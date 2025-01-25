@@ -23,7 +23,7 @@
 * Bedømmelsesform: 20 minutters mundtlig eksamen med afsæt i gruppeprojekt (se eksamensbeskrivelse i menuen til venstre)  
  
 
-## :fontawesome-solid-vector-square:{ .fa-vector-square} Lectures and course organization
+## :fontawesome-solid-vector-square:{ .fa-vector-square} Kursusorganisering
 
 Kurset er planlagt til at starte i uge 6 og vil blive afholdt om **mandagen** fra **9:00 til 12:00** i jeres lokale. Generelt består hver session af fire aktiviteter:
 
