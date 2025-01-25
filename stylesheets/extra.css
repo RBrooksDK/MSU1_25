@@ -1,5 +1,5 @@
 /* Dark mode as default */
-[data-md-color-scheme="slate"] {
+[data-md-color-scheme="default"] {
   --md-slate-bg-color: #121212; /* Main background */
   --md-slate-fg-color: #378856; /* Secondary text */
   
