@@ -19,7 +19,7 @@ Denne session introducerer kartesiske koordinatsystemer, som er fundamentale for
 - Trigonometriske funktioner
 - Lokalisering af punkter
 
-### Udvidede noter
+### Uddybende noter
 
 #### Introduktion
 Et kartesisk koordinatsystem bruges til at præcist beskrive positioner, afstande og vinkler i rummet. Systemet blev opfundet af René Descartes og har været fundamentet for moderne matematik, særligt inden for geometri og algebra.

@@ -1,55 +1,49 @@
 <h1 align="center">Vektorer</h1>
 
+<p align="center">
+    <video class="custom-video" width="600" autoplay loop muted>
+        <source src="../figures/video_preview1_h264.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</p>
 
-### Forberedelse
-3DM: [Kapitel 2]()
 
-There are no exercises to be solved before class, since it is the first class. However, it is recommended to go through the material and make sure you understand the concepts.
+## Forberedelse
+3DM: [Kapitel 2](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EY0IPZH01qBPkv3nwVzB5bwBrxvNME6IdmpavOeTxRfckg?e=QB5kSE)
 
-Also, check out the [prerequisites](https://rbrooksdk.github.io/SMP1_25/00_Important_Recap/) for the course.
+I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
 
-### Session Material
+## Materiale
 
-[Session Notes]()
+[Sessionsmateriale](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/En3EgvyjiiBPiFhgsDoOITYBJgyL36UFnS7ivBi1YZUWsA?e=kw0ooo)
 
-[Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuOeq6E9sg9Jjf5n_qCeM80B4uonPufDX4RnR0nFz3EdMg?e=dRNi7T)
-
-Make sure you are acquainted with common [Series, Approximations, and Identities](https://lpsa.swarthmore.edu/BackGround/UsefulSeries/)
-
-Session from 20/21:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F3bB33pqjLw?si=G7eN7FQnrZj1XLWN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
----
-
-### Session Description
-In this session, we will look at the foundational principles of statistics and probability theory, starting with an understanding of why these fields are essential for analysing data and making predictions. We will discuss the distinction between samples and populations, along with key measures and scales of measurement. The session will introduce random experiments and the foundational concepts of probabilities.
-
-Building on this, we will review key concepts in probability, including types of probability, conditional probability, and conditional independence. Finally, we introduce the concept of a random variable.
-
-#### Key Concepts
-- Importance of Statistics and Probability Theory
-- Samples vs. Populations
-- Measures and Scales of Measurement
-- Random Experiments and Probabilities
-- Types of Probability
-- Conditional Probability
-- Conditional Independence
-- Expectation and Variance
-- Independent Random Variables
-- Functions of Random Variables
-
+[Øvelsesnoter - tilgængelige mandag]()
 
 ---
 
-### Exercises
-Full solutions to the Exam case exercises (8-10) can be found in the [general resource folder](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A)
+## Kort om sessionen
 
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>
+Denne session introducerer begrebet vektorer, både i matematisk og geometrisk forstand. Vi gennemgår deres repræsentation, dimensioner og grundlæggende operationer som addition, multiplikation med skalarer og negation. Desuden behandles forskellen mellem punkter og vektorer, samt vektorens rolle i kartesiske koordinatsystemer.
 
-#### Exercise 1
+### Nøgleord
+- Vektordefinition
+- Geometrisk repræsentation
+- Kartesiske koordinater
+- Vektorlængde
+- Addition og subtraktion
+- Multiplikation med skalar
+- Relativ position
+
+---
+
+## Videomateriale
+
+
+---
+
+## Øvelser
+
+### Exercise 1
 Heart failures are due to either natural occurrences
 (87%) or outside factors (13%). Outside factors are related to
 induced substances (73%) or foreign objects (27%). Natural
@@ -68,7 +62,7 @@ and infection (e.g., staph infection) (17%).
 
     2. $P(\text{disease or infection}) = 0.87\times (0.27+0.17) = 0.3828$
 
-#### Exercise 2
+### Exercise 2
 Computer keyboard failures are due to faulty electrical connects (12%) or mechanical defects (88%). Mechanical defects are related to loose keys (27%) or improper assembly (73%). Electrical connect defects are caused by defective wires (35%), improper connections (13%), or poorly welded wires (52%).
 
 1. Find the probability that a failure is due to loose keys.
@@ -81,7 +75,7 @@ Computer keyboard failures are due to faulty electrical connects (12%) or mechan
 
     2. \(P(\text{improperly connected or poorly welded wires}) = 0.12 \times (0.13 + 0.52) = 0.078\)
 
-#### Exercise 3
+### Exercise 3
 Two teams \(A\) and \(B\) play a football match, and we are interested in the winner. The sample space can be defined as:  
 
 \[
@@ -105,7 +99,7 @@ Based on this,
 
     2. \(P(b \cup d) = P(b) + P(d) = 0.25 + 0.25 = 0.5\)
 
-#### Exercise 4
+### Exercise 4
 Let \(A\) and \(B\) be two events such that:  
 
 \[
@@ -138,7 +132,7 @@ Let \(A\) and \(B\) be two events such that:
 
     6. \(P(A \cap (B \cup A^c)) = P(A \cap B) = 0.2\)
 
-#### Exercise 5
+### Exercise 5
 Consider a random experiment with a sample space: 
 
 \[
@@ -199,7 +193,7 @@ where \(c\) is a constant number.
         P(\{3, 4, 5, \cdots\}) = \frac{\frac{2}{27}}{1 - \frac{1}{3}} = \frac{\frac{2}{27}}{\frac{2}{3}} = \frac{2}{27} \cdot \frac{3}{2} = \frac{1}{9}.
         $$
 
-#### Exercise 6
+### Exercise 6
 Let \(T\) be the time needed (in hours) to complete a job at a certain factory. By using the historical data, we know that:
 
 \[
@@ -266,7 +260,7 @@ P(T \leq t) =
         P(1 \leq T \leq 3) = \frac{9}{16} - \frac{1}{16} = \frac{8}{16} = \frac{1}{2}.
         \]
 
-#### Exercise 7
+### Exercise 7
 You choose a point $(A,B)$ uniformly at random in the unit square $\{(x,y):0 \leq x,y \leq 1\}$.
 
 <div style="text-align: center;">
@@ -289,7 +283,7 @@ has real solutions?
     Also, see more elaborate solution [here](src/Solution7.pdf)
 
 
-#### Exercise 8 (Exam 2014.2 (a+b))
+### Exercise 8 (Exam 2014.2 (a+b))
 An IT company receives its printed circuit boards from two different suppliers, 1 and 2. Records show that 5% of the circuit boards from supplier 1 and 3% of the circuit boards from supplier 2 are defective. 60% of the company’s current circuit boards come from supplier 2, and the remaining from supplier 1. The company usually keeps a stock of 2000 circuit boards. 
 
 1. Based on this information, construct a contingency table of the company’s circuit board stock. Place supplier in the columns and defective/non-defective in the rows.
@@ -310,7 +304,7 @@ An IT company receives its printed circuit boards from two different suppliers, 
         P(\text{Supplier 1} | \text{Defective}) = \frac{P(\text{Supplier 1} \cap \text{Defective})}{P(\text{Defective})} = \frac{40/2000}{76/2000} = \frac{40}{76} \approx 0.5263.
         \]
 
-#### Exercise 9 (Exam 2015.2)
+### Exercise 9 (Exam 2015.2)
 A batch of 1000 hard drives from three suppliers were tested. 2% of the hard drives from Toshiba and 2% of the hard drives from Seagate were defective, and in the entire batch there were 3% defectives in total. In the batch, 50% were Western Digital hard drives and 30% were Toshibas.
 
 1. Based on this information, create a 3 x 2 contingency table of the hard drives.
@@ -339,7 +333,7 @@ A batch of 1000 hard drives from three suppliers were tested. 2% of the hard dri
         P(\text{Western Digital}) = \frac{500}{1000} = 0.5.
         \]
 
-#### Exercise 10 (Exam 2016 New Test.3)
+### Exercise 10 (Exam 2016 New Test.3)
 The probability that a regularly scheduled flight departs on time is 0.83; the probability that it arrives on time is 0.82; and the probability that it departs and arrives on time is 0.78. Find the probability that a plane
 
 1. Arrives on time, given that it departed on time
@@ -352,3 +346,77 @@ The probability that a regularly scheduled flight departs on time is 0.83; the p
     2. \(P(\text{Departs on time} | \text{Arrives on time}) = \frac{P(\text{Departs on time} \cap \text{Arrives on time})}{P(\text{Arrives on time})} = \frac{0.78}{0.82} \approx 0.9512\)
 
     3. \(P(\text{Arrives on time} | \text{Did not depart on time}) = \frac{P(\text{Arrives on time} \cap \text{Did not depart on time})}{P(\text{Did not depart on time})} = \frac{0.04}{0.17} \approx 0.2353\)
+   
+## Uddybende noter
+Vektorer er fundamentale byggesten inden for lineær algebra og 3D-matematik. De kan beskrives matematisk som lister af tal og geometrisk som rettede linjesegmenter med en bestemt længde og retning.
+
+### Notation for vektorer
+
+Vektorer kan repræsenteres på flere forskellige måder, afhængigt af konteksten og præferencer:
+
+- **Fed skrift**: $\mathbf{v}$ er en standard notation i trykt tekst og bruges ofte i lineær algebra og fysik. Det er nemt at genkende og skelne fra skalarer.
+
+- **Pil over variablen**: $\vec{v}$ er en almindelig notation i håndskrevne noter og fysikbøger. Det fremhæver vektorens geometriske betydning som en pil med retning og længde.
+
+- **Hat over variablen**: $\hat{\mathbf{v}}$ bruges til at angive en enhedsvektor (en vektor med længde $1$). Dette er praktisk, når retningen er vigtig, men længden er ubetydelig.
+
+- **Ikke-specifik notation**: I nogle kontekster skrives vektorer blot som $v$, uden fed eller andre markeringer, hvilket kan føre til forvirring, hvis det ikke er klart fra sammenhængen, at der er tale om en vektor.
+
+- **Håndskrevet notation**: I håndskrevne noter anvender nogle en lille streg under variablen for at indikere, at det er en vektor.
+
+På denne kursusside bruges **fed skrift** som standardnotation for vektorer ($\mathbf{v}$) og en hat for enhedsvektorer ($\hat{\mathbf{v}}$), da dette er konsistent og nemt at læse i både trykt og digital form.
+
+
+### Typer af vektorer
+- **Rækkevektor**: Vandret repræsentation, f.eks. $\mathbf{v} =[x, y, z]$.
+- **Søjlevektor**: Lodret repræsentation, f.eks. $\mathbf{v} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}$.
+
+### Geometrisk definition
+Geometrisk repræsenteres vektorer som pile i rummet, hvor:
+
+- **Længde (magnitude)**: Målt med formel $\|\mathbf{v}\| = \sqrt{x^2 + y^2 + z^2}$.
+- **Retning**: Viser vektorens orientering.
+
+#### Relativ position
+Vektorer beskriver forskydning, ikke absolut position. F.eks. viser vektoren $\mathbf{v} = [3, -2]$ en forskydning på 3 enheder til højre og 2 nedad.
+
+### Kartesiske koordinater og vektorer
+
+I kartesiske koordinater specificeres en vektor ved dens komponenter langs hver akse:
+
+- **2D**: $\mathbf{v} = [x, y]$.
+- **3D**: $\mathbf{v} = [x, y, z]$.
+
+Disse komponenter repræsenterer forskydninger i hver dimension.
+
+### Operationer med vektorer
+
+#### Addition og subtraktion
+Vektorer kan adderes eller subtraheres komponentvist:
+
+- Addition: $\begin{bmatrix} x_1 \\ y_1 \end{bmatrix} + \begin{bmatrix} x_2 \\ y_2 \end{bmatrix} = \begin{bmatrix} x_1 + x_2 \\ y_1 + y_2 \end{bmatrix}$.
+- Subtraktion: $\begin{bmatrix} x_1 \\ y_1 \end{bmatrix} - \begin{bmatrix} x_2 \\ y_2 \end{bmatrix} = \begin{bmatrix} x_1 - x_2 \\ y_1 - y_2 \end{bmatrix}$.
+
+#### Multiplikation med skalar
+Multiplikation ændrer en vektors længde:
+
+- Formel: $k \cdot \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} kx \\ ky \end{bmatrix}$.
+- Hvis $k < 0$, vendes vektorens retning.
+
+#### Negation
+At negere en vektor svarer til multiplikation med $-1$:
+
+- $-\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} -x \\ -y \end{bmatrix}$.
+
+### Enhedsvektorer og normalisering
+Enhedsvektorer har længden $1$ og bruges til at angive retning:
+
+- Normalisering: $\mathbf{\hat{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|}$ for $\|\mathbf{v}\| \neq 0$.
+
+### Punkt vs. vektor
+- **Punkt**: Angiver en absolut position, f.eks. $(x, y)$.
+- **Vektor**: Angiver forskydning, f.eks. $\mathbf{v} = [x, y]$.
+Disse begreber overlapper i mange tilfælde, men er konceptuelt forskellige.
+
+### Anvendelse
+Vektorer er essentielle i spiludvikling, da de bruges til at modellere positioner, bevægelser og kræfter. Forståelsen af både deres matematiske og geometriske egenskaber er central for effektiv brug.
