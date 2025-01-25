@@ -1,0 +1,154 @@
+# Project information
+site_name: Matematik for Spiludviklere
+site_url: https://rbrooksdk.github.io/MSU1_25
+site_author: Richard Brooks
+site_description: Course page for Matematik for Softwareudviklere at VIA University College
+docs_dir: .
+site_dir: ../site
+# Repository information
+repo_name: Github
+repo_url: https://github.com/RBrooksDK/MSU1_25
+
+# Copyright
+copyright: Copyright &copy; 2025 Richard Brooks
+
+# Configurations
+theme:
+  name: material
+  language: da
+  # custom_dir: overrides
+  favicon: figures/fav.png
+  logo: figures/logo.png
+  icon:
+    repo: fontawesome/brands/github
+    annotation: material/chevron-right-circle
+  font:
+    text: Roboto
+    code: Red Hat Mono
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.prune
+    # - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: orange
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: orange
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to light mode
+
+plugins:
+  - same-dir
+  - blog
+  - search
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/3d-coordinates.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: material/email
+      link: mailto:rib@via.dk
+    - icon: fontawesome/brands/github
+      link: https://github.com/RBrooksDK/
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/rbrooks-dk/
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Richard Brooks: https://rbrooksdk.github.io
+  - Home: README.md
+  - Sessioner:
+    - Sessions/README.md
+    - 00 Koordinatsystemer: 00_koordinatsystemer/README.md
+    - 01 Vektorer: 01_Vektorer/README.md
+    - 02 Multiple koordinatsystemer: 02_Flere_koordinatsystemer/README.md
+    - 03 Introduktion til matricer: 03_Introduction_til_matricer/README.md
+    - 04 Lineære tranformationer: 04_Matricer_og_linear_transformationer/README.md
+    - 05 Matricer II: 05_Mere_om_Matricer/README.md
+    - 06 Polære Koordinater: 06_Polaere_koordinater/README.md
+    - 07 Rotationr i 3D: 07_Rotationer_i_3d/README.md
+    - 08 Opstart projektarbejde: 08_Projekt_arbejde/README.md
+    - 09 Geometri: 09_Geometri/README.md
+    - 10 3D Grafik: 10_3d_grafik/README.md
+  - Eksamen: pages/exam.md
+  - FAQ: pages/faq.md
+  - Generelle ressourcer: https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EitPFtuwEsdPmyp8jK_WPRABPNowCGE9vLvNsyLHZudXIw?e=n8kTwG
