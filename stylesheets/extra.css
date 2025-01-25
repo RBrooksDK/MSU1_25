@@ -149,3 +149,17 @@
 .md-typeset details.question summary::after {
   color: #22b455; /* Green for collapsible indicator */
 }
+
+.custom-video {
+  border-radius: 125px; /* Makes it oval/rounded */
+}
+
+a {
+  text-decoration: none; /* Removes any underline */
+  color: inherit; /* Ensures link colour matches the surrounding content */
+}
+
+a:hover .custom-video {
+  transform: scale(1.05); /* Optional: Add hover effects for emphasis */
+  transition: transform 0.2s ease;
+}

@@ -1,15 +1,20 @@
 <p align="center">
     <h1 align="center">Matematik for Spiludviklere - Forår 2025</h1>
-    <p align="center">Repository for <a href="https://www.via.dk/TMH/Courses/matematik-for-spiludviklere?education=sw">MSU1</a> at VIA</p>
-    <p align="center"><strong><a href="https://rbrooksdk.github.io/MSU1_25">Checkout the homepage!</a></strong></p>
+    <p align="center">Repo for <a href="https://www.via.dk/TMH/Courses/matematik-for-spiludviklere?education=sw">MSU1</a> ved VIA</p>
+    <p align="center"><strong><a href="https://rbrooksdk.github.io/MSU1_25">Gå til hjemmesiden!</a></strong></p>
 </p>
 
 <p align="center">
-  <video width="500" autoplay loop muted>
-    <source src="figures/video_preview_h264.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <a href="https://rbrooksdk.github.io/MSU1_25">
+    <video class="custom-video" width="600" autoplay loop muted>
+      <source src="figures/video_preview_h264.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </a>
 </p>
+
+
+
 
 
 
