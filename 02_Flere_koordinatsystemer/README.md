@@ -1,5 +1,7 @@
 <h1 align="center">Discrete Random Variables</h1>
 
+
+
 ### Session Preparation:
 ASPE: 3
 
@@ -16,6 +18,8 @@ Solve the [exercises from session 1](https://rbrooksdk.github.io/SMP1_25/01_Intr
 Session from 20/21:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/cXtY94_iETI?si=-dXqhYd_ByMZMCIK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 ---
 

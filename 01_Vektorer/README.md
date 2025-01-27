@@ -43,7 +43,8 @@ Denne session introducerer begrebet vektorer, både i matematisk og geometrisk f
 
 ## Øvelser
 
-### Exercise 1
+**Øvelse 1**
+
 Heart failures are due to either natural occurrences
 (87%) or outside factors (13%). Outside factors are related to
 induced substances (73%) or foreign objects (27%). Natural
@@ -62,7 +63,8 @@ and infection (e.g., staph infection) (17%).
 
     2. $P(\text{disease or infection}) = 0.87\times (0.27+0.17) = 0.3828$
 
-### Exercise 2
+**Øvelse 2**
+
 Computer keyboard failures are due to faulty electrical connects (12%) or mechanical defects (88%). Mechanical defects are related to loose keys (27%) or improper assembly (73%). Electrical connect defects are caused by defective wires (35%), improper connections (13%), or poorly welded wires (52%).
 
 1. Find the probability that a failure is due to loose keys.
@@ -364,7 +366,9 @@ Vektorer kan repræsenteres på flere forskellige måder, afhængigt af kontekst
 
 - **Håndskrevet notation**: I håndskrevne noter anvender nogle en lille streg under variablen for at indikere, at det er en vektor.
 
-På denne kursusside bruges **fed skrift** som standardnotation for vektorer ($\mathbf{v}$) og en hat for enhedsvektorer ($\hat{\mathbf{v}}$), da dette er konsistent og nemt at læse i både trykt og digital form.
+På denne kursusside bruges **fed skrift** som standardnotation for vektorer ($\mathbf{v}$) og en hat for enhedsvektorer ($\hat{\mathbf{v}}$), da dette er konsistent og nemt at læse i både trykt og digital form. Skalarer er almindelige små bogstaver i kursiv, f.eks. $a$, $b$, $x$, $y$, $z$, $\alpha$, $\beta$. Disse repræsenterer almindelige tal uden geometrisk betydning. Matricer noteres med **fed skrift med store bogstaver**, f.eks. $\mathbf{A}$, $\mathbf{B}$, $\mathbf{M}$ osv. Dette er en standardnotation, der gør det nemt at skelne dem fra vektorer og skalarer.
+
+
 
 
 ### Typer af vektorer

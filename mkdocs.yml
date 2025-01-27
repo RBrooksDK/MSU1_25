@@ -17,7 +17,7 @@ theme:
   name: material
   language: da
   # custom_dir: overrides
-  favicon: figures/fav.png
+  favicon: figures/logo.png
   logo: figures/logo.png
   icon:
     repo: fontawesome/brands/github

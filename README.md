@@ -80,6 +80,7 @@ Orientér dig på kursus bogens hjemmeside: [3D Math Primer for Graphics and Gam
 Jeg synes egentlig Freya Holmér's [Math for Game Devs](https://www.youtube.com/watch?v=fjOdtSu4Lm4&list=PLImQaTpSAdsArRFFj8bIfqMk2X7Vlf3XF) er en god ressource. Den falder i 10 dele og dækker meget godt det vi skal igennem. Dette som supplement til bogen og mine videoer.
 
 Men der er rigtig mange gode ressourcer på Youtube. Blot søg efter "Math for Game Developers" og I vil finde en masse gode videoer.
+
 ---
 
 Sørg for at installere en fungerende version af Jupyter Notebook og Python version 3.7 eller nyere. Den nemmeste måde at installere Python og Jupyter på er ved at bruge [Anaconda Distribution](https://www.anaconda.com/products/distribution). Du kan vælge hvilken som helst platform, du ønsker at arbejde i, så længe den kan håndtere Jupyter Notebooks. At installere VS Code med en Jupyter Notebook-udvidelse ser ud til at være et populært valg.  

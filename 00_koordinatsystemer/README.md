@@ -19,6 +19,27 @@ Denne session introducerer kartesiske koordinatsystemer, som er fundamentale for
 - Trigonometriske funktioner
 - Lokalisering af punkter
 
+---
+### Videomateriale
+
+[**0.1. 1d Koordinatsystemer:**](https://drive.google.com/file/d/1PM9Q4P-v5fYvPMI1fmOzhoBl3IOYW-sU/view?usp=sharing)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jnGDnfin11A?si=hCYDw2o1Dpwjos6T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[**0.2. 2d Koordinatsystemer:**](https://drive.google.com/file/d/1cH0zXQ8EYP8lODhza3SnV9QqmheA02sz/view?usp=sharing)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/e0w9NjjD2To?si=eBml2z3yBaM0HW0f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[**0.3. 3d Koordinatsystemer:**](https://drive.google.com/file/d/1k1r26zv4-jqzm03nQsoaVL7UkE8X3gum/view?usp=sharing)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CQWZlje7vF4?si=EvN5oSkbg0ux97Om" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[**0.4. Vigtige formler:**](https://drive.google.com/file/d/1oEUgn4SZwgsXLw2R1s1VdicfcJmyKvZ4/view?usp=sharing)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_tzz3YCCx-w?si=ATGCEm6IkVQ3ncQm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
 ### Uddybende noter
 
 #### Introduktion
