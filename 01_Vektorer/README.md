@@ -38,317 +38,248 @@ Denne session introducerer begrebet vektorer, både i matematisk og geometrisk f
 
 ## Videomateriale
 
-
 ---
 
 ## Øvelser
 
+---
+
 **Øvelse 1**
 
-Heart failures are due to either natural occurrences
-(87%) or outside factors (13%). Outside factors are related to
-induced substances (73%) or foreign objects (27%). Natural
-occurrences are caused by arterial blockage (56%), disease (27%),
-and infection (e.g., staph infection) (17%).
+En almindelig konvention inden for luftfart er, at \(+x\) peger fremad/mod nord, \(+y\) peger mod højre/øst, og \(z\) peger nedad.
 
-1. Determine the probability that a failure is due to an induced substance.
+1. Er dette et venstre- eller højrehåndet koordinatsystem?
+2. Hvordan kan vi konvertere 3D-koordinater fra disse luftfartskonventioner til vores konventioner?
+3. Hvad med at konvertere fra vores konventioner (venstre, y-op) til luftfartskonventionerne?
 
-2. Determine the probability that a failure is due to disease or infection.
+??? answer "Se svaret"
 
+    1. Højrehåndet koordinatsystem.
 
+    2. Byt \(y\) og \(z\)
+    
+    3. Byt \(y\) og \(z\)
 
-??? answer
-
-    1. \(P(\text{induced substance}) = 0.13 \times 0.73 = 0.0949\)
-
-    2. $P(\text{disease or infection}) = 0.87\times (0.27+0.17) = 0.3828$
+---
 
 **Øvelse 2**
 
-Computer keyboard failures are due to faulty electrical connects (12%) or mechanical defects (88%). Mechanical defects are related to loose keys (27%) or improper assembly (73%). Electrical connect defects are caused by defective wires (35%), improper connections (13%), or poorly welded wires (52%).
+Udregn følgende:
 
-1. Find the probability that a failure is due to loose keys.
+1. \(\sum_{i=1}^5 i\)
+2. \(\sum_{i=1}^5 2 i\)
+3. \(\prod_{i=1}^5 2 i\)
+4. \(\prod_{i=0}^4 7(i+1)\)
+5. \(\sum_{i=1}^{100} i\)
 
-2. Find the probability that a failure is due to improperly connected or poorly welded wires.
+??? answer "Se svaret"
 
-??? answer
+    1. \(\sum_{i=1}^5 i = 15\)
+    2. \(\sum_{i=1}^5 2 i = 30\)
+    3. \(\prod_{i=1}^5 2 i = 3840\)
+    4. \(\prod_{i=0}^4 7(i+1) = 2016840\)
+    5. \(\sum_{i=1}^{100} i= 5050\)
 
-    1. \(P(\text{loose keys}) = 0.88 \times 0.27 = 0.2376\)
+---
 
-    2. \(P(\text{improperly connected or poorly welded wires}) = 0.12 \times (0.13 + 0.52) = 0.078\)
+**Exercise 3**
 
-### Exercise 3
-Two teams \(A\) and \(B\) play a football match, and we are interested in the winner. The sample space can be defined as:  
+Lad 
 
-\[
-S = \{a, b, d\}
-\]  
+$\mathbf{a}=\left[\begin{array}{ll}
+    -3 & 8
+    \end{array}\right], \quad \mathbf{b}=\left[\begin{array}{l}
+    4 \\ 
+    0 \\ 
+    5
+    \end{array}\right], \quad \mathbf{c}=\left[\begin{array}{c}
+    16 \\ 
+    -1 \\ 
+    4 \\ 
+    6
+    \end{array}\right]$
 
-where \(a\) shows the outcome that \(A\) wins, \(b\) shows the outcome that \(B\) wins, and \(d\) shows the outcome that they draw. Suppose that we know that:
 
-* The probability that \(A\) wins is \(P(a) = P(\{a\}) = 0.5\).  
-* The probability of a draw is \(P(d) = P(\{d\}) = 0.25\).
+??? answer "Se svaret"
 
-Based on this,
+      1. \(\mathbf{a}\) er en 2D rækkevektor. \(\mathbf{b}\) er en 3D søjlevektor. \(\mathbf{c}\) er en 4D søjlevektor.  
+      2. \(b_y+c_w+a_x+b_z=0+6+(-3)+5=8\)
 
-1. Find the probability that \(B\) wins.
+---
 
-2. Find the probability that \(B\) wins or a draw occurs.
+**Øvelse 4**
 
-??? answer
+Identificér størrelserne i hver af følgende sætninger som skalar eller vektor. For vektorstørrelser, angiv størrelsen og retningen. (Bemærk: nogle retninger kan være implicitte.) 
 
-    1. \(P(b) = 1 - P(a) - P(d) = 1 - 0.5 - 0.25 = 0.25\)
+1. Hvor meget vejer du?  
+2. Har du nogen idé om, hvor hurtigt du kørte?  
+3. Det er to blokke nord herfra.  
+4. Vi flyver fra Los Angeles til New York med en hastighed på \(960 \, \mathrm{km/t}\) i en højde af \(10,000 \, \mathrm{m}\).  
 
-    2. \(P(b \cup d) = P(b) + P(d) = 0.25 + 0.25 = 0.5\)
+??? answer "Se svaret"
 
-### Exercise 4
-Let \(A\) and \(B\) be two events such that:  
+    1. "Hvor meget vejer du?" Din vægt er en skalar størrelse. Men tyngdekraften, der trækker dig nedad, er en vektor, så hvis du sagde, at vægt var en vektor af den grund, ville det også være korrekt. ("Min vægt er \(80 \, \mathrm{kg}\) kraft i nedadgående retning.")  
 
-\[
-    P(A) = 0.4, \quad P(B) = 0.7, \quad P(A \cup B) = 0.9
-\]
+    2. "Har du nogen idé om, hvor hurtigt du kørte?" Betjenten refererer sandsynligvis til farten på dit køretøj, som er en skalar størrelse.  
 
-1. Find \(P(A \cap B)\).
+    3. "Det er to blokke nord herfra." Vektorstørrelse.  
 
-2. Find \(P(A^c \cap B)\).
+    4. "Vi flyver fra Los Angeles til New York med en hastighed på \(960 \, \mathrm{km/t}\) i en højde af \(10,000 \, \mathrm{m}\)." Farten \(960\, \mathrm{km/t}\) er en skalar størrelse. Da New York ligger øst for Los Angeles, kan man med rimelighed antage en retning mod øst, så \(960\, \mathrm{km/t}\) østpå er en hastighed, som er en vektorstørrelse. Tilsvarende er højden \(10,000 \, \mathrm{m}\) en skalar størrelse. 
 
-3. Find \(P(A - B)\).
+---
 
-4. Find \(P(A^c - B)\).
+**Øvelse 5**
 
-5. Find \(P(A^c \cup B)\).
+Bestem om følgende er sandt/falsk:
 
-6. Find \(P(A \cap (B \cup A^c))\).
+1. Størrelsen af en vektor i en graf er ikke vigtig; vi skal blot tegne den det rigtige sted.  
+2. Forskydningen udtrykt af en vektor kan visualiseres som en sekvens af aksialt justerede forskydninger.  
+3. Disse aksialt justerede forskydninger fra det forrige spørgsmål skal ske i rækkefølge.  
+4. Vektoren \([x, y]\) angiver forskydningen fra punktet \((x, y)\) til origo.
 
-??? answer
+??? answer "Se svaret"
 
-    1. \(P(A \cap B) = P(A) + P(B) - P(A \cup B) = 0.4 + 0.7 - 0.9 = 0.2\)
+    1. **Falsk**. Dette er omvendt; for vektorer er størrelsen vigtig (dvs. længden af vektoren), mens placeringen ikke er det.
+    2. **Sandt**.  
+    3. **Falsk**. Vi kan anvende dem i vilkårlig rækkefølge og opnå det samme slutresultat.  
+    4. **Falsk**. Dette er omvendt; vektoren \([x, y]\) angiver forskydningen fra origo til punktet \((x, y)\).  
 
-    2. \(P(A^c \cap B) = P(B) - P(A \cap B) = 0.7 - 0.2 = 0.5\)
+---
 
-    3. \(P(A - B) = P(A) - P(A \cap B) = 0.4 - 0.2 = 0.2\)
+**Øvelse 6**
 
-    4. \(P(A^c - B) = 1 - P(A \cup B) = 1 - 0.9 = 0.1\)
+Normalisér følgende vektorer:
 
-    5. \(P(A^c \cup B) = 1 - P(A - B) = 1 - 0.2 = 0.8\)
+1. \(\begin{array}{ccc}{[-12} & 3 & -4]\end{array}\)
+2. \(\left[\begin{array}{llll}1 & 1 & 1 & 1\end{array}\right]\)
 
-    6. \(P(A \cap (B \cup A^c)) = P(A \cap B) = 0.2\)
+??? answer "Se svaret"
 
-### Exercise 5
-Consider a random experiment with a sample space: 
+    1. \(\left[\begin{array}{lll}\frac{-12}{13} & \frac{3}{13} & \frac{-4}{13}\end{array}\right]\)
 
-\[
-S = \{1, 2, 3, \cdots\}.
-\]  
+    2. \(\left[\begin{array}{llll}0.5 & 0.5 & 0.5 & 0.5\end{array}\right]\)
 
-Suppose that we know:  
+---
 
-\[
-P(k) = P(\{k\}) = \frac{c}{3^k} \quad \textrm{for} \quad k = 1, 2, \cdots
-\]  
+**Øvelse 7**
 
-where \(c\) is a constant number.
+Beregn
 
-1. Find \(c\).
+1. \(\left[\begin{array}{lll}7 & -2 & -3\end{array}\right]+\left[\begin{array}{lll}6 & 6 & -4\end{array}\right]\)
+2. \(\left[\begin{array}{c}4 \\ 5 \\ -11\end{array}\right]-\left[\begin{array}{c}-4 \\ -5 \\ 11\end{array}\right]\)
 
-2. Find \(P(\{2, 4, 6\})\).
+??? answer "Se svaret"
 
-3. Find \(P(\{3, 4, 5, \cdots\})\).
+    1. \(\left[\begin{array}{lll}13 & 4 & -7\end{array}\right]\)
 
-??? answer
+    2. \(\left[\begin{array}{c}8 \\ 10 \\ -22\end{array}\right]\)
 
-    1. To find \(c\), use the fact that the sum of all probabilities must equal 1:
-      
-        \[
-        \sum_{k=1}^\infty P(k) = \sum_{k=1}^\infty \frac{c}{3^k} = 1.
-        \]
+---
 
-        This is a geometric series with the first term \(\frac{c}{3}\) and ratio \(\frac{1}{3}\):
-       
-        \[
-        \sum_{k=1}^\infty \frac{c}{3^k} = \frac{c}{3} \cdot \frac{1}{1 - \frac{1}{3}} = \frac{c}{3} \cdot \frac{3}{2} = \frac{c}{2}.$
-        \]
+**Øvelse 8**
 
-        Therefore, \(\frac{c}{2} = 1 \implies c = 2\).
+Bestem afstanden mellem vektorerne:
 
-    2. \(P(\{2, 4, 6\})\):
-       
-        \[
-        P(\{2, 4, 6\}) = P(2) + P(4) + P(6) = \frac{2}{3^2} + \frac{2}{3^4} + \frac{2}{3^6}.
-        \]
-       
-        Compute each term:
-       
-        $$
-        P(\{2, 4, 6\}) = \frac{2}{9} + \frac{2}{81} + \frac{2}{729} = \frac{162 + 18 + 2}{729} = \frac{182}{729} \approx 0.25.
-        $$
+1. \(\left[\begin{array}{c}-2 \\ -4 \\ 9\end{array}\right],\left[\begin{array}{c}6 \\ -7 \\ 9.5\end{array}\right]\)
+2. \(\left[\begin{array}{c}4 \\ -4 \\ -4 \\ 4\end{array}\right],\left[\begin{array}{c}-6 \\ 6 \\ 6 \\ -6\end{array}\right]\)
 
-    3. \(P(\{3, 4, 5, \cdots\})\):
-       
-        $$
-        P(\{3, 4, 5, \cdots\}) = \sum_{k=3}^\infty P(k) = \sum_{k=3}^\infty \frac{2}{3^k}.
-        $$
-        
-        This is a geometric series starting at \(k=3\) with the first term \(\frac{2}{3^3} = \frac{2}{27}\) and ratio \(\frac{1}{3}\):
-        
-        $$
-        P(\{3, 4, 5, \cdots\}) = \frac{\frac{2}{27}}{1 - \frac{1}{3}} = \frac{\frac{2}{27}}{\frac{2}{3}} = \frac{2}{27} \cdot \frac{3}{2} = \frac{1}{9}.
-        $$
+??? answer "Se svaret"
 
-### Exercise 6
-Let \(T\) be the time needed (in hours) to complete a job at a certain factory. By using the historical data, we know that:
+    1. ca. \(8.56\)
 
-\[
-P(T \leq t) = 
-\begin{cases} 
-\frac{1}{16}t^2 & \text{for } 0 \leq t \leq 4, \\
-1 & \text{for } t > 4.
-\end{cases}
-\]
+    2. \(20\)
 
-1. Find the probability that the job is completed in less than one hour, i.e., find \(P(T \leq 1)\).
+---
 
-2. Find the probability that the job needs more than 2 hours.
+**Øvelse 9**
 
-3. Find the probability that \(1 \leq T \leq 3\).
-
-??? answer
-
-    1. Using the given formula for \(P(T \leq t)\) when \(0 \leq t \leq 4\):
+1. Bestem
    
-        \[
-        P(T \leq 1) = \frac{1}{16}(1)^2 = \frac{1}{16}.
-        \]
+    $$
+    3\left[\begin{array}{c}-2 \\ 0 \\ 4\end{array}\right] \cdot\left(\left[\begin{array}{c}8 \\ -2 \\ 3 / 2\end{array}\right]+\left[\begin{array}{l}0 \\ 9 \\ 7\end{array}\right]\right)
+    $$
 
-    2. Using the complement rule:
+2. Givet de to vektorer
 
-        \[
-        P(T > 2) = 1 - P(T \leq 2).
-        \]
+    $$
+    \mathbf{v}=\left[\begin{array}{c}
+    4 \\
+    3 \\
+    -1
+    \end{array}\right], \quad \hat{\mathbf{n}}=\left[\begin{array}{c}
+    \sqrt{2} / 2 \\
+    \sqrt{2} / 2 \\
+    0
+    \end{array}\right]
+    $$
+    
+    opdel \(\mathbf{v}\) i komponenter, der er vinkelrette og parallelle med \(\hat{\mathbf{n}}\). (Som notationen antyder, er \(\hat{\mathbf{n}}\) en enhedsvektor.)
 
-        Compute \(P(T \leq 2)\) using the given formula:
+3. Beregn \(\mathbf{a} \times \mathbf{b}\) og \(\mathbf{b} \times \mathbf{a}\)
+    
+    \(\mathbf{a}=\left[\begin{array}{lll}3 & 10 & 7\end{array}\right], \mathbf{b}=\left[\begin{array}{lll}8 & -7 & 4\end{array}\right]\)
 
-        \[
-        P(T \leq 2) = \frac{1}{16}(2)^2 = \frac{4}{16} = \frac{1}{4}.
-        \]
+??? answer "Se svaret"
 
-        Therefore:
+    1. 54
+    2. \(\begin{aligned} \mathbf{v}_{\|} & =\hat{\mathbf{n}} \frac{\mathbf{v} \cdot \hat{\mathbf{n}}}{\|\mathbf{n}\|^2}=\hat{\mathbf{n}} \frac{\mathbf{v} \cdot \hat{\mathbf{n}}}{1}=\hat{\mathbf{n}}(\mathbf{v} \cdot \hat{\mathbf{n}}) \\ & =\left[\begin{array}{c}\sqrt{2} / 2 \\ \sqrt{2} / 2 \\ 0\end{array}\right]\left(\left[\begin{array}{c}4 \\ 3 \\ -1\end{array}\right] \cdot\left[\begin{array}{c}\sqrt{2} / 2 \\ \sqrt{2} / 2 \\ 0\end{array}\right]\right)=\left[\begin{array}{c}\sqrt{2} / 2 \\ \sqrt{2} / 2 \\ 0\end{array}\right]\left(2 \sqrt{2}+\frac{3 \sqrt{2}}{2}+0\right) \\ & =\left[\begin{array}{c}\sqrt{2} / 2 \\ \sqrt{2} / 2 \\ 0\end{array}\right] \frac{7 \sqrt{2}}{2}=\left[\begin{array}{c}7 / 2 \\ 7 / 2 \\ 0\end{array}\right]\end{aligned}\)
+    3. \(\begin{aligned} & {\left[\begin{array}{c}3 \\ 10 \\ 7\end{array}\right] \times\left[\begin{array}{c}8 \\ -7 \\ 4\end{array}\right]=\left[\begin{array}{c}(10)(4)-(7)(-7) \\ (7)(8)-(3)(4) \\ (3)(-7)-(10)(8)\end{array}\right]=\left[\begin{array}{c}40-(-49) \\ 56-12 \\ -21-80\end{array}\right]=\left[\begin{array}{c}89 \\ 44 \\ -101\end{array}\right]} \\ & {\left[\begin{array}{c}8 \\ -7 \\ 4\end{array}\right] \times\left[\begin{array}{c}3 \\ 10 \\ 7\end{array}\right]=\left[\begin{array}{c}(-7)(7)-(4)(10) \\ (4)(3)-(8)(7) \\ (8)(10)-(-7)(3)\end{array}\right]=\left[\begin{array}{c}-49-40 \\ 12-56 \\ 80-(-21)\end{array}\right]=\left[\begin{array}{c}-89 \\ -44 \\ 101\end{array}\right]}\end{aligned}\)
 
-        \[
-        P(T > 2) = 1 - \frac{1}{4} = \frac{3}{4}.
-        \]
+**Øvelse 10**
 
-    3. Using the subtraction rule:
-
-        \[
-        P(1 \leq T \leq 3) = P(T \leq 3) - P(T \leq 1).
-        \]
-
-        Compute \(P(T \leq 3)\):
-
-        \[
-        P(T \leq 3) = \frac{1}{16}(3)^2 = \frac{9}{16}.
-        \]
-
-        Compute \(P(T \leq 1)\) (already found in part (a)):
-
-        \[
-        P(T \leq 1) = \frac{1}{16}.
-        \]
-
-        Therefore:
-
-        \[
-        P(1 \leq T \leq 3) = \frac{9}{16} - \frac{1}{16} = \frac{8}{16} = \frac{1}{2}.
-        \]
-
-### Exercise 7
-You choose a point $(A,B)$ uniformly at random in the unit square $\{(x,y):0 \leq x,y \leq 1\}$.
-
-<div style="text-align: center;">
-    <img src="src/ex7.png" width="200">
-</div>
-
-What is the probability that the equation
+Afsnit 2.8 introducerede normen af en vektor, nemlig en skalarværdi, der er forbundet med en given vektor. Dog er den definition af normen, der blev givet i dette afsnit, ikke den eneste definition af en norm for en vektor. Generelt er \(p\)-normen af en \(n\)-dimensional vektor defineret som
 
 $$
-\begin{align*}
-    AX^2+X+B=0
-\end{align*}
+\|\mathbf{x}\|_p \equiv\left(\sum_{i=1}^n\left|x_i\right|^p\right)^{1 / p}
 $$
 
-has real solutions?
+Nogle af de mest almindelige \(p\)-normer omfatter:  
+
+- **\(L^1\)-normen**, også kaldet Manhattan-normen (\(p=1\)):
+
+    $$
+    \|\mathbf{x}\|_1 \equiv \sum_{i=1}^n\left|x_i\right|
+    $$
+
+- **\(L^2\)-normen**, også kaldet den Euklidiske norm (\(p=2\)). Dette er den mest almindelige og velkendte norm, da den måler geometrisk længde:
+
+    $$
+    \|\mathbf{x}\|_2 \equiv \sqrt{\sum_{i=1}^n x_i^2}
+    $$
+
+- **Uendelig-normen**, også kaldet Chebyshev-normen (\(p=\infty\)):
+
+    $$
+    \|\mathbf{x}\|_{\infty} \equiv \max \left(\left|x_1\right|, \ldots,\left|x_n\right|\right)
+    $$
+
+Hver af disse normer kan betragtes som en måde at tildele en længde eller størrelse til en vektor. Den Euklidiske norm blev diskuteret i afsnit 2.8. Manhattan-normen har sit navn fra gaderne på Manhattan, der er udlagt som et gitter (fx Cartesia fra afsnit 1.2.1). For eksempel kører en taxa, der kører 1 blok øst og 1 blok nord, en samlet afstand på 2 blokke, mens en helikopter, kan flyve i en lige linje fra start til slut og kun rejse \(\sqrt{2}\) blokke (Euklidisk norm). Chebyshev-normen er blot den absolutte værdi af den komponent i vektoren med den største absolutte værdi. Et eksempel på, hvordan denne norm kan anvendes, er at overveje antallet af træk, der kræves for at flytte en konge i et skakspil fra et felt til et andet. De umiddelbart omkringliggende felter kræver 1 træk, felterne omkring dem kræver 2 træk og så videre.
+
+Find for hver af følgende \(\|\mathbf{x}\|_1, \|\mathbf{x}\|_2, \|\mathbf{x}\|_3\), og \(\|\mathbf{x}\|_{\infty}\):  
+
+1. \(\left[\begin{array}{lll}6 & 1 & -9\end{array}\right]\)  
+2. \(\left[\begin{array}{llll}-2 & -2 & -2 & -2\end{array}\right]\)  
+
 
 ??? answer
-    \(\frac{1}{4}+\frac{1}{4} \ln 4 \approx 0.5966\)
+    1.  $\left\|\left[\begin{array}{lll}6 & 1 & -9\end{array}\right]\right\|_1=|6|+|1|+|-9|=16$
 
-    Also, see more elaborate solution [here](src/Solution7.pdf)
+        $\left\|\left[\begin{array}{lll}6 & 1 & -9\end{array}\right]\right\|_2=\sqrt{|6|^2+|1|^2+|-9|^2}=\sqrt{118} \approx 10.863$
+
+        $\left\|\left[\begin{array}{lll}6 & 1 & -9\end{array}\right]\right\|_3=\sqrt[3]{|6|^3+|1|^3+|-9|^3}=\sqrt[3]{946} \approx 9.817$  
+
+        $\left\|\left[\begin{array}{lll}6 & 1 & -9\end{array}\right]\right\|_{\infty}=\max (|6|,|1|,|-9|)=9$
 
 
-### Exercise 8 (Exam 2014.2 (a+b))
-An IT company receives its printed circuit boards from two different suppliers, 1 and 2. Records show that 5% of the circuit boards from supplier 1 and 3% of the circuit boards from supplier 2 are defective. 60% of the company’s current circuit boards come from supplier 2, and the remaining from supplier 1. The company usually keeps a stock of 2000 circuit boards. 
-
-1. Based on this information, construct a contingency table of the company’s circuit board stock. Place supplier in the columns and defective/non-defective in the rows.
-2. If a randomly chosen circuit board from the company’s stock is chosen and turns out to be defective, what is the probability that the circuit board is from supplier 1?
-
-??? answer
-    1. The contingency table is as follows:
-
-        |               | Supplier 1 | Supplier 2 | Total |
-        |---------------|------------|------------|-------|
-        | **Defectives**    | 40         | 36         | 76    |
-        | **Non-Defectives**| 760        | 1164       | 1924  |
-        | **Total**         | 800        | 1200       | 2000  |
-
-    2. The probability that a circuit board is from supplier 1 given that it is defective is:
+    2. \(\left\|\left[\begin{array}{llll}-2 & -2 & -2 & -2\end{array}\right]\right\|_1=|-2|+|-2|+|-2|+|-2|=8\)
    
-        \[
-        P(\text{Supplier 1} | \text{Defective}) = \frac{P(\text{Supplier 1} \cap \text{Defective})}{P(\text{Defective})} = \frac{40/2000}{76/2000} = \frac{40}{76} \approx 0.5263.
-        \]
+        \(\left\|\left[\begin{array}{llll}-2 & -2 & -2 & -2\end{array}\right]\right\|_2=\sqrt{|-2|^2+|-2|^2+|-2|^2+|-2|^2}=4\)
 
-### Exercise 9 (Exam 2015.2)
-A batch of 1000 hard drives from three suppliers were tested. 2% of the hard drives from Toshiba and 2% of the hard drives from Seagate were defective, and in the entire batch there were 3% defectives in total. In the batch, 50% were Western Digital hard drives and 30% were Toshibas.
+        \(\left\|\left[\begin{array}{llll}-2 & -2 & -2 & -2\end{array}\right]\right\|_3=\sqrt[3]{|-2|^3+|-2|^3+|-2|^3+|-2|^3}=\sqrt[3]{32} \approx 3.175\)
 
-1. Based on this information, create a 3 x 2 contingency table of the hard drives.
-2. What is the probability that a defective product came from Seagate?
-3. What is the probability of randomly selecting a Western Digital hard drive from the entire batch?
+        \(\left\|\left[\begin{array}{cccc}-2 & -2 & -2 & -2\end{array}\right]\right\|_{\infty}=\max (|-2|,|-2|,|-2|,|-2|)=2\)
 
-??? answer
-    1. The contingency table is as follows:
 
-        | Supplier          | Defective | Non-Defective | Total |
-        |--------------------|-----------|---------------|-------|
-        | Toshiba (30%)      | 6         | 294           | 300   |
-        | Seagate (20%)      | 4         | 196           | 200   |
-        | Western Digital (50%) | 20        | 480           | 500   |
-        | **Total**          | 30        | 970           | 1000  |
-
-    2. The probability that a defective product came from Seagate is:
-   
-        \[
-        P(\text{Seagate} | \text{Defective}) = \frac{P(\text{Seagate} \cap \text{Defective})}{P(\text{Defective})} = \frac{4/1000}{30/1000} = \frac{4}{30} = \frac{2}{15} \approx 0.1333.
-        \]
-
-    3. The probability of randomly selecting a Western Digital hard drive from the entire batch is:
-   
-        \[
-        P(\text{Western Digital}) = \frac{500}{1000} = 0.5.
-        \]
-
-### Exercise 10 (Exam 2016 New Test.3)
-The probability that a regularly scheduled flight departs on time is 0.83; the probability that it arrives on time is 0.82; and the probability that it departs and arrives on time is 0.78. Find the probability that a plane
-
-1. Arrives on time, given that it departed on time
-2. Departed on time, given that it has arrived on time
-3. Arrives on time, given that it did not depart on time
-
-??? answer
-    1. \(P(\text{Arrives on time} | \text{Departs on time}) = \frac{P(\text{Arrives on time} \cap \text{Departs on time})}{P(\text{Departs on time})} = \frac{0.78}{0.83} \approx 0.9398\)
-
-    2. \(P(\text{Departs on time} | \text{Arrives on time}) = \frac{P(\text{Departs on time} \cap \text{Arrives on time})}{P(\text{Arrives on time})} = \frac{0.78}{0.82} \approx 0.9512\)
-
-    3. \(P(\text{Arrives on time} | \text{Did not depart on time}) = \frac{P(\text{Arrives on time} \cap \text{Did not depart on time})}{P(\text{Did not depart on time})} = \frac{0.04}{0.17} \approx 0.2353\)
-   
 ## Uddybende noter
 Vektorer er fundamentale byggesten inden for lineær algebra og 3D-matematik. De kan beskrives matematisk som lister af tal og geometrisk som rettede linjesegmenter med en bestemt længde og retning.
 

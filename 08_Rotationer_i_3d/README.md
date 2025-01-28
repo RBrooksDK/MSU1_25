@@ -1,9 +1,9 @@
-<h1 align="center">Polære koordinater</h1>
+<h1 align="center">Rotationer i 3D</h1>
 
 
 
 ## Forberedelse
-3DM: [Kapitel 7]()
+3DM: [Kapitel 8]()
 
 I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
 

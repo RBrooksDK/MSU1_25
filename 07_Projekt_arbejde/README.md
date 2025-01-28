@@ -1,9 +1,9 @@
-<h1 align="center">Polære koordinater</h1>
+<h1 align="center">Projektarbejde</h1>
 
 
 
 ## Forberedelse
-3DM: [Kapitel 7]()
+
 
 I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
 

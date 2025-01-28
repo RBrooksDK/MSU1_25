@@ -108,7 +108,6 @@ markdown_extensions:
   - pymdownx.tilde
 
 extra_javascript:
-  - javascripts/3d-coordinates.js
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
@@ -142,8 +141,8 @@ nav:
     - 04 Lineære tranformationer: 04_Matricer_og_linear_transformationer/README.md
     - 05 Matricer II: 05_Mere_om_Matricer/README.md
     - 06 Polære Koordinater: 06_Polaere_koordinater/README.md
-    - 07 Rotationr i 3D: 07_Rotationer_i_3d/README.md
-    - 08 Opstart projektarbejde: 08_Projekt_arbejde/README.md
+    - 07 Opstart projektarbejde: 07_Projekt_arbejde/README.md
+    - 08 Rotationer i 3D: 08_Rotationer_i_3d/README.md
     - 09 Geometri: 09_Geometri/README.md
     - 10 3D Grafik: 10_3d_grafik/README.md
   - Eksamen: pages/exam.md
