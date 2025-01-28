@@ -1,7 +1,10 @@
 <h1 align="center">00 Koordinatsystemer</h1>
 
 <p align="center">
-  <img src="src/3d_coordinate_system.png" width="500">
+    <video class="custom-video" width="400" autoplay loop muted>
+        <source src="../figures/video_preview0_h264.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </p>
 
 
