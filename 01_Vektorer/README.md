@@ -361,9 +361,7 @@ Længden af en vektor \(\mathbf{v} = [x, y, z]\) defineres som:
 
 Dette svarer til afstanden fra origo til punktet \((x, y, z)\) i rummet.  
 
-
-
-### Afstand mellem vektorer 
+#### Afstand mellem vektorer 
 Afstanden mellem to vektorer \(\mathbf{v} = [x_1, y_1, z_1]\) og \(\mathbf{w} = [x_2, y_2, z_2]\) er givet ved:
 
 \[
@@ -372,9 +370,7 @@ d(\mathbf{v}, \mathbf{w}) = \|\mathbf{v} - \mathbf{w}\| = \sqrt{(x_2 - x_1)^2 + 
 
 Denne formel bruges ofte til at beregne afstanden mellem punkter i rummet.  
 
-
-
-### Enhedsvektorer og normalisering
+#### Enhedsvektorer og normalisering
 En **enhedsvektor** er en vektor med længde 1. En vektor \(\mathbf{v}\) kan **normaliseres** til en enhedsvektor:  
 
 \[
@@ -382,8 +378,6 @@ En **enhedsvektor** er en vektor med længde 1. En vektor \(\mathbf{v}\) kan **n
 \]  
 
 Normalisering bruges, når vi kun er interesseret i retningen af en vektor og ikke dens størrelse.  
-
-
 
 ### Prikproduktet  
 Prikproduktet mellem to vektorer \(\mathbf{v}\) og \(\mathbf{w}\) defineres som:  
