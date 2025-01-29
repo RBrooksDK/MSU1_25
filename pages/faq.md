@@ -1,95 +1,91 @@
 <h1 align="center">FAQ</h1>
 
-### General information
+### Generel information
 
-??? question "Is there a FAQ for the course?"
-    Yes, you are looking at it! This FAQ is designed to answer some of the most common questions about the course. If you have a question that is not answered here, please feel free to contact the course responsible, [Richard Brooks](mailto: rib@via.dk)
+??? question "Er der en FAQ for kurset?"
+    Ja, du kigger på den! Denne FAQ er designet til at besvare nogle af de mest almindelige spørgsmål om kurset. Hvis du har et spørgsmål, der ikke er besvaret her, er du velkommen til at kontakte kursusansvarlig, [Richard Brooks](mailto:rib@via.dk).
 
-??? question "What is the course about?"
-    The course covers an introduction to probability theory and statistics. In depth description can be found in the [course description](https://www.via.dk/TMH/Courses/stochastic-modelling-and-processes) or by going the description of each session in the Sessions menu.
 
-??? question "How is the course related to the study program?"
-    The course mostly relates to the study program by providing a foundation for understanding and applying probability theory and statistics in the context of engineering, especially in the field of data science and machine learning.
+??? question "Hvad handler kurset om?"
+    Dette kursus dækker den grundlæggende matematik, der skal bruges i forbindelse med spiludvikling. Kurset dækker en introduktion til lineær algebra. En detaljeret beskrivelse kan findes i [kursusbeskrivelsen](https://www.via.dk/TMH/Courses/matematik-for-spiludviklere?education=sw) eller ved at gå til beskrivelsen af hver session i menuen Sessioner.
 
-??? question "What are the prerequisites for the course?"
-    In the menu to the left, you can find the prerequisites for the course under the "Prerequisites" section. The course is designed to be self-contained, but it is recommended that students have a basic understanding of the topics listed.
 
-??? question "Who should take this course?"
-    The course is intended for students who are interested in learning about probability theory and statistics and how to apply them in the context of engineering. It is very useful for students who are interested in data science and machine learning. It is a complex course, and you should only take it if you are willing to put in the effort to learn the material. The course is mandatory for some Master's programs.
+??? question "Hvad er forudsætningerne for kurset?"
+    I menuen til venstre kan du finde forudsætningerne for kurset under sektionen "00 Koordinatsystemer". Herudover forudsættes at man er godt inde i Matematik A, B og C på gymnasialt niveau, med særlig fokus på vektorer.
 
-??? question "Is attendance mandatory?"
-    Attendance is not mandatory, but it is highly recommended. The course is complex, and it is important to keep up with the material. If you are unable to attend a session, you should make sure to catch up on the material, e.g. by watching the recording of the 2021 session.
----
 
-### Who to contact?
+??? question "Er fremmøde obligatorisk?"
+    Fremmøde er obligatorisk og du skal have mindst 75% fremmøde for at blive indstillet til eksamen.
 
-??? question "Who should I contact if I have questions about the course content?"
-    You can contact the course responsible, [Richard Brooks](mailto:rib@via.dk), if you have questions about the course content.
-
-??? question "Who should I contact if I have questions about the exam?"
-    You should always contact the [Study Service](mailto: studieservice.hs@via.dk) if you have questions about the exam.
-
-??? question "Who should I contact if I have questions about the schedule?"
-    You can contact our [scheduler](mailto: giba@via.dk) if you have questions about the schedule.
-
-??? question "Who should I contact if I have scheduling conflicts?"
-    You can contact our [scheduler](mailto: giba@via.dk) if you have questions about scheduling conflicts.
-
-??? question "Who should I contact if I want to know whether this course is mandatory for a Master's program or if it satisfies a specific requirement?"
-    You can contact the [Study Councillor](mailto: eng.studycounselling@via.dk).
 
 ---
 
-### Exam and assessment
+### Hvem skal jeg kontakte?
 
-??? question "What type of exam will conclude the course"
-    Please see the "Exam" section in the menu to the left for detailed information about the exam.
+??? question "Hvem skal jeg kontakte, hvis jeg har spørgsmål om kursusindholdet?"
+    Du kan kontakte kursusansvarlig, [Richard Brooks](mailto:rib@via.dk), hvis du har spørgsmål om kursusindholdet.
 
-??? question "When will the exam and re-exam be held?"
-    The exam is usually held in June and the re-exam in August. The exact dates will be published in the exam plan in MyVia. Feel free to contact the [Study Service](mailto: studieservice.hs@via.dk) for more information.
+??? question "Hvem skal jeg kontakte, hvis jeg har spørgsmål om eksamen?"
+    Du skal altid kontakte [Studieservice](mailto:studieservice.hs@via.dk), hvis du har spørgsmål om eksamen.
 
-??? question "What is the grading scale for the course?"
-    The grading scale for the course is the 7-point grading scale.
+??? question "Hvem skal jeg kontakte, hvis jeg har spørgsmål om skemaet?"
+    Du kan kontakte vores [skemaplanlægger](mailto:giba@via.dk), hvis du har spørgsmål om skemaet.
 
-??? question "How is the final grade calculated?"
-    The final grade is calculated based on the exam. The exam has two parts: a Flowlock exam in Wiseflow and a Wiseflow exam without Flowlock. Part 1 weighs 75% and Part 2 weighs 25% in the final grade. Please see the "Exam" section in the menu to the left for more information.
+??? question "Hvem skal jeg kontakte, hvis jeg har skemakonflikter?"
+    Du kan kontakte vores [skemaplanlægger](mailto:giba@via.dk), hvis du har spørgsmål om skemakonflikter.
 
-??? question "What is the re-exam procedure?"
-    Re-exams may be oral. Please see the "Exam" section in the menu to the left for more information.
+---
 
-??? question "What happens if I fail the exam?"
-    If you fail the exam, you will have the opportunity to take a re-exam. Please see the "Exam" section in the menu to the left for more information.
+### Eksamen og bedømmelse
 
-??? question "What happens if I fail the re-exam?"
-    If you fail the re-exam, you will have to wait until the course is held again to retake the exam. In special cases, we may be able to offer you an oral re-exam. Please see the "Exam" section in the menu to the left for more information.
+??? question "Hvilken type eksamen afslutter kurset?"
+    Se venligst sektionen "Eksamen" i menuen til venstre for detaljeret information om eksamen.
 
-??? question "How many percentage points do I need to pass the exam?"
-    The exam is graded on a 7-point grading scale. To pass the exam, you need a grade of 02 or higher. In order to obtain a 02, you need to score at least 50% of the total points on the exam. This score may vary from year to year, but is never higher than 50%.
+??? question "Hvornår afholdes eksamen og reeksamen?"
+    Eksamen afholdes normalt i juni, og reeksamen i august. De præcise datoer offentliggøres i eksamensplanen på MyVia. Du er velkommen til at kontakte [Studieservice](mailto:studieservice.hs@via.dk) for mere information.
+
+??? question "Hvilken karakterskala bruges i kurset?"
+    Kurset bedømmes efter 7-trins skalaen.
+
+??? question "Hvordan beregnes den endelige karakter?"
+    Det gives som en helhedsvurdering af projektet og den mundtlige eksamen. Se venligst sektionen "Eksamen" i menuen til venstre for mere information.
+
+??? question "Hvordan foregår reeksamen?"
+    Reeksamen har samme form som eksamen.
+
+??? question "Hvad sker der, hvis jeg dumper eksamen?"
+    Hvis du dumper eksamen, får du mulighed for at tage en reeksamen. Se venligst sektionen "Eksamen" i menuen til venstre for mere information.
+
+??? question "Hvad sker der, hvis jeg dumper reeksamen?"
+    Hvis du dumper reeksamen, skal du vente, indtil kurset afholdes igen, for at tage eksamen. I særlige tilfælde kan vi muligvis tilbyde dig en ekstra reeksamen. Se venligst sektionen "Eksamen" i menuen til venstre for mere information.
+
+??? question "Hvor mange procentpoint skal jeg have for at bestå eksamen?"
+    Eksamen bedømmes efter 7-trins skalaen. For at bestå eksamen skal du opnå en karakter på mindst 02.
+
 
 ---
 
 ## Resources
 
-??? question "Is the course book mandatory?"
-    The course book is not mandatory, but I do recommend finding some resources to help you understand the material. The course book is a good resource, but there are many other resources available online. I recommend [Probability Course](https://www.probabilitycourse.com/) as a good resource.
+## Ressourcer
 
-??? question "Is Python mandatory?"
-    Python is mandatory for the course. You will need to use Python to complete the assignments and the exam. If you are not familiar with Python, I recommend finding some resources to help you learn the basics.
+??? question "Er kursusbogen obligatorisk?"
+    Kursusbogen er ikke som sådan obligatorisk, men jeg anbefaler at I bruger den, da den er rigtig nem at gå til. Det væsentligste er at I får set videoerne inden timerne.
 
-??? question "Is Jupyter Notebook mandatory?"
-    Jupyter Notebook is mandatory for the course. You will need to use Jupyter Notebook to complete the assignments and the exam. You can install a Plugin in VSCode to run Jupyter Notebooks.
+??? question "Er Python obligatorisk?"
+    Python er obligatorisk for kurset. Du skal bruge Python til at løse opgaverne og eksamen. Hvis du ikke er fortrolig med Python, anbefaler jeg, at du finder nogle ressourcer til at lære det grundlæggende. Det er også muligt at bruge C++, men det bliver for egen regning.
 
-??? question "Is the course material available online?"
-    Yes, the course material is available online. You can find all material by navigating the menu to the left.
+??? question "Er Jupyter Notebook obligatorisk?"
+    Jupyter Notebook er obligatorisk for kurset. Du skal bruge Jupyter Notebook til at løse nogle af opgaverne. Du kan installere en plugin i VSCode for at køre Jupyter Notebooks.
 
-??? question "Is there a recommended study plan?"
-    Yes, I recommend following the study plan outlined in the course material. You can find the study plan in the course material by navigating the menu to the left.
+??? question "Er kursusmaterialet tilgængeligt online?"
+    Ja, kursusmaterialet er tilgængeligt online. Du kan finde alt materiale ved at navigere i menuen til venstre.
 
-??? question "Where do I find material such as old exam cases, solutions, and other resources?"
-    You can find all material by navigating the menu to the left, see "General Resources SMP".
+??? question "Er der en anbefalet studieplan?"
+    Ja, jeg anbefaler at følge studieplanen, som er beskrevet i kursusmaterialet. Du kan finde studieplanen ved at navigere i menuen til venstre.
 
-??? question "Are there any additional resources available?"
-    Yes, there are many additional resources available online. I recommend checking out the resources listed in the course material. You can find the resources by navigating the menu to the left.
+??? question "Hvor finder jeg materiale som gamle eksamensopgaver, løsninger og andre ressourcer?"
+    Vi har ikke nogen gamle eksamensopgaver, men du kan finde alt materiale ved at navigere i menuen til venstre under "Generelle ressourcer".
 
-??? question "What is the Wiseflow code?"
-    The Wiseflow code for the course is 0000. However, at the exam you will be given specific codes.
+??? question "Er der yderligere ressourcer tilgængelige?"
+    Ja, der findes mange ekstra ressourcer online. Jeg anbefaler at tjekke de ressourcer, der er opført i kursusmaterialet. Du kan finde dem ved at navigere i menuen til venstre.

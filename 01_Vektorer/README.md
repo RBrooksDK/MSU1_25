@@ -42,6 +42,10 @@ Denne session introducerer begrebet vektorer, både i matematisk og geometrisk f
 
 ## Øvelser
 
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
+
 ---
 
 **Øvelse 1**

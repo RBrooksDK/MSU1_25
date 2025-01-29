@@ -1,28 +1,27 @@
-<h1 align="center">Exam</h1>
+<h1 align="center">Eksamen</h1>
 
-### Exam prerequisites: 
-None
+### Eksamensforudsætninger: 
 
-### Exam type
-The exam has two parts:
+1. Der er krav om mindst 75% fremmøde til undervisningen for at kunne gå til eksamen.
+2. Herudover skal man uploade et summary af sit projekt til Wiseflow for at kunne gå til eksamen.
 
-- The first part is a Flowlock exam in Wiseflow.
-- The second part is a Wiseflow exam without Flowlock.
-The second part must be completed in the Jupyter Notebook environment and the answers must be submitted in Wiseflow.
+Ved manglende opfyldelse af eksamensforudsætning 1, skal den studerende gennemføre en skriftlig opgave i WISEflow for at blive indstillet til reeksamen.
 
-Part 1 has a duration of 3 hours and part 2 has a duration of 1 hour. The exam has a total duration of 4 hours. 
-The student will not be able to access the second part before the first part is concluded.
-Part 1 weighs 75% and Part 2 weighs 25% in the final grade.
+Denne opgave planlægges efter den ordinære eksamen.
 
-### Tools allowed 
-In the first part the students are allowed to use any notes, books, and/or other written/printed material and will have access to PDF files on their laptop.
+Eksamensforudsætning 2 kan ikke afhjælpes af erstatningsopgave.
 
-The students may bring their own calculator.
+### Eksamensform
+Individuel mundtlig eksamen, 20 minutter.
 
-In the second part all supplementary materials and aids are allowed, e.g., using a computer as a reference work.
+Eksamen tager afsæt i et gruppeprojekt, afleveret (i WISEflow) i henhold til deadline. Emnet for gruppeprojektet er selvvalgt fra pensum og skal godkendes af underviseren. Projektet skal indeholde praktiske anvendelser af det selvvalgte emne.
 
-It is not allowed, however, to use AI-tools such as Copilot, ChatGPT, Bing, etc.
-Communication of any sort is not allowed during the exam and will lead to expulsion of all involved parties from the exam.
+Der gives én karakter på baggrund af både projektet og den mundtlige eksamen.
 
-### Re-exam
-Re-exams may be oral.
+Intern bedømmelse.
+
+### Tilladte hjælpemidler
+Alle hjælpemidler er tilladt til udarbejdelse af projektet. Dog skal den studerende angive kilder, herunder brug af Generativ A.I. og Machine Learning teknologier. Til den mundtlige eksamen skal den studerende medbringe projektet.
+
+### Reeksamen
+Hvis projektet er mangelfuldt, kan den studerende forbedre og aflevere det igen inden reeksamen, der gennemføres som den ordinære eksamen.
