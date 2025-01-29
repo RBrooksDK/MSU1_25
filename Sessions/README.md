@@ -6,7 +6,7 @@ Klik på en session til venstre for at få adgang til en plan for den specifikke
 
 | Session | Uge | Dato                 | Emne                        |
 | ------- | --- | :-------------------: | ---------------------------- |
-| 00      | 6   |                      | Repetition - selvstudie       |
+| 00      |    |                      | Repetition - selvstudie       |
 | 01      | 6   | 3. feb. 9:00 – 12:00 | Vektorer                    |
 | 02      | 7   | 10. feb. 9:00 – 12:00 | Flere koordinatsystemer      |
 | 03      | 8   | 17. feb. 9:00 – 12:00 | Introduktion til matricer    |

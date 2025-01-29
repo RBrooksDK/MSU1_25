@@ -303,9 +303,6 @@ Vektorer kan repræsenteres på flere forskellige måder, afhængigt af kontekst
 
 På denne kursusside bruges **fed skrift** som standardnotation for vektorer ($\mathbf{v}$) og en hat for enhedsvektorer ($\hat{\mathbf{v}}$), da dette er konsistent og nemt at læse i både trykt og digital form. Skalarer er almindelige små bogstaver i kursiv, f.eks. $a$, $b$, $x$, $y$, $z$, $\alpha$, $\beta$. Disse repræsenterer almindelige tal uden geometrisk betydning. Matricer noteres med **fed skrift med store bogstaver**, f.eks. $\mathbf{A}$, $\mathbf{B}$, $\mathbf{M}$ osv. Dette er en standardnotation, der gør det nemt at skelne dem fra vektorer og skalarer.
 
-
-
-
 ### Typer af vektorer
 - **Rækkevektor**: Vandret repræsentation, f.eks. $\mathbf{v} =[x, y, z]$.
 - **Søjlevektor**: Lodret repræsentation, f.eks. $\mathbf{v} = \begin{bmatrix} x \\ y \\ z \end{bmatrix}$.
@@ -347,15 +344,117 @@ At negere en vektor svarer til multiplikation med $-1$:
 
 - $-\begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} -x \\ -y \end{bmatrix}$.
 
-### Enhedsvektorer og normalisering
-Enhedsvektorer har længden $1$ og bruges til at angive retning:
-
-- Normalisering: $\mathbf{\hat{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|}$ for $\|\mathbf{v}\| \neq 0$.
-
 ### Punkt vs. vektor
 - **Punkt**: Angiver en absolut position, f.eks. $(x, y)$.
 - **Vektor**: Angiver forskydning, f.eks. $\mathbf{v} = [x, y]$.
+
 Disse begreber overlapper i mange tilfælde, men er konceptuelt forskellige.
 
-### Anvendelse
-Vektorer er essentielle i spiludvikling, da de bruges til at modellere positioner, bevægelser og kræfter. Forståelsen af både deres matematiske og geometriske egenskaber er central for effektiv brug.
+### Geometriske egenskaber af vektorer
+
+#### **Længde (normen af en vektor)**  
+Længden af en vektor \(\mathbf{v} = [x, y, z]\) defineres som:  
+
+\[
+\|\mathbf{v}\| = \sqrt{x^2 + y^2 + z^2}
+\]  
+
+Dette svarer til afstanden fra origo til punktet \((x, y, z)\) i rummet.  
+
+
+
+### Afstand mellem vektorer 
+Afstanden mellem to vektorer \(\mathbf{v} = [x_1, y_1, z_1]\) og \(\mathbf{w} = [x_2, y_2, z_2]\) er givet ved:
+
+\[
+d(\mathbf{v}, \mathbf{w}) = \|\mathbf{v} - \mathbf{w}\| = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2}
+\]  
+
+Denne formel bruges ofte til at beregne afstanden mellem punkter i rummet.  
+
+
+
+### Enhedsvektorer og normalisering
+En **enhedsvektor** er en vektor med længde 1. En vektor \(\mathbf{v}\) kan **normaliseres** til en enhedsvektor:  
+
+\[
+\hat{\mathbf{v}} = \frac{\mathbf{v}}{\|\mathbf{v}\|}, \quad \text{for } \|\mathbf{v}\| \neq 0
+\]  
+
+Normalisering bruges, når vi kun er interesseret i retningen af en vektor og ikke dens størrelse.  
+
+
+
+### Prikproduktet  
+Prikproduktet mellem to vektorer \(\mathbf{v}\) og \(\mathbf{w}\) defineres som:  
+
+\[
+\mathbf{v} \cdot \mathbf{w} = v_1 w_1 + v_2 w_2 + v_3 w_3
+\]  
+
+Dette giver et **skalar-resultat** og har to vigtige fortolkninger:  
+
+1. **Mål for vinklen mellem to vektorer:**  
+   
+    \[
+    \mathbf{v} \cdot \mathbf{w} = \|\mathbf{v}\| \|\mathbf{w}\| \cos\theta
+    \]  
+
+    hvor \(\theta\) er vinklen mellem vektorerne.  
+
+     - Hvis \(\mathbf{v} \cdot \mathbf{w} > 0\), peger vektorerne nogenlunde i samme retning.  
+     - Hvis \(\mathbf{v} \cdot \mathbf{w} = 0\), er vektorerne **ortogonale** (vinkelrette).  
+     - Hvis \(\mathbf{v} \cdot \mathbf{w} < 0\), peger de i modsat retning.  
+
+1. **Prikproduktet som projektion:**  
+    Prikproduktet kan også tolkes som projektionen af \(\mathbf{v}\) på \(\mathbf{w}\): 
+
+    \[
+    \frac{\mathbf{v} \cdot \mathbf{w}}{\|\mathbf{w}\|} = \|\mathbf{v}\| \cos\theta
+    \]  
+
+    Dette beskriver, hvor meget af \(\mathbf{v}\) der ligger i retningen af \(\mathbf{w}\).  
+
+
+
+### Krydsproduktet 
+Krydsproduktet af to **3D-vektorer** \(\mathbf{v} = [v_1, v_2, v_3]\) og \(\mathbf{w} = [w_1, w_2, w_3]\) giver en **ny vektor** vinkelret på begge:  
+
+\[
+\mathbf{v} \times \mathbf{w} =
+\begin{bmatrix} 
+v_2 w_3 - v_3 w_2 \\ 
+v_3 w_1 - v_1 w_3 \\ 
+v_1 w_2 - v_2 w_1
+\end{bmatrix}
+\]
+
+Krydsproduktet bruges ofte til at finde normalvektorer og i fysik til at beskrive moment og magnetiske felter.  
+
+Egenskaber:  
+
+- Resultatet er **en vektor**, ikke en skalar.  
+- \(\mathbf{v} \times \mathbf{w}\) er **ortogonal** på både \(\mathbf{v}\) og \(\mathbf{w}\).  
+- Hvis \(\mathbf{v}\) og \(\mathbf{w}\) er parallelle, er krydsproduktet **nulvektoren**.  
+
+
+### Oversigt over vektoridentiteter
+
+| **Identitet** | **Kommentarer** |
+|--------------|----------------|
+| \( \mathbf{a} + \mathbf{b} = \mathbf{b} + \mathbf{a} \) | Kommutativ egenskab for vektoraddition |
+| \( \mathbf{a} - \mathbf{b} = \mathbf{a} + (-\mathbf{b}) \) | Definition af vektorsubtraktion |
+| \( (\mathbf{a} + \mathbf{b}) + \mathbf{c} = \mathbf{a} + (\mathbf{b} + \mathbf{c}) \) | Associativ egenskab for vektoraddition |
+| \( k (\mathbf{a} + \mathbf{b}) = k \mathbf{a} + k \mathbf{b} \) | Skalarmultiplikation distribuerer over vektoraddition |
+| \( \|k \mathbf{a}\| = \|k\| \|\mathbf{a}\| \) | Multiplikation af en vektor med en skalar skalerer størrelsen med en faktor lig den absolutte værdi af skalaren |
+| \( \|\mathbf{a}\| \geq 0 \) | Størrelsen af en vektor er ikke-negativ |
+| \( \|\mathbf{a}\|^2 + \|\mathbf{b}\|^2 = \|\mathbf{a} + \mathbf{b}\|^2 \) | Pythagoras' sætning anvendt på vektoraddition |
+| \( \|\mathbf{a}\| + \|\mathbf{b}\| \geq \|\mathbf{a} + \mathbf{b}\| \) | Trekantsuligheden for vektoraddition (Ingen side kan være længere end summen af de to andre sider) |
+| \( \mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a} \) | Kommutativ egenskab for prikproduktet |
+| \( \|\mathbf{a}\| = \sqrt{\mathbf{a} \cdot \mathbf{a}} \) | Vektorstørrelse defineret ved hjælp af prikprodukt |
+| \( k (\mathbf{a} \cdot \mathbf{b}) = (k\mathbf{a}) \cdot \mathbf{b} = \mathbf{a} \cdot (k\mathbf{b}) \) | Associativ egenskab for skalarmultiplikation med prikprodukt |
+| \( \mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c} \) | Prikprodukt distribuerer over vektoraddition og subtraktion |
+| \( \mathbf{a} \times \mathbf{b} = - (\mathbf{b} \times \mathbf{a}) \) | Krydsproduktet er antikommutativt |
+| \( \mathbf{a} \times \mathbf{b} = (-\mathbf{a}) \times (-\mathbf{b}) \) | Negering af begge operander i krydsproduktet giver det samme vektorresultat |
+| \( k (\mathbf{a} \times \mathbf{b}) = (k\mathbf{a}) \times \mathbf{b} = \mathbf{a} \times (k\mathbf{b}) \) | Associativ egenskab for skalarmultiplikation med krydsprodukt |
+| \( \mathbf{a} \times (\mathbf{b} + \mathbf{c}) = \mathbf{a} \times \mathbf{b} + \mathbf{a} \times \mathbf{c} \) | Krydsprodukt distribuerer over vektoraddition og subtraktion |

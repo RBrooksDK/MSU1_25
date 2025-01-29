@@ -17,7 +17,6 @@
 ??? question "Er fremmøde obligatorisk?"
     Fremmøde er obligatorisk og du skal have mindst 75% fremmøde for at blive indstillet til eksamen.
 
-
 ---
 
 ### Hvem skal jeg kontakte?
@@ -64,8 +63,6 @@
 
 
 ---
-
-## Resources
 
 ## Ressourcer
 
