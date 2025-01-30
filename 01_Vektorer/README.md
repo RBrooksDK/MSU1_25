@@ -38,6 +38,32 @@ Denne session introducerer begrebet vektorer, både i matematisk og geometrisk f
 
 ## Videomateriale
 
+[Videonoter](https://drive.google.com/file/d/1-ViAG_ka7PH0AUswAeC09znR-nhW-iq6/view?usp=sharing)
+
+### 1.1. Introduktion til vektorer
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b7eFkSJsGkk?si=qxUa5Rxby1tC4d_j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 1.2. Vektorer i koordinatsystemer
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jfLfH_7VGv8?si=QKjCyMkS23pZjUqh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 1.3. Regneregler
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/inTTWR7KSVw?si=9-H0i2oSAhKyJ1x3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 1.4. Længde, afstand og enhedsvektorer
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ksSWQhmF2uM?si=Ucus8SngnZglnLwT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 1.5. Prikprodukt
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PiYqcXu4Ui8?si=Vz1lILPK3C9zajz-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 1.6. Krydsprodukt
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N3YmZ247D7w?si=IuBmX6j12b6dJL9W" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ---
 
 ## Øvelser
