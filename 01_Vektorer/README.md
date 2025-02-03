@@ -289,7 +289,7 @@ Nogle af de mest almindelige \(p\)-normer omfatter:
 
 Hver af disse normer kan betragtes som en måde at tildele en længde eller størrelse til en vektor. Den Euklidiske norm blev diskuteret i afsnit 2.8. Manhattan-normen har sit navn fra gaderne på Manhattan, der er udlagt som et gitter (fx Cartesia fra afsnit 1.2.1). For eksempel kører en taxa, der kører 1 blok øst og 1 blok nord, en samlet afstand på 2 blokke, mens en helikopter, kan flyve i en lige linje fra start til slut og kun rejse \(\sqrt{2}\) blokke (Euklidisk norm). Chebyshev-normen er blot den absolutte værdi af den komponent i vektoren med den største absolutte værdi. Et eksempel på, hvordan denne norm kan anvendes, er at overveje antallet af træk, der kræves for at flytte en konge i et skakspil fra et felt til et andet. De umiddelbart omkringliggende felter kræver 1 træk, felterne omkring dem kræver 2 træk og så videre.
 
-Find for hver af følgende \(\|\mathbf{x}\|_1, \|\mathbf{x}\|_2, \|\mathbf{x}\|_3\), og \(\|\mathbf{x}\|_{\infty}\):  
+Find hver af følgende \(\|\mathbf{x}\|_1, \|\mathbf{x}\|_2, \|\mathbf{x}\|_3\), og \(\|\mathbf{x}\|_{\infty}\):  
 
 1. \(\left[\begin{array}{lll}6 & 1 & -9\end{array}\right]\)  
 2. \(\left[\begin{array}{llll}-2 & -2 & -2 & -2\end{array}\right]\)  
