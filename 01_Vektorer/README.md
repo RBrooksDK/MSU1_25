@@ -129,6 +129,10 @@ $\mathbf{a}=\left[\begin{array}{ll}
     6
     \end{array}\right]$
 
+1. Find ud af om a, b, c er række- eller søjlevektorer.
+
+2. udregn \(b_y+c_w+a_x+b_z\)
+
 
 ??? answer "Se svaret"
 
