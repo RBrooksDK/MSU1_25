@@ -83,5 +83,13 @@ Men der er rigtig mange gode ressourcer på Youtube. Blot søg efter "Math for G
 
 ---
 
-Sørg for at installere en fungerende version af Jupyter Notebook og Python version 3.7 eller nyere. Den nemmeste måde at installere Python og Jupyter på er ved at bruge [Anaconda Distribution](https://www.anaconda.com/products/distribution). Du kan vælge hvilken som helst platform, du ønsker at arbejde i, så længe den kan håndtere Jupyter Notebooks. At installere VS Code med en Jupyter Notebook-udvidelse ser ud til at være et populært valg.  
+I skal have installeret Python og Jupyter Notebook. Jeg vil tro, at I bliver mest glade for at have det samlet i VS Code. Så I kan installere Python og Jupyter Notebook i VS Code. Følg de guides, der er her til punkt og prikke:
+
+[How to set up a Python environment](https://www.raillyhugo.com/blog/how-to-setup-python-environment)
+
+Og her er en video tutorial:
+[Python How to setup vscode with Jupyter Notebooks to Code](https://www.youtube.com/watch?v=COkYKDAdpck)
+
+Når I henter Python etc. så husk blot at vælge den nyeste stable version af Python - i videoen er det 3.12., men i skrivende stund er det 3.13.1.
+
 

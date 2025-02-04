@@ -7,6 +7,15 @@
 
 I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
 
+I skal have installeret Python og Jupyter Notebook. Jeg vil tro, at I bliver mest glade for at have det samlet i VS Code. Så I kan installere Python og Jupyter Notebook i VS Code. Følg de guides, der er her til punkt og prikke:
+
+[How to set up a Python environment](https://www.raillyhugo.com/blog/how-to-setup-python-environment)
+
+Og her er en video tutorial:
+[Python How to setup vscode with Jupyter Notebooks to Code](https://www.youtube.com/watch?v=COkYKDAdpck)
+
+Når I henter Python etc. så husk blot at vælge den nyeste stable version af Python - i videoen er det 3.12., men i skrivende stund er det 3.13.1.
+
 ## Materiale
 
 [Sessionsmateriale]()
