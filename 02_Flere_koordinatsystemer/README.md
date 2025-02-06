@@ -1,9 +1,7 @@
 <h1 align="center">Flere Koordinatsystemer</h1>
 
-
-
 ## Forberedelse
-3DM: [Kapitel 3]()
+3DM: [Kapitel 3](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EZsFWkemMb1Lg7fX5HguWOsBjbyAugDBBcNQ-Y0uEfB3qA?e=xP3bVr)
 
 I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
 
@@ -18,7 +16,7 @@ Når I henter Python etc. så husk blot at vælge den nyeste stable version af P
 
 ## Materiale
 
-[Sessionsmateriale]()
+[Sessionsmateriale](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ekd-XQ_oGkhHlt2Nt7gMs8IBHTLENq3XnxI38t-pWV7MkQ?e=9p8pVk)
 
 [Øvelsesnoter - tilgængelige mandag]()
 
@@ -36,18 +34,38 @@ I denne session skal vi se, hvordan flere koordinatsystemer anvendes til at fore
 - Basisvektorer
 - Koordinattransformation
 - Hierarkiske koordinatsystemer
-- Venstre- og højrehåndede systemer
 - Passiv og aktiv transformation
-- René Descartes
 
 
 ---
 
 ## Videomateriale
 
+Alt materiale til videoerne er i Sessionsmaterialet.
+
+### 2.1. Introduktion til flere koordinatsystemer
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Bz5chWo08-8?si=A2uR0-LnwlwgXhSw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 2.2. Fra world space til screen space
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xeOhTJa2JWw?si=_PSADb18e4k02-iy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 2.3. Transformationer
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t7g48Wjt6Hc?si=Fcb3sR2PfhnL6j2L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 2.4. Vektorrum og basis
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5ylhyBrZF58?si=MYntIA9_QpUMonlJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 ---
 
+
 ## Øvelser
+
+Øvelser uploades inden timen starter
 
 ---
 
