@@ -8,7 +8,7 @@
 </p>
 
 
-Denne session er tilrettelagt som selvstudie. Jeg har vurderet at det ligge så tæt på gymnasieniveau, at det er noget I selv kan arbejde med. Jeg forudsætter at I kan matematik på gymnasieniveau, og at I har arbejdet med koordinatsystemer før. Hvis I har brug for en opfriskning, kan I se [videoerne](#videomateriale) nedenfor, læse [kapitel 1](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EcdahK3g3eROhhGCoh_fS1MBEWnKVWLrlw0vGmTlw8kpjw?e=WCdU7S) i bogen eller læse de [udvidede noter](#udvidede-noter).
+Denne session er tilrettelagt som selvstudie. Jeg har vurderet at det ligge så tæt på gymnasieniveau, at det er noget I selv kan arbejde med. Jeg forudsætter at I kan matematik på gymnasieniveau, og at I har arbejdet med koordinatsystemer før. Hvis I har brug for en opfriskning, kan I se [videoerne](#videomateriale) nedenfor, læse [kapitel 1](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EcdahK3g3eROhhGCoh_fS1MBEWnKVWLrlw0vGmTlw8kpjw?e=WCdU7S) i bogen eller læse de [uddybende noter](#uddybende-noter).
 
 ### Kort om sessionen
 
