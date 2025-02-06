@@ -1,5 +1,12 @@
 <h1 align="center">Flere Koordinatsystemer</h1>
 
+<p align="center">
+    <video class="custom-video" width="600" autoplay loop muted>
+        <source src="../figures/video_preview2_h264.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</p>
+
 ## Forberedelse
 3DM: [Kapitel 3](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EZsFWkemMb1Lg7fX5HguWOsBjbyAugDBBcNQ-Y0uEfB3qA?e=xP3bVr)
 
