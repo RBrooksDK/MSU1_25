@@ -35,6 +35,17 @@ I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udg
 **Øvelse 1**
 
 
+    Koordinaterne nedenfor er i world space. Transformér disse koordinater fra world space til upright space og object space.
+
+4. \((1,10,3)\)  
+5. \((0,0,0)\)  
+6. \((2.732,10,2.000)\)  
+
+    ??? answer "Se svaret"
+        4. Upright: \((0.000,0.000,0.000)\); Object: \((0.000,0.000,0.000)\)
+        5. Upright: \((-1.000,-10.000,-3.000)\); Object: \((0.634,-10.000,-3.098)\)
+        6. Upright: \((1.732,0.000,-1.000)\); Object: \((2.000,0.000,0.000)\)
+
 
 ??? answer "Se svaret"
 
