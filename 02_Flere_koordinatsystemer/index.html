@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../figures/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
     
     
       
@@ -1344,57 +1344,380 @@
 
 <hr />
 <h2 id="velser">Øvelser<a class="headerlink" href="#velser" title="Permanent link">&para;</a></h2>
-<p>Øvelser uploades inden timen starter</p>
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
+
+<p>Øvelse 1-2 er baseret på sidste uges emne. Øvelse 3-7 er baseret på denne uges emne.</p>
 <hr />
 <p><strong>Øvelse 1</strong></p>
+<p>En ikke-spiller karakter (NPC) står på positionen <span class="arithmatex">\(\mathbf{p}\)</span> med en fremadgående retning <span class="arithmatex">\(\mathbf{v}\)</span>.</p>
+<ol>
+<li>
+<p>Hvordan kan prikproduktet bruges til at bestemme, om punktet <span class="arithmatex">\(\mathbf{x}\)</span> er foran eller bagved NPC'en? <em>Hint</em>: Jeg gennemgår det i videoen om prikproduktet. Ellers se svaret, prøv at forstå det, og gå så videre til opgave (b).</p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p>Brug fortegnet af prikproduktet mellem <span class="arithmatex">\(\mathbf{v}\)</span> og <span class="arithmatex">\(\mathbf{x}-\mathbf{p}\)</span> til at bestemme, om punktet <span class="arithmatex">\(\mathbf{x}\)</span> er foran eller bagved NPC'en. Dette følger af den geometriske fortolkning af prikproduktet,</p>
+<div class="arithmatex">\[
+\mathbf{v} \cdot(\mathbf{x}-\mathbf{p})=\|\mathbf{v}\|\|\mathbf{x}-\mathbf{p}\| \cos \theta
+\]</div>
+<p>hvor <span class="arithmatex">\(\theta\)</span> er vinklen mellem <span class="arithmatex">\(\mathbf{v}\)</span> og <span class="arithmatex">\(\mathbf{x}-\mathbf{p}\)</span>.<br />
+Både <span class="arithmatex">\(\|\mathbf{v}\|\)</span> og <span class="arithmatex">\(\|\mathbf{x}-\mathbf{p}\|\)</span> er altid positive, hvilket betyder, at fortegnet af prikproduktet udelukkende afhænger af værdien af <span class="arithmatex">\(\cos \theta\)</span>.  </p>
+<ul>
+<li>Hvis <span class="arithmatex">\(\cos \theta &gt; 0\)</span>, er <span class="arithmatex">\(\theta\)</span> mindre end <span class="arithmatex">\(90^{\circ}\)</span>, og <span class="arithmatex">\(\mathbf{x}\)</span> er foran NPC'en.  </li>
+<li>Hvis <span class="arithmatex">\(\cos \theta &lt; 0\)</span>, er <span class="arithmatex">\(\theta\)</span> større end <span class="arithmatex">\(90^{\circ}\)</span>, og <span class="arithmatex">\(\mathbf{x}\)</span> er bagved NPC'en.  </li>
+<li>Den særlige situation, hvor <span class="arithmatex">\(\mathbf{v} \cdot(\mathbf{x}-\mathbf{p})=0\)</span>, betyder, at <span class="arithmatex">\(\mathbf{x}\)</span> ligger enten direkte til venstre eller højre for NPC'en. Hvis dette tilfælde ikke eksplicit skal håndteres, kan det vilkårligt tilskrives enten at være foran eller bagved.</li>
+</ul>
 </details>
+</li>
+<li>
+<p>Lad</p>
+<div class="arithmatex">\[
+\mathbf{p}=\begin{bmatrix} -3 &amp; 4 \end{bmatrix}, \quad \mathbf{v}=\begin{bmatrix} 5 &amp; -2 \end{bmatrix}
+\]</div>
+<p>For hvert af de følgende punkter <span class="arithmatex">\(\mathbf{x}\)</span>, bestem om <span class="arithmatex">\(\mathbf{x}\)</span> er foran eller bagved NPC'en:</p>
+<p>i. <span class="arithmatex">\(\mathbf{x}=\begin{bmatrix} 0 &amp; 0 \end{bmatrix}\)</span></p>
+<p>ii. <span class="arithmatex">\(\mathbf{x}=\begin{bmatrix} -6 &amp; 0 \end{bmatrix}\)</span></p>
+<p>iii. <span class="arithmatex">\(\mathbf{x}=\begin{bmatrix} -3 &amp; 0 \end{bmatrix}\)</span></p>
+<p>iv. <span class="arithmatex">\(\mathbf{x}=\begin{bmatrix} -6 &amp; -3.5 \end{bmatrix}\)</span></p>
+<details class="answer">
+<summary>Se svaret</summary>
+<p>i. <span class="arithmatex">\(\mathbf{x}\)</span> er foran NPC'en.</p>
+<p><span class="arithmatex">\(\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{l}
+  0 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right)=\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left[\begin{array}{c}
+  3 \\
+  -4
+  \end{array}\right]=(5)(3)+(-2)(-4)=23\)</span></p>
+<p>ii. <span class="arithmatex">\(\mathbf{x}\)</span> er bagved NPC'en.</p>
+<p><span class="arithmatex">\(\begin{aligned}
+  {\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{c}
+  -6 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right) } &amp; =\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left[\begin{array}{c}
+  -3 \\
+  -4
+  \end{array}\right]=(5)(-3)+(-2)(-4) = -7
+  \end{aligned}\)</span></p>
+<p>iii. <span class="arithmatex">\(\mathbf{x}\)</span> er foran NPC'en.</p>
+<p><span class="arithmatex">\(\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{c}
+  -3 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right)=\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left[\begin{array}{c}
+  0 \\
+  -4
+  \end{array}\right]=(5)(0)+(-2)(-4)=8\)</span></p>
+<p>iv. <span class="arithmatex">\(\mathbf{x}\)</span> kan enten være foran eller bagved NPC'en, afhængigt af hvordan vi har valgt at håndtere dette specielle tilfælde.</p>
+<p><span class="arithmatex">\(\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{c}
+  -6 \\
+  -3.5
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right)=\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left[\begin{array}{c}
+  -3 \\
+  -7.5
+  \end{array}\right]=(5)(-3)+(-2)(-7.5)=0\)</span></p>
+</details>
+</li>
+</ol>
 <hr />
 <p><strong>Øvelse 2</strong></p>
-<p>Udregn følgende:</p>
+<p>Ved at udvide konceptet fra Øvelse 1, betragt nu tilfældet, hvor NPC'en har et begrænset synsfelt (FOV). Hvis den totale FOV-vinkel er <span class="arithmatex">\(\phi\)</span>, kan NPC'en se til venstre eller højre for sin fremadgående retning med en maksimal vinkel på <span class="arithmatex">\(\phi / 2\)</span>.</p>
+<ol>
+<li>
+<p>Hvordan kan prikproduktet bruges til at bestemme, om punktet <span class="arithmatex">\(\mathbf{x}\)</span> er synligt for NPC'en? <em>Hint</em>: Det har noget at gøre med <span class="arithmatex">\(\cos \theta\)</span> og <span class="arithmatex">\(\cos (\phi / 2)\)</span>. Ellers se svaret, prøv at forstå det, og gå så videre til opgave </p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p>For at bestemme, om punktet <span class="arithmatex">\(\mathbf{x}\)</span> er synligt for NPC'en, sammenlignes <span class="arithmatex">\(\cos \theta\)</span> med <span class="arithmatex">\(\cos (\phi / 2)\)</span>. Hvis <span class="arithmatex">\(\cos \theta \geq \cos (\phi / 2)\)</span>, er <span class="arithmatex">\(\mathbf{x}\)</span> synligt for NPC'en.</p>
+<p>Værdien af <span class="arithmatex">\(\cos (\phi / 2)\)</span> kan findes ud fra FOV-vinklen. For at beregne <span class="arithmatex">\(\cos \theta\)</span> anvendes prikproduktet:</p>
+<div class="arithmatex">\[
+\cos \theta=\frac{\mathbf{v} \cdot(\mathbf{x}-\mathbf{p})}{\|\mathbf{v}\|\|\mathbf{x}-\mathbf{p}\|}
+\]</div>
 </details>
-<hr />
-<p><strong>Exercise 3</strong></p>
+</li>
+<li>
+<p>For hvert af punkterne <span class="arithmatex">\(\mathbf{x}\)</span> i Øvelse 1, bestem om <span class="arithmatex">\(\mathbf{x}\)</span> er synligt for NPC'en, hvis dens FOV er <span class="arithmatex">\(90^{\circ}\)</span>.</p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p>Jeg har lavet et lille <a href="Udregn_cos.ipynb">script</a>, som kan udregne cosinusværdierne for jer. I kan også gøre det manuelt.</p>
+<p>i. <span class="arithmatex">\(\mathbf{x}\)</span> er synligt for NPC'en.</p>
+<p><span class="arithmatex">\(\cos \theta=\frac{\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{l}
+  0 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right)}{\left\|\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right]\right\|\left\|\left[\begin{array}{l}
+  0 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right\|}=\frac{23}{(\sqrt{29})(\sqrt{25)}} \approx 0.854 \geq 0.707\)</span></p>
+<p>ii. <span class="arithmatex">\(\mathbf{x}\)</span> er ikke synligt for NPC'en.</p>
+<p><span class="arithmatex">\(\cos \theta =\frac{\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{c}
+  -6 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right)}{\left\|\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right]\right\|\left\|\left[\begin{array}{c}
+  -6 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right\|}=\frac{-7}{(\sqrt{29})(\sqrt{25})} \approx -0.260 &lt; 0.707\)</span></p>
+<p>iii. <span class="arithmatex">\(\mathbf{x}\)</span> er ikke synligt for NPC'en.</p>
+<p><span class="arithmatex">\(\cos \theta=\frac{\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{c}
+  -3 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right)}{\left\|\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right]\right\|\left\|\left[\begin{array}{c}
+  -3 \\
+  0
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right\|}=\frac{8}{(\sqrt{29})(\sqrt{16})} \approx 0.371 &lt; 0.707\)</span></p>
+<p>iv. <span class="arithmatex">\(\mathbf{x}\)</span> er ikke synligt for NPC'en.</p>
+<p><span class="arithmatex">\(\cos \theta=\frac{\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right] \cdot\left(\left[\begin{array}{c}
+  -6 \\
+  -3.5
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right)}{\left\|\left[\begin{array}{c}
+  5 \\
+  -2
+  \end{array}\right]\right\|\left\|\left[\begin{array}{c}
+  -6 \\
+  -3.5
+  \end{array}\right]-\left[\begin{array}{c}
+  -3 \\
+  4
+  \end{array}\right]\right\|}=\frac{0}{(\sqrt{29})(\sqrt{65.25})}=0 &lt; 0.707\)</span></p>
+</details>
+</li>
+</ol>
+<hr />
+<p><strong>Øvelse 3</strong></p>
+<p>Hvilket koordinatsystem (objekt, upright, kamera eller verden) er mest passende at bruge til at stille følgende spørgsmål?</p>
+<ul>
+<li>Er min computer foran mig eller bagved mig?  </li>
+<li>Er bogen øst eller vest for mig?  </li>
+<li>Hvordan kommer jeg fra ét rum til et andet?  </li>
+<li>Kan jeg se min computer?  </li>
+</ul>
+<details class="answer">
+<summary>Se svaret</summary>
+<ul>
+<li>
+<p>Er min computer foran mig eller bagved mig?<br />
+  Object space.</p>
+</li>
+<li>
+<p>Er bogen øst eller vest for mig?<br />
+  Vi kan sammenligne min object space <span class="arithmatex">\(x\)</span>-koordinat med bogens object space <span class="arithmatex">\(x\)</span>-koordinat. Eller vi kan blot undersøge fortegnet af <span class="arithmatex">\(x\)</span>-koordinaten i upright space.</p>
+</li>
+<li>
+<p>Hvordan kommer jeg fra ét rum til et andet?<br />
+  World space.<br />
+  Dette spørgsmål kræver en global position i forhold til verdenskoordinaterne.</p>
+</li>
+<li>
+<p>Kan jeg se min computer?<br />
+  Object space.
+  Eller man kunne sige, at vi kan tage prikproduktet med vores fremadrettede retningsvektor – hvilket er ækvivalent med at udtrække <span class="arithmatex">\(z\)</span>-koordinaten i object space.  </p>
+</li>
+</ul>
 </details>
 <hr />
 <p><strong>Øvelse 4</strong></p>
+<p>For følgende sæt af basisvektorer, bestem om de er lineært uafhængige. Hvis ikke, forklar hvorfor.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}1 \\ 0 \\ 0\end{array}\right],\left[\begin{array}{l}0 \\ 0 \\ 0\end{array}\right],\left[\begin{array}{l}0 \\ 2 \\ 0\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}-1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}1 \\ -2 \\ 3\end{array}\right],\left[\begin{array}{r}1 \\ 2 \\ -3\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}1 \\ 1 \\ 5\end{array}\right],\left[\begin{array}{r}0 \\ -5 \\ 4\end{array}\right],\left[\begin{array}{r}1 \\ -4 \\ 9\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}-1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}1 \\ -2 \\ 3\end{array}\right]\)</span></p>
+</li>
+</ol>
 <details class="answer">
 <summary>Se svaret</summary>
+<ol>
+<li>
+<p>Afhængig da den indeholder en nulvektor.</p>
+</li>
+<li>
+<p>Afhængig - flere vektorer end dimensioner.</p>
+</li>
+<li>
+<p>Afhængig - den tredje er en linær kombination af de to første.</p>
+</li>
+<li>
+<p>Uafhængig</p>
+</li>
+</ol>
 </details>
 <hr />
 <p><strong>Øvelse 5</strong></p>
+<p>For følgende sæt af basisvektorer, bestem om de er ortogonale. Hvis ikke, forklar hvorfor.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}-1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}1 \\ -2 \\ 3\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}0 \\ 4 \\ 1\end{array}\right],\left[\begin{array}{r}0 \\ -1 \\ 4\end{array}\right],\left[\begin{array}{l}8 \\ 0 \\ 0\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{r}4 \\ -6 \\ 2\end{array}\right],\left[\begin{array}{r}-4 \\ -2 \\ 2\end{array}\right],\left[\begin{array}{c}-3 \\ -6 \\ -12\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{r}7 \\ -1 \\ 5\end{array}\right],\left[\begin{array}{r}5 \\ 5 \\ -6\end{array}\right],\left[\begin{array}{r}-2 \\ 0 \\ 1\end{array}\right]\)</span></p>
+</li>
+</ol>
 <details class="answer">
 <summary>Se svaret</summary>
+<ol>
+<li>
+<p>Ikke ortogonale.</p>
+</li>
+<li>
+<p>Ortogonale.</p>
+</li>
+<li>
+<p>Ortogonale.</p>
+</li>
+<li>
+<p>Ikke ortogonale.</p>
+</li>
+</ol>
 </details>
 <hr />
 <p><strong>Øvelse 6</strong></p>
+<p>For følgende sæt af basisvektorer, bestem om de er ortonormale. Hvis ikke, forklar hvorfor.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}-1 \\ 2 \\ 3\end{array}\right],\left[\begin{array}{r}1 \\ -2 \\ 3\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}1 \\ 0 \\ 0\end{array}\right],\left[\begin{array}{r}0 \\ 0 \\ -1\end{array}\right],\left[\begin{array}{l}0 \\ 1 \\ 0\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{l}0 \\ 1 \\ 0\end{array}\right],\left[\begin{array}{c}0 \\ .707 \\ .707\end{array}\right],\left[\begin{array}{l}1 \\ 0 \\ 0\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{r}.921 \\ .294 \\ -.254\end{array}\right],\left[\begin{array}{r}-.254 \\ .951 \\ .178\end{array}\right],\left[\begin{array}{r}.294 \\ -.100 \\ .951\end{array}\right]\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\left[\begin{array}{c}.995 \\ 0 \\ -.100\end{array}\right],\left[\begin{array}{l}.840 \\ .810 \\ .837\end{array}\right],\left[\begin{array}{r}.054 \\ -1.262 \\ .537\end{array}\right]\)</span></p>
+</li>
+</ol>
 <details class="answer">
 <summary>Se svaret</summary>
+<ol>
+<li>
+<p>Nej. Ingen af basisvektorerne har enhedslængde.  </p>
+</li>
+<li>
+<p>Ja, de er ortonormale.  </p>
+</li>
+<li>
+<p>Nej. Den første og anden basisvektor er ikke vinkelrette på hinanden.  </p>
+</li>
+<li>
+<p>Ja, de er ortonormale.  </p>
+</li>
+<li>
+<p>Nej. Den anden og tredje basisvektor har ikke enhedslængde.  </p>
+</li>
+</ol>
 </details>
 <hr />
 <p><strong>Øvelse 7</strong></p>
+<p>Antag at robotten er på positionen <span class="arithmatex">\((1,10,3)\)</span>, og at hendes højre-, op- og fremadrettede vektorer, udtrykt i upright space, er <span class="arithmatex">\([0.866,0,-0.500], [0,1,0]\)</span> og <span class="arithmatex">\([0.500,0,0.866]\)</span>, henholdsvis. (Bemærk, at disse vektorer danner en ortonormal basis.)  </p>
+<p>Følgende punkter er udtrykt i objekt-rummet. Beregn koordinaterne for disse punkter i upright og world space.</p>
+<ol>
+<li><span class="arithmatex">\((-1,2,0)\)</span>  </li>
+<li><span class="arithmatex">\((1,2,0)\)</span>  </li>
+<li>
+<p><span class="arithmatex">\((0,0,0)\)</span>  </p>
 <details class="answer">
 <summary>Se svaret</summary>
+<ol>
+<li>Upright: <span class="arithmatex">\((-0.866,2.000,0.500)\)</span>; World: <span class="arithmatex">\((0.134,12.000,3.500)\)</span></li>
+<li>Upright: <span class="arithmatex">\((0.866,2.000,-0.500)\)</span>; World: <span class="arithmatex">\((1.866,12.000,2.500)\)</span></li>
+<li>Upright: <span class="arithmatex">\((0,0,0)\)</span>; World: <span class="arithmatex">\((1,10,3)\)</span></li>
+</ol>
 </details>
+</li>
+</ol>
 <hr />
-<p><strong>Øvelse 8</strong></p>
-<details class="answer">
-<summary>Se svaret</summary>
-</details>
-<hr />
-<p><strong>Øvelse 9</strong></p>
-<details class="answer">
-<summary>Se svaret</summary>
-</details>
-<p><strong>Øvelse 10</strong></p>
-<details class="answer">
-<summary>Answer</summary>
-</details>
 <h2 id="uddybende-noter">Uddybende noter<a class="headerlink" href="#uddybende-noter" title="Permanent link">&para;</a></h2>
 <p>I denne session introduceres ideen om flere koordinatsystemer og deres betydning i grafik og spiludvikling. Koordinatsystemer oprettes ofte for specifikke formål, og de kan være indlejret i hinanden for at håndtere komplekse interaktioner og hierarkiske relationer mellem objekter.</p>
 <h3 id="hvorfor-flere-koordinatsystemer">Hvorfor flere koordinatsystemer?<a class="headerlink" href="#hvorfor-flere-koordinatsystemer" title="Permanent link">&para;</a></h3>
@@ -1440,11 +1763,15 @@
 <h4 id="hvad-er-en-basisvektor">Hvad er en basisvektor?<a class="headerlink" href="#hvad-er-en-basisvektor" title="Permanent link">&para;</a></h4>
 <ul>
 <li>En basisvektor definerer retningen for hver akse i et koordinatsystem.</li>
-<li>Et vektorfelt kan beskrives som en linearkombination af basisvektorer:
-  [
-  \mathbf{v} = x\mathbf{p} + y\mathbf{q} + z\mathbf{r}
-  ]</li>
-<li>God praksis: Basisvektorer bør være ortogonale (vinkelrette) og have samme længde.</li>
+<li>
+<p>Et vektorfelt kan beskrives som en linearkombination af basisvektorer:</p>
+<div class="arithmatex">\[
+\mathbf{v} = x\mathbf{p} + y\mathbf{q} + z\mathbf{r}
+\]</div>
+</li>
+<li>
+<p>God praksis: Basisvektorer bør være ortogonale (vinkelrette) og have samme længde.</p>
+</li>
 </ul>
 <h4 id="koordinattransformationer">Koordinattransformationer<a class="headerlink" href="#koordinattransformationer" title="Permanent link">&para;</a></h4>
 <ul>
@@ -1601,7 +1928,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.prune", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Kopieret til udklipsholderen", "clipboard.copy": "Kopi\u00e9r til udklipsholderen", "search.result.more.one": "1 resultat mere p\u00e5 denne side", "search.result.more.other": "# resultater mere p\u00e5 denne side", "search.result.none": "Ingen resultater fundet", "search.result.one": "1 resultat", "search.result.other": "# resultater", "search.result.placeholder": "Indtast s\u00f8geord", "search.result.term.missing": "Mangler", "select.version": "V\u00e6lg version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f13b1293.min.js"></script>
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
