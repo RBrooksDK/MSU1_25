@@ -17,7 +17,7 @@ I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udg
 
 [Sessionsmateriale](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/En3EgvyjiiBPiFhgsDoOITYBJgyL36UFnS7ivBi1YZUWsA?e=kw0ooo)
 
-[Øvelsesnoter - tilgængelige mandag]()
+[Øvelsesnoter - tilgængelige mandag](https://drive.google.com/file/d/1myeg7cBBELK9izi3oxcWC9uSjo6BvsEX/view?usp=sharing)
 
 ---
 

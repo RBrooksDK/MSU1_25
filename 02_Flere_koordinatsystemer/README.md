@@ -25,7 +25,7 @@ Når I henter Python etc. så husk blot at vælge den nyeste stable version af P
 
 [Sessionsmateriale](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ekd-XQ_oGkhHlt2Nt7gMs8IBHTLENq3XnxI38t-pWV7MkQ?e=9p8pVk)
 
-[Øvelsesnoter - tilgængelige mandag]()
+[Øvelsesnoter - tilgængelige mandag](https://drive.google.com/file/d/1_gLg9xe4PY5GSPH4jcdEieNgPYk51uwa/view?usp=sharing)
 
 ---
 
