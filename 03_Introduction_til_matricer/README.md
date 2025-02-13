@@ -359,7 +359,6 @@ Overvej derefter, om multiplikation fra højre med søjlevektoren \([5,-1,2]^{\m
     3. Fra venstre: \(\left[\begin{array}{lll}{[2} & 29 & 11]\end{array}\right.\). Fra højre: \(\left[\begin{array}{c}2 \\ 29 \\ 11\end{array}\right]\)
     4. Fra venstre: \(\left[\begin{array}{lll}-10 & -18 & 16\end{array}\right]\). Fra højre: \(\left[\begin{array}{c}10 \\ 18 \\ -16\end{array}\right]\)
 
-
 ---
 
 **Øvelse 8**
@@ -373,8 +372,6 @@ Manipulér de følgende matrixudtryk for at fjerne parenteserne.
 3. \(\left(\left(\mathbf{D}^{\mathrm{T}} \mathbf{C}^{\mathrm{T}}\right)(\mathbf{A B})^{\mathrm{T}}\right)^{\mathrm{T}}\)  
 
 4. \(\left((\mathbf{A B})^{\mathrm{T}}(\mathbf{C D E})^{\mathrm{T}}\right)^{\mathrm{T}}\)  
-
-![Beskrivende tekst](src/oev9.png)
 
 
 ??? answer "Se svaret"
@@ -402,6 +399,7 @@ Par hver figur (1-4) med den tilsvarende transformation (a-d).
 3. \(\left[\begin{array}{cc}-\frac{\sqrt{2}}{2} & -\frac{\sqrt{2}}{2} \\ -\frac{\sqrt{2}}{2} & \frac{\sqrt{2}}{2}\end{array}\right]\)
 4. \(\left[\begin{array}{cc}1.5 & 0 \\ 0 & 2.0\end{array}\right]\)
 
+![Beskrivende tekst](src/oev9.png)
 
 
 ??? answer "Se svaret"
