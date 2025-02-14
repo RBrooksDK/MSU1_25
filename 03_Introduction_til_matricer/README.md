@@ -43,7 +43,7 @@ Målet med sessionen er at give jer en intuitiv forståelse af, hvordan matricer
 
 ## Videomateriale
 
-Alt materiale til videoerne er i Sessionsmaterialet.
+Alt materiale til videoerne er i [Sessionsmaterialet](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Et2l1Ih6uu5Os-few3a3EXUBjHFQeS9wVjGBZmRnYWj8TA?e=LcwbJ7)
 
 ### 3.1. Introduktion til matricer
 
