@@ -157,8 +157,7 @@ For hver matrix, angiv dimensionerne for matricen og identificér, om den er kva
     \text { D } & 5 \times 2 & \text { No } & \text { No } \\
     \text { E } & 1 \times 3 & \text { No } & \text { No } \\
     \mathbf{F} & 4 \times 1 & \text { No } & \text { No } \\
-    \mathbf{G} & 1 \times 4 & \text { No } & \text { No } \\
-    \mathbf{H} & 3 \times 1 & \text { No } & \text { No }
+    \mathbf{G} & 1 \times 4 & \text { No } & \text { No }
     \end{array}
     \end{aligned}
     \]
@@ -227,12 +226,6 @@ Transponér matricerne $\mathbf{A}$, $\mathbf{C}$, $\mathbf{D}$, $\mathbf{F}$ og
     20 \\
     30 \\
     1
-    \end{array}\right] \quad \mathbf{H}^{\mathrm{T}}=\left[\begin{array}{c}
-    \alpha \\
-    \beta \\
-    \gamma
-    \end{array}\right]^{\mathrm{T}}=\left[\begin{array}{lll}
-    \alpha & \beta & \gamma
     \end{array}\right]
     \end{aligned}$
 
@@ -240,10 +233,10 @@ Transponér matricerne $\mathbf{A}$, $\mathbf{C}$, $\mathbf{D}$, $\mathbf{F}$ og
 
 **Øvelse 5**
 
-Find alle mulige par af matricer, der kan multipliceres lovligt, og angiv dimensionerne for det resulterende produkt. Inkludér også "par", hvor en matrix multipliceres med sig selv.  (*Hint*: Der er 14 par.)
+Find alle mulige par af matricer, der kan multipliceres lovligt, og angiv dimensionerne for det resulterende produkt. Inkludér også "par", hvor en matrix multipliceres med sig selv.  (*Hint*: Der er 9 par.)
 
 ??? answer "Se svaret"
-    \(\begin{array}{rll}\mathbf{A B}=(4 \times 3)(3 \times 3)=4 \times 3 & \mathbf{A H}=(4 \times 3)(3 \times 1)=4 \times 1 \\ \mathbf{B B}=(3 \times 3)(3 \times 3)=3 \times 3 & \mathbf{B H}=(3 \times 3)(3 \times 1)=3 \times 1 \\ \mathbf{C C}=(2 \times 2)(2 \times 2)=2 \times 2 & \text { DC }=(5 \times 2)(2 \times 2)=5 \times 2 \\ \mathbf{E B}=(1 \times 3)(3 \times 3)=1 \times 3 & \mathbf{E H}=(1 \times 3)(3 \times 1)=1 \times 1 \\ \mathbf{F E}=(4 \times 1)(1 \times 3)=4 \times 3 & \mathbf{F G}=(4 \times 1)(1 \times 4)=4 \times 4 \\ \mathbf{G A}=(1 \times 4)(4 \times 3)=1 \times 3 & \mathbf{G F}=(1 \times 4)(4 \times 1)=1 \times 1 \\ \mathbf{H E}=(3 \times 1)(1 \times 3)=3 \times 3 & \mathbf{H G}=(3 \times 1)(1 \times 4)=3 \times 4\end{array}\)
+    \(\begin{array}{rll}\mathbf{A B}=(4 \times 3)(3 \times 3)=4 \times 3 \\ \mathbf{B B}=(3 \times 3)(3 \times 3)=3 \times 3 \\ \mathbf{C C}=(2 \times 2)(2 \times 2)=2 \times 2 & \text { DC }=(5 \times 2)(2 \times 2)=5 \times 2 \\ \mathbf{E B}=(1 \times 3)(3 \times 3)=1 \times 3 \\ \mathbf{F E}=(4 \times 1)(1 \times 3)=4 \times 3 & \mathbf{F G}=(4 \times 1)(1 \times 4)=4 \times 4 \\ \mathbf{G A}=(1 \times 4)(4 \times 3)=1 \times 3 & \mathbf{G F}=(1 \times 4)(4 \times 1)=1 \times 1\end{array}\)
  
 
 ---
