@@ -87,11 +87,11 @@ Lav Øvelse 7 fra sidste uge
 
 **Øvelse 2**
 
-Lav øvelse 4.b., 5.c. og 6.d. fra sidste uge.
+Lav øvelse 4.b., 5.c. og 6.d. fra sidste uge i Python.
 
 
 ??? answer "Se svaret"
-    Du skal bruge Sympy til at løse opgaverne. Se løsningerne i opgaven fra sidste uge. I 4.a. skal du række reducere matricen og tjekke om der er frie variable. I 5.c. skal du række reducere kovariansmatricen og tjekke om der kun er værdier på diagonalen. I 6.d. skal du også reducere kovariansmatricen og tjekke om der kun er værdier på diagonalen og om disse værdier er 1 (eller cirka 1).
+    Du skal bruge Sympy til at løse opgaverne. Se løsningerne i opgaven fra sidste uge. I 4.b. skal du række reducere matricen og tjekke om der er frie variable. I 5.c. skal du række reducere kovariansmatricen og tjekke om der kun er værdier på diagonalen. I 6.d. skal du også reducere kovariansmatricen og tjekke om der kun er værdier på diagonalen og om disse værdier er 1 (eller cirka 1).
     
 
 ---
