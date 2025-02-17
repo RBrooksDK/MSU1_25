@@ -132,8 +132,7 @@ z \\
 w 
 \end{bmatrix}, \\  
 \mathbf{G} &= \begin{bmatrix} 
-10 & 20 & 30 \\  
-1  &    &    
+10 & 20 & 30 & 1    
 \end{bmatrix}. 
 \end{aligned}
 $$
