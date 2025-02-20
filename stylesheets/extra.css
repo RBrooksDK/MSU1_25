@@ -163,3 +163,11 @@ a:hover .custom-video {
   transform: scale(1.05); /* Optional: Add hover effects for emphasis */
   transition: transform 0.2s ease;
 }
+
+/* Override image centering and sizing */
+.center-image {
+  display: block;
+  margin: 0 auto !important;
+  height: 300px !important;
+  width: 300px !important;
+}
