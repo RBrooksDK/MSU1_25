@@ -8,13 +8,13 @@
 </p>
 
 ## Forberedelse
-3DM: [Kapitel 5]()
+3DM: [Kapitel 5](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EZjqQWsDCXVCsm9fPNZN7tQBr_LcFjIxYxjcOLIWs5mQ8g?e=Ui4e7k)
 
 I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
 
 ## Materiale
 
-[Sessionsmateriale]()
+[Sessionsmateriale](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EkwrW1csYklNh6JLqqtTznQBL26fDtX7_ljkDpIs4tIbfA?e=X4p6hR)
 
 [Øvelsesnoter - tilgængelige mandag]()
 
