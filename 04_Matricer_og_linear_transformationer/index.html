@@ -1234,57 +1234,109 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GrdqAizcfU?si=PdDComaAf8U16gPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <hr />
 <h2 id="velser">Øvelser<a class="headerlink" href="#velser" title="Permanent link">&para;</a></h2>
-<p>Uploades på mandag</p>
+<p>For hver opgave prøv først at skrive svaret ned på papir (eller en tablet eller på anden vis). Brug eventuelt en lommeregner til at beregne de trigonometriske funktioner. Prøv derefter at implementere det i Python. Brug NumPy da det er mere effektivt. Se eventuelt <a href="">denne</a> notebook, hvor jeg gennemgår forskellige implementeringer. Hvis du føler dig sikker, så bare hop direkte til Python-delen. Du kan også finde mine Python løsninger <a href="">her</a>.</p>
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
+
 <hr />
 <p><strong>Øvelse 1</strong></p>
+<p>Alle nedenstående er i 3D-rummet.</p>
+<ol>
+<li>Konstruér en matrix til at rotere <span class="arithmatex">\( -22^{\circ} \)</span> omkring <span class="arithmatex">\( x \)</span>-aksen.  </li>
+<li>Konstruér en matrix til at rotere <span class="arithmatex">\( 30^{\circ} \)</span> omkring <span class="arithmatex">\( y \)</span>-aksen.  </li>
+<li>Konstruér en matrix til at rotere <span class="arithmatex">\( -15^{\circ} \)</span> omkring aksen <span class="arithmatex">\( [0.267,-0.535,0.802] \)</span>.  </li>
+</ol>
 <details class="answer">
 <summary>Se svaret</summary>
+<ol>
+<li><span class="arithmatex">\(\left[\begin{array}{ccc}1 &amp; 0 &amp; 0 \\ 0 &amp; \cos \left(-22^{\circ}\right) &amp; \sin \left(-22^{\circ}\right) \\ 0 &amp; -\sin \left(-22^{\circ}\right) &amp; \cos \left(-22^{\circ}\right)\end{array}\right]=\left[\begin{array}{ccc}1.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.927 &amp; -0.375 \\ 0.000 &amp; 0.375 &amp; 0.927\end{array}\right]\)</span></li>
+<li><span class="arithmatex">\(\begin{aligned} &amp; {\left[\begin{array}{ccc}\cos 30^{\circ} &amp; 0 &amp; -\sin 30^{\circ} \\ 0 &amp; 1 &amp; 0 \\ \sin 30^{\circ} &amp; 0 &amp; \cos 30^{\circ}\end{array}\right]=\left[\begin{array}{ccc}0.866 &amp; 0.000 &amp; -0.500 \\ 0.000 &amp; 1.000 &amp; 0.000 \\ 0.500 &amp; 0.000 &amp; 0.866\end{array}\right]}\end{aligned}\)</span></li>
+<li><span class="arithmatex">\(\left[\begin{array}{ccc}0.968 &amp; -0.212 &amp; -0.131 \\ 0.203 &amp; 0.976 &amp; -0.084 \\ 0.146 &amp; 0.054 &amp; 0.988\end{array}\right]\)</span></li>
+</ol>
 </details>
 <hr />
 <p><strong>Øvelse 2</strong></p>
-<p>Udregn følgende:</p>
+<p>Konstruér en matrix, der fordobler højden, bredden og længden af et objekt i 3D.</p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\left[\begin{array}{lll}2 &amp; 0 &amp; 0 \\ 0 &amp; 2 &amp; 0 \\ 0 &amp; 0 &amp; 2\end{array}\right]\)</span></p>
 </details>
 <hr />
 <p><strong>Exercise 3</strong></p>
+<p>Konstruér en matrix til at skalere med en faktor 5 omkring planet gennem origo, som er vinkelret på vektoren <span class="arithmatex">\( [0.267,-0.535,0.802] \)</span>.  </p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\left[\begin{array}{ccc}1.285 &amp; -0.571 &amp; 0.857 \\ -0.571 &amp; 2.145 &amp; -1.716 \\ 0.857 &amp; -1.716 &amp; 3.573\end{array}\right]\)</span></p>
 </details>
 <hr />
 <p><strong>Øvelse 4</strong></p>
+<p>Konstruér en matrix til ortografisk projektion på planet gennem origo, som er vinkelret på vektoren <span class="arithmatex">\( [0.267,-0.535,0.802] \)</span>.  </p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\left[\begin{array}{ccc}0.929 &amp; 0.143 &amp; -0.214 \\ 0.143 &amp; 0.714 &amp; 0.429 \\ -0.214 &amp; 0.429 &amp; 0.356\end{array}\right]\)</span></p>
 </details>
 <hr />
 <p><strong>Øvelse 5</strong></p>
+<p>Konstruér en matrix til ortografisk spejling omkring planet gennem origo, som er vinkelret på vektoren <span class="arithmatex">\( [0.267,-0.535,0.802] \)</span>.  </p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\left[\begin{array}{ccc}0.857 &amp; .286 &amp; -0.428 \\ 0.286 &amp; .428 &amp; 0.858 \\ -0.428 &amp; .858 &amp; -0.286\end{array}\right]\)</span></p>
 </details>
 <hr />
 <p><strong>Øvelse 6</strong></p>
+<p>Et objekt havde oprindeligt sine akser og origo sammenfaldende med verdens akser og origo. Det blev derefter roteret <span class="arithmatex">\( 30^{\circ} \)</span> omkring <span class="arithmatex">\( y \)</span>-aksen og derefter <span class="arithmatex">\( -22^{\circ} \)</span> omkring verdens <span class="arithmatex">\( x \)</span>-akse.</p>
+<ol>
+<li>Hvad er matricen, der kan bruges til at transformere rækkevektorer fra objektets rum til verdensrummet? <em>Hint</em>: du kan bruge rotationsmatricerne fra øvelse 1.</li>
+<li>Hvad med matricen til at transformere vektorer fra verdensrummet til objektets rum? <em>Hint</em>: Det er ret meget relateret til (6a) og transponering.</li>
+<li>Udtryk objektets <span class="arithmatex">\( z \)</span>-akse ved hjælp af opretstående koordinater (upright space fra sidste session).</li>
+</ol>
 <details class="answer">
 <summary>Se svaret</summary>
+<ol>
+<li><span class="arithmatex">\(\begin{aligned} \mathbf{M}_{\mathrm{obj} \rightarrow \text { wld }}=\mathbf{R}_y\left(30^{\circ}\right) \mathbf{R}_x\left(-22^{\circ}\right) &amp; =\left[\begin{array}{ccc}0.866 &amp; 0.000 &amp; -0.500 \\ 0.000 &amp; 1.000 &amp; 0.000 \\ 0.500 &amp; 0.000 &amp; 0.866\end{array}\right]\left[\begin{array}{ccc}1.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.927 &amp; -0.375 \\ 0.000 &amp; 0.375 &amp; 0.927\end{array}\right] \\ &amp; =\left[\begin{array}{ccc}0.866 &amp; -0.187 &amp; -0.464 \\ 0.000 &amp; 0.927 &amp; -0.375 \\ 0.500 &amp; 0.324 &amp; 0.803\end{array}\right]\end{aligned}\)</span></li>
+<li>
+<p>Her skal vi tage de modsatte rotationer i den modsatte rækkefølge.</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathbf{M}_{\mathrm{wld} \rightarrow \mathrm{obj}}=\mathbf{R}_x\left(22^{\circ}\right) \mathbf{R}_y\left(-30^{\circ}\right) &amp; =\left[\begin{array}{ccc}
+1.000 &amp; 0.000 &amp; 0.000 \\
+0.000 &amp; 0.927 &amp; 0.375 \\
+0.000 &amp; -0.375 &amp; 0.927
+\end{array}\right]\left[\begin{array}{ccc}
+0.866 &amp; 0.000 &amp; 0.500 \\
+0.000 &amp; 1.000 &amp; 0.000 \\
+-0.500 &amp; 0.000 &amp; 0.866
+\end{array}\right] \\
+&amp; =\left[\begin{array}{ccc}
+0.866 &amp; 0.000 &amp; 0.500 \\
+-0.187 &amp; 0.927 &amp; 0.324 \\
+-0.464 &amp; -0.375 &amp; 0.803
+\end{array}\right]
+\end{aligned}
+\]</div>
+<p>Eller, måske vidste du allerede, at resultatet blot ville være transponeret af svaret fra det forrige problem. Hvis ja, godt for dig.</p>
+</li>
+<li>
+<p>Konverter <span class="arithmatex">\( z \)</span>-aksen fra objektets rum til opretstående rum:</p>
+<div class="arithmatex">\[
+\left[\begin{array}{lll}
+0 &amp; 0 &amp; 1
+\end{array}\right]\left[\begin{array}{ccc}
+0.866 &amp; -0.187 &amp; -0.464 \\
+0.000 &amp; 0.927 &amp; -0.375 \\
+0.500 &amp; 0.324 &amp; 0.803
+\end{array}\right]=\left[\begin{array}{lll}
+0.500 &amp; 0.324 &amp; 0.803
+\end{array}\right]
+\]</div>
+<p>Dette er selvfølgelig blot det samme som at udtrække den sidste række af matricen.</p>
+</li>
+</ol>
 </details>
 <hr />
 <p><strong>Øvelse 7</strong></p>
-<details class="answer">
-<summary>Se svaret</summary>
-</details>
-<hr />
-<p><strong>Øvelse 8</strong></p>
-<details class="answer">
-<summary>Se svaret</summary>
-</details>
-<hr />
-<p><strong>Øvelse 9</strong></p>
-<details class="answer">
-<summary>Se svaret</summary>
-</details>
-<p><strong>Øvelse 10</strong></p>
-<details class="answer">
-<summary>Answer</summary>
-</details>
+<p>Klap nu dig selv på skuldrene; du har nu forstået transformationer i 3D-rummet.</p>
 <h2 id="uddybende-noter">Uddybende noter<a class="headerlink" href="#uddybende-noter" title="Permanent link">&para;</a></h2>
 <h3 id="introduktion-til-transformationer">Introduktion til Transformationer<a class="headerlink" href="#introduktion-til-transformationer" title="Permanent link">&para;</a></h3>
 <p>Dette materiale dækker <strong>transformationer i 3D-rum</strong> ved hjælp af <strong><span class="arithmatex">\(3 \times 3\)</span> matricer</strong>, med særligt fokus på <strong>lineære transformationer</strong>. Transformationer bruges til at ændre objekters position, størrelse og orientering i et koordinatsystem. Vi vil primært beskæftige os med transformationer, der kan udtrykkes ved hjælp af matrixmultiplikation.</p>
