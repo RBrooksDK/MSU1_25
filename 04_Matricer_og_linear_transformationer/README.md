@@ -110,7 +110,41 @@ Jeg har dog lavet en række tutorials, som I kan gå igennem. Hvis I vil, kan I 
 
 ## Øvelser
 
-For hver opgave prøv først at skrive svaret ned på papir (eller en tablet eller på anden vis). Brug eventuelt en lommeregner til at beregne de trigonometriske funktioner. Prøv derefter at implementere det i Python. Brug NumPy da det er mere effektivt. Se eventuelt [denne]() notebook, hvor jeg gennemgår forskellige implementeringer. Hvis du føler dig sikker, så bare hop direkte til Python-delen. Du kan også finde mine Python løsninger [her]().
+For hver opgave prøv først at skrive svaret ned på papir (eller en tablet eller på anden vis). Brug eventuelt en lommeregner til at beregne de trigonometriske funktioner. Prøv derefter at implementere det i Python. Brug NumPy da det er mere effektivt. Se eventuelt [denne](https://github.com/RBrooksDK/MSU1_25/blob/main/04_Matricer_og_linear_transformationer/src/eksempler.ipynb) notebook, hvor jeg gennemgår forskellige implementeringer. Hvis du føler dig sikker, så bare hop direkte til Python-delen. Du kan også finde mine Python løsninger [her](https://github.com/RBrooksDK/MSU1_25/blob/main/04_Matricer_og_linear_transformationer/src/loesninger.ipynb).
+
+I opgave 6 skal du anvende matrixmultiplikation til at kombinere to rotationer. Vi har primært arbejdet med matrixmultiplikation i SymPy, hvor man blot kan skrive `A*B` for at multiplicere to matricer. I NumPy foregår det på følgende måde:
+
+```python
+import numpy as np
+
+# Definer to 3x3 matricer
+A = np.array([[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]])
+
+B = np.array([[9, 8, 7],
+              [6, 5, 4],
+              [3, 2, 1]])
+
+# Udfør matrixmultiplikation ved hjælp af np.dot
+resultat = np.dot(A, B)
+
+# Alternativt kan '@'-operatoren bruges (Python 3.5+)
+resultat_alt = A @ B
+
+# Vis resultater
+print("Matrix A:")
+print(A)
+
+print("\nMatrix B:")
+print(B)
+
+print("\nResultat af matrixmultiplikation (A * B):")
+print(resultat)
+
+print("\nResultat af matrixmultiplikation ved hjælp af '@' operatoren (A @ B):")
+print(resultat_alt)
+
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
