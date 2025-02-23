@@ -158,7 +158,7 @@ Konstruér en matrix til at skalere med en faktor 5 omkring planet gennem origo,
 
 **Øvelse 4**
 
-Konstruér en matrix til ortografisk projektion på planet gennem origo, som er vinkelret på vektoren \( [0.267,-0.535,0.802] \).  
+Konstruér en matrix til ortografisk projektion på planet gennem origo, som er vinkelret på vektoren \( [0.267,-0.535,0.802] \). [*Hint*](https://rbrooksdk.github.io/MSU1_25/04_Matricer_og_linear_transformationer/T4/#skalering-i-en-vilkarlig-retning)
 
 
 ??? answer "Se svaret"
@@ -176,9 +176,9 @@ Konstruér en matrix til ortografisk spejling omkring planet gennem origo, som e
 
 **Øvelse 6**
 
-Et objekt havde oprindeligt sine akser og origo sammenfaldende med verdens akser og origo. Det blev derefter roteret \( 30^{\circ} \) omkring \( y \)-aksen og derefter \( -22^{\circ} \) omkring verdens \( x \)-akse.
+Et objekt havde oprindeligt sine akser og origo sammenfaldende med world space akser og origo. Det blev derefter roteret \( 30^{\circ} \) omkring \( y \)-aksen og derefter \( -22^{\circ} \) omkring \( x \)-aksen. Husk at rækkevektorer multipliceres fra højre og kolonnevektorer fra venstre.
 
- 1. Hvad er matricen, der kan bruges til at transformere rækkevektorer fra objektets rum til verdensrummet? *Hint*: du kan bruge rotationsmatricerne fra øvelse 1.
+ 1. Hvad er matricen, der kan bruges til at transformere rækkevektorer fra objekt space til world space? *Hint*: du kan bruge rotationsmatricerne fra øvelse 1.
  2. Hvad med matricen til at transformere vektorer fra verdensrummet til objektets rum? *Hint*: Det er ret meget relateret til (6a) og transponering.
  3. Udtryk objektets \( z \)-akse ved hjælp af opretstående koordinater (upright space fra sidste session).
 
