@@ -1008,6 +1008,43 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#definer-to-3x3-matricer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definer to 3x3 matricer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udfr-matrixmultiplikation-ved-hjlp-af-npdot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Udfør matrixmultiplikation ved hjælp af np.dot
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternativt-kan-operatoren-bruges-python-35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternativt kan '@'-operatoren bruges (Python 3.5+)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vis-resultater" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vis resultater
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vis resultater">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#uddybende-noter" class="md-nav__link">
     <span class="md-ellipsis">
       Uddybende noter
@@ -1126,6 +1163,11 @@
     </nav>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
     </ul>
   
@@ -1234,7 +1276,30 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8GrdqAizcfU?si=PdDComaAf8U16gPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <hr />
 <h2 id="velser">Øvelser<a class="headerlink" href="#velser" title="Permanent link">&para;</a></h2>
-<p>For hver opgave prøv først at skrive svaret ned på papir (eller en tablet eller på anden vis). Brug eventuelt en lommeregner til at beregne de trigonometriske funktioner. Prøv derefter at implementere det i Python. Brug NumPy da det er mere effektivt. Se eventuelt <a href="">denne</a> notebook, hvor jeg gennemgår forskellige implementeringer. Hvis du føler dig sikker, så bare hop direkte til Python-delen. Du kan også finde mine Python løsninger <a href="">her</a>.</p>
+<p>For hver opgave prøv først at skrive svaret ned på papir (eller en tablet eller på anden vis). Brug eventuelt en lommeregner til at beregne de trigonometriske funktioner. Prøv derefter at implementere det i Python. Brug NumPy da det er mere effektivt. Se eventuelt <a href="https://github.com/RBrooksDK/MSU1_25/blob/main/04_Matricer_og_linear_transformationer/src/eksempler.ipynb">denne</a> notebook, hvor jeg gennemgår forskellige implementeringer. Hvis du føler dig sikker, så bare hop direkte til Python-delen. Du kan også finde mine Python løsninger <a href="https://github.com/RBrooksDK/MSU1_25/blob/main/04_Matricer_og_linear_transformationer/src/loesninger.ipynb">her</a>.</p>
+<p>I opgave 6 skal du anvende matrixmultiplikation til at kombinere to rotationer. Vi har primært arbejdet med matrixmultiplikation i SymPy, hvor man blot kan skrive <code>A*B</code> for at multiplicere to matricer. I NumPy foregår det på følgende måde:</p>
+<p>```python
+import numpy as np</p>
+<h1 id="definer-to-3x3-matricer">Definer to 3x3 matricer<a class="headerlink" href="#definer-to-3x3-matricer" title="Permanent link">&para;</a></h1>
+<p>A = np.array([[1, 2, 3],
+              [4, 5, 6],
+              [7, 8, 9]])</p>
+<p>B = np.array([[9, 8, 7],
+              [6, 5, 4],
+              [3, 2, 1]])</p>
+<h1 id="udfr-matrixmultiplikation-ved-hjlp-af-npdot">Udfør matrixmultiplikation ved hjælp af np.dot<a class="headerlink" href="#udfr-matrixmultiplikation-ved-hjlp-af-npdot" title="Permanent link">&para;</a></h1>
+<p>resultat = np.dot(A, B)</p>
+<h1 id="alternativt-kan-operatoren-bruges-python-35">Alternativt kan '@'-operatoren bruges (Python 3.5+)<a class="headerlink" href="#alternativt-kan-operatoren-bruges-python-35" title="Permanent link">&para;</a></h1>
+<p>resultat_alt = A @ B</p>
+<h1 id="vis-resultater">Vis resultater<a class="headerlink" href="#vis-resultater" title="Permanent link">&para;</a></h1>
+<p>print("Matrix A:")
+print(A)</p>
+<p>print("\nMatrix B:")
+print(B)</p>
+<p>print("\nResultat af matrixmultiplikation (A * B):")
+print(resultat)</p>
+<p>print("\nResultat af matrixmultiplikation ved hjælp af '@' operatoren (A @ B):")
+print(resultat_alt)</p>
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
 </style>
