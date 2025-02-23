@@ -160,8 +160,6 @@ Alle nedenstående er i 3D-rummet.
  2. Konstruér en matrix til at rotere \( 30^{\circ} \) omkring \( y \)-aksen.  
  3. Konstruér en matrix til at rotere \( -15^{\circ} \) omkring aksen \( [0.267,-0.535,0.802] \).  
 
-
-
 ??? answer "Se svaret"
 
     1. $\left[\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \left(-22^{\circ}\right) & \sin \left(-22^{\circ}\right) \\ 0 & -\sin \left(-22^{\circ}\right) & \cos \left(-22^{\circ}\right)\end{array}\right]=\left[\begin{array}{ccc}1.000 & 0.000 & 0.000 \\ 0.000 & 0.927 & -0.375 \\ 0.000 & 0.375 & 0.927\end{array}\right]$
