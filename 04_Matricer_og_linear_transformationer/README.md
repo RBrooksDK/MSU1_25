@@ -144,7 +144,7 @@ print(resultat)
 
 print("\nResultat af matrixmultiplikation ved hjælp af '@' operatoren (A @ B):")
 print(resultat_alt)
-
+```
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
