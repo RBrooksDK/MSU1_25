@@ -208,7 +208,7 @@ Konstruér en matrix til ortografisk spejling omkring planet gennem origo, som e
 
 **Øvelse 6**
 
-Et objekt havde oprindeligt sine akser og origo sammenfaldende med world space akser og origo. Det blev derefter roteret \( 30^{\circ} \) omkring \( y \)-aksen og derefter \( -22^{\circ} \) omkring \( x \)-aksen. Husk at rækkevektorer multipliceres fra højre og kolonnevektorer fra venstre.
+Et objekt havde oprindeligt sine akser og origo sammenfaldende med world space akser og origo. Det blev derefter roteret \( 30^{\circ} \) omkring \( y \)-aksen og derefter \( -22^{\circ} \) omkring \( x \)-aksen. Husk at rækkevektorer multipliceres fra venstre og kolonnevektorer fra højre.
 
  1. Hvad er matricen, der kan bruges til at transformere rækkevektorer fra objekt space til world space? *Hint*: du kan bruge rotationsmatricerne fra øvelse 1.
  2. Hvad med matricen til at transformere vektorer fra verdensrummet til objektets rum? *Hint*: Det er ret meget relateret til (6a) og transponering.
