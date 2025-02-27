@@ -1,0 +1,1247 @@
+
+<!doctype html>
+<html lang="da" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Course page for Matematik for Softwareudviklere at VIA University College">
+      
+      
+        <meta name="author" content="Richard Brooks">
+      
+      
+        <link rel="canonical" href="https://rbrooksdk.github.io/MSU1_25/05_Mere_om_Matricer/T3/">
+      
+      
+      
+      
+      <link rel="icon" href="../../figures/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+    
+    
+      
+        <title>Tutorial 3: Homogene matricer og translationer - Matematik for Spiludviklere</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-12 6 6-6-6-6-1.4 1.4 4.6 4.6-4.6 4.6z"/></svg>');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial-3-homogene-matricer-og-translationer" class="md-skip">
+          Gå til indholdet
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Sidehoved">
+    <a href="../.." title="Matematik for Spiludviklere" class="md-header__button md-logo" aria-label="Matematik for Spiludviklere" data-md-component="logo">
+      
+  <img src="../../figures/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Matematik for Spiludviklere
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial 3: Homogene matricer og translationer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Søg" placeholder="Søg" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Søg">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Del" aria-label="Del" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Nulstil søgning" aria-label="Nulstil søgning" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Start søgning
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RBrooksDK/MSU1_25" title="Åbn arkiv" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Matematik for Spiludviklere" class="md-nav__button md-logo" aria-label="Matematik for Spiludviklere" data-md-component="logo">
+      
+  <img src="../../figures/logo.png" alt="logo">
+
+    </a>
+    Matematik for Spiludviklere
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RBrooksDK/MSU1_25" title="Åbn arkiv" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://rbrooksdk.github.io" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Richard Brooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../Sessions/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Sessioner
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pages/exam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Eksamen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pages/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EitPFtuwEsdPmyp8jK_WPRABPNowCGE9vLvNsyLHZudXIw?e=n8kTwG" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generelle ressourcer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indholdsfortegnelse">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indholdsfortegnelse
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notation-rkkevektorer-vs-sjlevektorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Notation: Rækkevektorer vs. Søjlevektorer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2d-transformationer-i-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      2D Transformationer i 3D
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Translation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Translation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#translation-i-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Translation i Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-rotation-omkring-koordinatakserne" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ Rotation omkring koordinatakserne
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣ Rotation omkring koordinatakserne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Rotation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-affine-transformationer" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Affine Transformationer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Affine Transformationer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rotation-om-origo-efterfulgt-af-translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotation Om Origo Efterfulgt af Translation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotation Om Origo Efterfulgt af Translation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eksempel" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Eksempel
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotation-omkring-et-vilkarligt-punkt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotation Omkring Et Vilkårligt Punkt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rotation Omkring Et Vilkårligt Punkt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affine-translation-sa-rotation-sjle" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Affine: Translation så rotation - søjle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#affine-translation-sa-rotation-rkke" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Affine: Translation, så rotation - række
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-3d-transformationer-som-4d-homogene-matricer" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ 3D Transformationer som 4D Homogene Matricer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vigtige-afsluttende-pointer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vigtige afsluttende pointer
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tutorial-3-homogene-matricer-og-translationer">Tutorial 3: Homogene matricer og translationer<a class="headerlink" href="#tutorial-3-homogene-matricer-og-translationer" title="Permanent link">&para;</a></h1>
+<p>Homogene matricer er 4x4 matricer, der bruges til at repræsentere affine transformationer i 3D-rum. Dette inkluderer <strong>translation, rotation, skalering, shear og perspektivisk projektion</strong>.</p>
+<p>En generel 4x4 transformationsmatrix ser således ud:</p>
+<div class="arithmatex">\[
+\mathbf{M} = \begin{bmatrix}
+r_{11} &amp; r_{12} &amp; r_{13} &amp; 0 \\
+r_{21} &amp; r_{22} &amp; r_{23} &amp; 0 \\
+r_{31} &amp; r_{32} &amp; r_{33} &amp; 0 \\
+t_x &amp; t_y &amp; t_z &amp; 1
+\end{bmatrix}
+\]</div>
+<p>Hvor:</p>
+<ul>
+<li><span class="arithmatex">\(r_{ij}\)</span> repræsenterer elementerne i en 3x3 rotationsmatrix (eller en anden lineær transformation).</li>
+<li><span class="arithmatex">\(t_x, t_y, t_z\)</span> repræsenterer translationen i x-, y- og z-retningen.</li>
+</ul>
+<p>I bogen notation repræsenteres translationen i den <strong>nederste række</strong> af matricen, hvor den vektor, der skal transformeres, er en <strong>rækkevektor</strong> der ganges fra venstre. I videoerne repræsenteres translationen i den <strong>sidste søjle</strong> af matricen, hvor vektoren, der skal transformeres, er en <strong>søjlevektor</strong> der ganges fra højre. Dette er også den mest almindelige konvention.</p>
+<h2 id="notation-rkkevektorer-vs-sjlevektorer">💡 Notation: Rækkevektorer vs. Søjlevektorer<a class="headerlink" href="#notation-rkkevektorer-vs-sjlevektorer" title="Permanent link">&para;</a></h2>
+<p>Når vi arbejder med homogene koordinater, kan vi vælge at repræsentere punkter som:</p>
+<ol>
+<li>
+<p><strong>Rækkevektorer</strong>: <span class="arithmatex">\(\mathbf{p} = \begin{bmatrix} x &amp; y &amp; z &amp; 1 \end{bmatrix}\)</span>  </p>
+<ul>
+<li>Her multiplicerer vi matricen fra højre: <span class="arithmatex">\(\mathbf{p}' = \mathbf{p} \mathbf{M}\)</span></li>
+</ul>
+</li>
+<li>
+<p><strong>Søjlevektorer</strong>: <span class="arithmatex">\(\mathbf{p} = \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}\)</span>  </p>
+<ul>
+<li>Her multiplicerer vi matricen fra venstre: <span class="arithmatex">\(\mathbf{p}' = \mathbf{M} \mathbf{p}\)</span></li>
+</ul>
+</li>
+</ol>
+<p>Vi bruger som bekendt et venstrehåndet system, hvor <span class="arithmatex">\( y \)</span>-aksen peger op, men formlerne ændrer sig afhængigt af, om vi bruger række- eller søjlevektorer. I sidste emne præsenterede vi transformationer i 2D og 3D, hvor vi brugte søjlevektorer - vi fulgte bogens konvention. Men når det kommer til translationer og homogene matricer, skifter bogen om til <em>rækkevektorer</em>. Det er lidt træls og kan skabe forvirring. Men heldigvis er det ret simpelt at konvertere mellem de to konventioner:</p>
+<p>✔ <strong>Forskellen mellem række- og søjlevektorer er, at alle transformationer transponeres!</strong>  </p>
+<p>Bemærk, der kan også være lidt tvivl om hvad der menes med at gange fra højre eller venstre. Lad os sige vi har en vektor <span class="arithmatex">\(\mathbf{v}\)</span> og en matrix <span class="arithmatex">\(\mathbf{M}\)</span>. Hvis vi skriver <span class="arithmatex">\(\mathbf{v} \mathbf{M}\)</span>, betyder det at vi ganger vektoren fra højre med matricen. Hvis vi skriver <span class="arithmatex">\(\mathbf{M} \mathbf{v}\)</span>, betyder det at vi ganger vektoren fra venstre med matricen. Men når der er tale om transformationer, skriver man ofte at transformationen anvendes på vektoren fra højre, fx <span class="arithmatex">\(\mathbf{p}' = \mathbf{p} \mathbf{M}\)</span>, selvom det i praksis betyder at vi ganger vektoren fra venstre med matricen.</p>
+<h2 id="2d-transformationer-i-3d">2D Transformationer i 3D<a class="headerlink" href="#2d-transformationer-i-3d" title="Permanent link">&para;</a></h2>
+<p>Selvom disse transformationer er 2D, kan de altså repræsenteres i 3D ved at inkludere dem i en 3D homogen matrix for søjlevektorer:</p>
+<ul>
+<li>
+<p><strong>2D Rotation om Origo:</strong></p>
+<div class="arithmatex">\[
+\mathbf{R}(θ)_{\text{søjle}} = \begin{bmatrix}
+\cos θ &amp; \sin θ &amp; 0 \\
+-\sin θ &amp; \cos θ &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+<li>
+<p><strong>2D Skalering langs akserne:</strong></p>
+<div class="arithmatex">\[
+\mathbf{S}(k_x, k_y) = \begin{bmatrix}
+k_x &amp; 0 &amp; 0 \\
+0 &amp; k_y &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+</ul>
+<p>For rækkevektorer, skal du transponere matricen:</p>
+<ul>
+<li>
+<p><strong>2D Rotation om Origo:</strong></p>
+<div class="arithmatex">\[
+\mathbf{R}(θ)_{\text{række}} = \begin{bmatrix}
+\cos θ &amp; -\sin θ &amp; 0 \\
+\sin θ &amp; \cos θ &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+<li>
+<p><strong>2D Skalering langs akserne:</strong> Ingen ændring</p>
+</li>
+</ul>
+<h2 id="1-translation"><strong>1️⃣ Translation</strong><a class="headerlink" href="#1-translation" title="Permanent link">&para;</a></h2>
+<p>En <strong>translation</strong> forskyder et punkt i rummet med <span class="arithmatex">\( (t_x, t_y, t_z) \)</span>. For en 3D translation af søjlevektorer bruger vi en 4x4 matrix:</p>
+<div class="arithmatex">\[
+\mathbf{T} =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; t_x \\
+0 &amp; 1 &amp; 0 &amp; t_y \\
+0 &amp; 0 &amp; 1 &amp; t_z \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<p>Multiplikation af et punkt <span class="arithmatex">\((x, y, z, 1)\)</span> med <span class="arithmatex">\(\mathbf{T}\)</span> giver:</p>
+<div class="arithmatex">\[
+\begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} \mathbf{T} =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; t_x \\
+0 &amp; 1 &amp; 0 &amp; t_y \\
+0 &amp; 0 &amp; 1 &amp; t_z \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix} \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}  = \begin{bmatrix} x + t_x \\ y + t_y \\ z + t_z \\ 1 \end{bmatrix}
+\]</div>
+<p>Og til rækkevektorer bruger vi den transponerede version:</p>
+<div class="arithmatex">\[
+\mathbf{T} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+t_x &amp; t_y &amp; t_z &amp; 1
+\end{bmatrix}
+\]</div>
+<p>Multiplikation af et punkt <span class="arithmatex">\((x, y, z, 1)\)</span> med <span class="arithmatex">\(\mathbf{T}\)</span> giver:</p>
+<div class="arithmatex">\[
+\begin{bmatrix} x &amp; y &amp; z &amp; 1 \end{bmatrix} \mathbf{T} = \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+t_x &amp; t_y &amp; t_z &amp; 1
+\end{bmatrix} = \begin{bmatrix} x + t_x &amp; y + t_y &amp; z + t_z &amp; 1 \end{bmatrix}
+\]</div>
+<h3 id="translation-i-python">💻 Translation i Python<a class="headerlink" href="#translation-i-python" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># 4x4 translationsmatrix for søjlevektoren (4, 3, 2)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">tx</span><span class="p">,</span> <span class="n">ty</span><span class="p">,</span> <span class="n">tz</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">translation_matrix_col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tx</span><span class="p">],</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ty</span><span class="p">],</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tz</span><span class="p">],</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Punkt der skal translateres (som en eksplicit søjlevektor)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">p_col</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]])</span>  <span class="c1"># 4x1 column vector</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">T_col</span> <span class="o">=</span> <span class="n">translation_matrix_col</span> <span class="o">@</span> <span class="n">p_col</span>  <span class="c1"># Output vil være 4x1</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Translation med søjlevektorer:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">T_col</span><span class="p">)</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># ✔ Hvis vi bruger rækkevektorer, transponerer vi blot matricen:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1"># 4x4 translationsmatrix for rækkevektorer</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">translation_matrix_row</span> <span class="o">=</span> <span class="n">translation_matrix_col</span><span class="o">.</span><span class="n">T</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># Translation med (4, 2, 3)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">T_row1</span> <span class="o">=</span> <span class="n">p_col</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">translation_matrix_row</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Translation med rækkevektorer:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">T_row1</span><span class="p">)</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1"># Vi kunne også konvertere søjlevektoren til rækkevektor notation direkte</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">T_row2</span> <span class="o">=</span> <span class="n">T_col</span><span class="o">.</span><span class="n">T</span> 
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Konverteret til rækkevektor notation:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">T_row2</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="2-rotation-omkring-koordinatakserne">2️⃣ Rotation omkring koordinatakserne<a class="headerlink" href="#2-rotation-omkring-koordinatakserne" title="Permanent link">&para;</a></h2>
+<p>Sidst brugte vi <span class="arithmatex">\(3 \times 3\)</span> rotationsmatricer til at rotere om koordinatakserne I 3D. Vi kan også repræsentere dette vha. homogene 4D matricer, her for søjlevektorer:</p>
+<ul>
+<li><strong>Rotation om <span class="arithmatex">\( x \)</span>-aksen</strong>:</li>
+</ul>
+<div class="arithmatex">\[ 
+\mathbf{R}_x(\theta)_{\text{søjle}} = 
+\begin{bmatrix} 
+1 &amp; 0 &amp; 0 &amp; 0 \\ 
+0 &amp; \cos \theta &amp; \sin \theta &amp; 0 \\ 
+0 &amp; -\sin \theta &amp; \cos \theta &amp; 0 \\ 
+0 &amp; 0 &amp; 0 &amp; 1 
+\end{bmatrix} 
+\]</div>
+<ul>
+<li><strong>Rotation om <span class="arithmatex">\( y \)</span>-aksen</strong>:</li>
+</ul>
+<div class="arithmatex">\[ 
+\mathbf{R}_y(\theta)_{\text{søjle}} = 
+\begin{bmatrix} 
+\cos \theta &amp; 0 &amp; -\sin \theta &amp; 0 \\ 
+0 &amp; 1 &amp; 0 &amp; 0 \\ 
+\sin \theta &amp; 0 &amp; \cos \theta &amp; 0 \\ 
+0 &amp; 0 &amp; 0 &amp; 1 
+\end{bmatrix} 
+\]</div>
+<ul>
+<li><strong>Rotation om <span class="arithmatex">\( z \)</span>-aksen</strong>:</li>
+</ul>
+<div class="arithmatex">\[ 
+\mathbf{R}_z(\theta)_{\text{søjle}} = 
+\begin{bmatrix} 
+\cos \theta &amp; \sin \theta &amp; 0 &amp; 0 \\ 
+-\sin \theta &amp; \cos \theta &amp; 0 &amp; 0 \\ 
+0 &amp; 0 &amp; 1 &amp; 0 \\ 
+0 &amp; 0 &amp; 0 &amp; 1 
+\end{bmatrix} 
+\]</div>
+<p>Vil du have for rækkevektorer, transponerer du blot matricen:</p>
+<ul>
+<li><strong>Rotation om <span class="arithmatex">\( x \)</span>-aksen</strong>: <span class="arithmatex">\(\mathbf{R}_x(\theta)_{\text{række}} = \mathbf{R}_x(\theta)_{\text{søjle}}^T\)</span></li>
+<li><strong>Rotation om <span class="arithmatex">\( y \)</span>-aksen</strong>: <span class="arithmatex">\(\mathbf{R}_y(\theta)_{\text{række}} = \mathbf{R}_y(\theta)_{\text{søjle}}^T\)</span></li>
+<li><strong>Rotation om <span class="arithmatex">\( z \)</span>-aksen</strong>: <span class="arithmatex">\(\mathbf{R}_z(\theta)_{\text{række}} = \mathbf{R}_z(\theta)_{\text{søjle}}^T\)</span></li>
+</ul>
+<h3 id="rotation">💻 Rotation<a class="headerlink" href="#rotation" title="Permanent link">&para;</a></h3>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">rotation_matrix_x</span><span class="p">(</span><span class="n">theta</span><span class="p">):</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returnerer en 4x4 rotationsmatrix om x-aksen.&quot;&quot;&quot;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">c</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>  <span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1"># Test rotation om x-aksen</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="n">Rx</span> <span class="o">=</span> <span class="n">rotation_matrix_x</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Rotation om x-aksen:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">Rx</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># Konverter til rækkevektor notation</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">Rx_row</span> <span class="o">=</span> <span class="n">Rx</span><span class="o">.</span><span class="n">T</span>
+</span></code></pre></div>
+<hr />
+<p>Her er din omstrukturerede tekst, hvor jeg har fjernet gentagelser og omorganiseret i henhold til vores diskussion. Alle oplysninger er bevaret, men strukturen er mere strømlinet.  </p>
+<hr />
+<h2 id="3-affine-transformationer">3️⃣ Affine Transformationer<a class="headerlink" href="#3-affine-transformationer" title="Permanent link">&para;</a></h2>
+<p>Affine transformationer er transformationer, der kan kombineres af både <strong>lineære transformationer</strong> (såsom rotation, skalering og spejling) og <strong>translationer</strong>.  </p>
+<h3 id="rotation-om-origo-efterfulgt-af-translation">Rotation Om Origo Efterfulgt af Translation<a class="headerlink" href="#rotation-om-origo-efterfulgt-af-translation" title="Permanent link">&para;</a></h3>
+<p>Når vi først <strong>roterer omkring origo</strong> og derefter <strong>translaterer</strong>, anvender vi transformationerne i denne rækkefølge:  </p>
+<ul>
+<li><strong>Søjlevektorer:</strong>  </li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{p}' = \mathbf{T} \mathbf{R} \mathbf{p}
+\]</div>
+<ul>
+<li>Her roteres punktet <strong>før</strong> det translateres.  </li>
+<li>
+<p>Hvis vi ønskede at bruge "de samme" matricer, men med rækkevektorer, skulle vi transponere dem.  </p>
+</li>
+<li>
+<p><strong>Rækkevektorer:</strong>  </p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{p}'^T = \mathbf{p}^T \mathbf{R}^T \mathbf{T}^T
+\]</div>
+<ul>
+<li>Her er Matricerne <span class="arithmatex">\(T\)</span> og <span class="arithmatex">\(R\)</span> de samme matricer som i søjletilfældet. Hvis de er givet som matricer for rækkevektorer, skal de ikke transponeres. Dette er vigtigt!</li>
+</ul>
+<p>Denne type transformation bruges når objekter roteres i <strong>world space</strong> og derefter placeres i rummet.  </p>
+<h4 id="eksempel">💻 Eksempel<a class="headerlink" href="#eksempel" title="Permanent link">&para;</a></h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">translation_matrix</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">ty</span><span class="p">,</span> <span class="n">tz</span><span class="p">):</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returnerer en 4x4 translationsmatrix.&quot;&quot;&quot;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tx</span><span class="p">],</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ty</span><span class="p">],</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">tz</span><span class="p">],</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">def</span><span class="w"> </span><span class="nf">rotation_matrix_x</span><span class="p">(</span><span class="n">theta</span><span class="p">):</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Returnerer en 4x4 rotationsmatrix om x-aksen.&quot;&quot;&quot;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="n">c</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span>  <span class="n">s</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>                     <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="c1"># Definer et punkt i homogene koordinater</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Søjlevektor</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="c1"># Transformationer</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="n">T</span> <span class="o">=</span> <span class="n">translation_matrix</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="n">R</span> <span class="o">=</span> <span class="n">rotation_matrix_x</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1"># Anvend transformationerne</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="n">P_transformed</span> <span class="o">=</span> <span class="n">T</span> <span class="o">@</span> <span class="n">R</span> <span class="o">@</span> <span class="n">P</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Transformeret søjlevektor:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">P_transformed</span><span class="p">)</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="c1"># Konverter til rækkevektor notation</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="n">P_transformed_row</span> <span class="o">=</span> <span class="n">P</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">R</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="n">T</span><span class="o">.</span><span class="n">T</span>    <span class="c1"># P.T er ikke nødvendigt</span>
+</span></code></pre></div>
+<p>Du kan se og interagere med ovenstående transformation her:</p>
+<iframe src="https://www.geogebra.org/calculator/vu6tt2s2?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+<p>I dette plot illustrerer vi, hvordan en vektor <span class="arithmatex">\( P \)</span> transformeres ved hjælp af en rotation efterfulgt af en translation. Vi viser tre vektorer:  </p>
+<ol>
+<li>
+<p><strong>Den røde vektor (oprindelig vektor)</strong>  </p>
+<ul>
+<li>Starter i origo <span class="arithmatex">\( (0,0,0) \)</span> og peger mod <span class="arithmatex">\( (1,2,3) \)</span>.  </li>
+<li>Dette er den oprindelige vektor, før nogen transformation er anvendt.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Den grønne vektor (roteret vektor)</strong>  </p>
+<ul>
+<li>Starter i <span class="arithmatex">\( (5,-2,3) \)</span> og peger mod <span class="arithmatex">\( (6, 1.53553391, 3.70710678) \)</span>.  </li>
+<li>Dette viser, hvordan vektoren ser ud efter at være blevet <strong>roteret</strong>, men før translationen har flyttet dens startpunkt.  </li>
+<li>Retningen er ændret i forhold til den røde vektor på grund af rotationen omkring x-aksen.  </li>
+</ul>
+</li>
+<li>
+<p><strong>Den blå vektor (endeligt transformeret vektor)</strong>  </p>
+<ul>
+<li>Starter i origo <span class="arithmatex">\( (0,0,0) \)</span> og peger mod <span class="arithmatex">\( (6, 1.53553391, 3.70710678) \)</span>.  </li>
+<li>Dette er den færdige transformation, hvor både rotation og translation er anvendt.  </li>
+<li>Bemærk, at vektoren nu har en ny længde og retning i forhold til den røde vektor, hvilket viser effekten af begge transformationer kombineret.  </li>
+</ul>
+</li>
+</ol>
+<p>🔹 <strong>Forskellen mellem den røde og den grønne vektor</strong> viser, hvordan <strong>rotationen</strong> påvirker vektorens retning.<br />
+🔹 <strong>Forskellen mellem den grønne og den blå vektor</strong> viser effekten af <strong>translationen</strong>.  </p>
+<hr />
+<h3 id="rotation-omkring-et-vilkarligt-punkt">Rotation Omkring Et Vilkårligt Punkt<a class="headerlink" href="#rotation-omkring-et-vilkarligt-punkt" title="Permanent link">&para;</a></h3>
+<p>Hvis vi vil <strong>rotere omkring et punkt <span class="arithmatex">\( \mathbf{p} \)</span></strong>, anvender vi en anden strategi:</p>
+<div class="arithmatex">\[
+\mathbf{T}(\mathbf{p}) \mathbf{R} \mathbf{T}(-\mathbf{p})
+\]</div>
+<ul>
+<li>Denne metode sikrer, at rotationen <strong>ikke nødvendigvis sker omkring origo</strong>, men omkring et vilkårligt punkt <span class="arithmatex">\( \mathbf{p} \)</span>.</li>
+<li>Dette gælder for <strong>søjlevektorer</strong>.</li>
+</ul>
+<style type="text/css">
+    ol { list-style-type: numbers; }
+</style>
+
+<ol>
+<li>
+<p><strong><span class="arithmatex">\( T(-\mathbf{p}) \)</span> flytter koordinatsystemet, så rotationspunktet <span class="arithmatex">\( \mathbf{p} \)</span> bliver origo.</strong>  </p>
+<ul>
+<li><span class="arithmatex">\( T(-\mathbf{p}) \)</span> er en translation, der flytter hele rummet <strong>modsat</strong> af <span class="arithmatex">\( \mathbf{p} \)</span>, dvs. til <span class="arithmatex">\( (0,0,0) \)</span>.  </li>
+</ul>
+</li>
+<li>
+<p><strong><span class="arithmatex">\( R \)</span> roterer vektoren omkring origo.</strong>  </p>
+<ul>
+<li><span class="arithmatex">\( R \)</span> anvender rotation omkring origo, hvilket er korrekt efter translationen.</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="arithmatex">\( T(\mathbf{p}) \)</span> flytter koordinatsystemet tilbage.</strong>  </p>
+<ul>
+<li><span class="arithmatex">\( T(\mathbf{p}) \)</span> gendanner den oprindelige position efter rotationen.</li>
+</ul>
+</li>
+</ol>
+<p>I <strong>homogene koordinater</strong> ser dette sådan ud for en søjlevektor <span class="arithmatex">\( \mathbf{v} \)</span>:</p>
+<div class="arithmatex">\[
+\mathbf{v}' = \mathbf{T}(\mathbf{p}) \mathbf{R} \mathbf{T}(-\mathbf{p}) \mathbf{v}
+\]</div>
+<p>Hvis vi vil <strong>rotere omkring et punkt <span class="arithmatex">\( \mathbf{p} \)</span></strong> med rækkevektorer, anvender vi en anden strategi:</p>
+<div class="arithmatex">\[
+\mathbf{v}' = \mathbf{v}\,\mathbf{T}(-\mathbf{p})\,\mathbf{R}\,\mathbf{T}(\mathbf{p})
+\]</div>
+<ul>
+<li>Denne metode sikrer, at rotationen <strong>ikke nødvendigvis sker omkring origo</strong>, men omkring et vilkårligt punkt <span class="arithmatex">\( \mathbf{p} \)</span>.</li>
+<li>Dette gælder for <strong>rækkevektorer</strong>.</li>
+</ul>
+<style type="text/css">
+    ol { list-style-type: numbers; }
+</style>
+
+<ol>
+<li>
+<p><strong><span class="arithmatex">\( T(-\mathbf{p}) \)</span> flytter koordinatsystemet, så rotationspunktet <span class="arithmatex">\( \mathbf{p} \)</span> bliver origo.</strong>  </p>
+<ul>
+<li><span class="arithmatex">\( T(-\mathbf{p}) \)</span> er en translation, der flytter hele rummet <strong>modsat</strong> af <span class="arithmatex">\( \mathbf{p} \)</span>, dvs. til <span class="arithmatex">\( (0,0,0) \)</span>.  </li>
+</ul>
+</li>
+<li>
+<p><strong><span class="arithmatex">\( R \)</span> roterer vektoren omkring origo.</strong>  </p>
+<ul>
+<li><span class="arithmatex">\( R \)</span> anvender rotation omkring origo, hvilket er korrekt efter translationen.</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="arithmatex">\( T(\mathbf{p}) \)</span> flytter koordinatsystemet tilbage.</strong>  </p>
+<ul>
+<li><span class="arithmatex">\( T(\mathbf{p}) \)</span> gendanner den oprindelige position efter rotationen.</li>
+</ul>
+</li>
+</ol>
+<p>I <strong>homogene koordinater</strong> ser dette sådan ud for en rækkevektor <span class="arithmatex">\( \mathbf{v} \)</span>:</p>
+<div class="arithmatex">\[
+\mathbf{v}' = \mathbf{v}\,\mathbf{T}(-\mathbf{p})\,\mathbf{R}\,\mathbf{T}(\mathbf{p})
+\]</div>
+<p>Bemærk her at <span class="arithmatex">\(T\)</span> og <span class="arithmatex">\(R\)</span> ikke er de helt samme matricer som vi anvendte til søjlevektorerne. De er transponerede, da vi nu arbejder med rækkevektorer. Dette fremgår også af koden nedenfor.</p>
+<h4 id="affine-translation-sa-rotation-sjle">💻 Affine: Translation så rotation - søjle<a class="headerlink" href="#affine-translation-sa-rotation-sjle" title="Permanent link">&para;</a></h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">### For søjlevektorer</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">affine_transform_around_point_col</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">R</span><span class="p">):</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Udfører en transformation omkring et punkt p = (px, py, pz).&quot;&quot;&quot;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="n">T1</span> <span class="o">=</span> <span class="n">translation_matrix</span><span class="p">(</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="n">T2</span> <span class="o">=</span> <span class="n">translation_matrix</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">return</span> <span class="n">T2</span> <span class="o">@</span> <span class="n">R</span> <span class="o">@</span> <span class="n">T1</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Rotationscenter</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="n">R</span> <span class="o">=</span> <span class="n">rotation_matrix_x</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">M</span> <span class="o">=</span> <span class="n">affine_transform_around_point_col</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Affine transformation omkring punktet (3,2,1):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="affine-translation-sa-rotation-rkke">💻 Affine: Translation, så rotation - række<a class="headerlink" href="#affine-translation-sa-rotation-rkke" title="Permanent link">&para;</a></h4>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">affine_transform_around_point_row</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">R</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Udfører en transformation omkring et punkt p = (px, py, pz) for rækkevektorer.&quot;&quot;&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">T1</span> <span class="o">=</span> <span class="n">translation_matrix</span><span class="p">(</span><span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="o">-</span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>      <span class="c1"># Bemærk</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">T2</span> <span class="o">=</span> <span class="n">translation_matrix</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>         <span class="c1"># Bemærk</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="k">return</span> <span class="n">T1</span> <span class="o">@</span> <span class="n">R</span> <span class="o">@</span> <span class="n">T2</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Rotationscenter</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="n">R</span> <span class="o">=</span> <span class="n">rotation_matrix_x</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="mi">45</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>         <span class="c1"># Bemærk</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">M</span> <span class="o">=</span> <span class="n">affine_transform_around_point_row</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Affine transformation omkring punktet (3,2,1) (rækkevektor-metoden):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">M</span><span class="p">)</span>
+</span></code></pre></div>
+<h2 id="4-3d-transformationer-som-4d-homogene-matricer">4️⃣ 3D Transformationer som 4D Homogene Matricer<a class="headerlink" href="#4-3d-transformationer-som-4d-homogene-matricer" title="Permanent link">&para;</a></h2>
+<p>Øvrige transformationer i 3D kan også repræsenteres som 4x4 homogene matricer:</p>
+<ul>
+<li>
+<p><strong>Skalering langs de kartesiske akser:</strong></p>
+<div class="arithmatex">\[
+\mathbf{S}(k_x, k_y, k_z) = \begin{bmatrix}
+k_x &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; k_y &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; k_z &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+<li>
+<p><strong>Rotation om en vilkårlig akse</strong> <span class="arithmatex">\(\hat{\mathbf{n}} = (n_x, n_y, n_z)\)</span>:</p>
+<div class="arithmatex">\[
+ \mathbf{R}(\hat{\mathbf{n}}, θ) = \begin{bmatrix}
+n_x^2(1 - \cos θ) + \cos θ &amp; n_xn_y(1 - \cos θ) + n_z\sin θ &amp; n_xn_z(1 - \cos θ) - n_y\sin θ &amp; 0 \\
+n_xn_y(1 - \cos θ) - n_z\sin θ &amp; n_y^2(1 - \cos θ) + \cos θ &amp; n_yn_z(1 - \cos θ) + n_x\sin θ &amp; 0 \\
+n_xn_z(1 - \cos θ) + n_y\sin θ &amp; n_yn_z(1 - \cos θ) - n_x\sin θ &amp; n_z^2(1 - \cos θ) + \cos θ &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+<li>
+<p><strong>Skalering i en vilkårlig retning</strong> <span class="arithmatex">\(\hat{\mathbf{n}}\)</span> <strong>med faktor</strong> <span class="arithmatex">\(k\)</span>:</p>
+<div class="arithmatex">\[
+ \mathbf{S}(\hat{\mathbf{n}}, k) = \begin{bmatrix}
+1 + (k-1)n_x^2 &amp; (k-1)n_xn_y &amp; (k-1)n_xn_z &amp; 0 \\
+(k-1)n_xn_y &amp; 1 + (k-1)n_y^2 &amp; (k-1)n_yn_z &amp; 0 \\
+(k-1)n_xn_z &amp; (k-1)n_yn_z &amp; 1 + (k-1)n_z^2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+<li>
+<p><strong>Ortografisk projektion på et plan med normalvektor</strong> <span class="arithmatex">\(\hat{\mathbf{n}}\)</span>:</p>
+<div class="arithmatex">\[
+ \mathbf{P}(\hat{\mathbf{n}}) = \begin{bmatrix}
+1 - n_x^2 &amp; -n_xn_y &amp; -n_xn_z &amp; 0 \\
+-n_xn_y &amp; 1 - n_y^2 &amp; -n_yn_z &amp; 0 \\
+-n_xn_z &amp; -n_yn_z &amp; 1 - n_z^2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+<li>
+<p><strong>Refleksion om et plan med normalvektor</strong> <span class="arithmatex">\(\hat{\mathbf{n}}\)</span>:</p>
+<div class="arithmatex">\[
+ \mathbf{R}(\hat{\mathbf{n}}) = \begin{bmatrix}
+1 - 2n_x^2 &amp; -2n_xn_y &amp; -2n_xn_z &amp; 0 \\
+-2n_xn_y &amp; 1 - 2n_y^2 &amp; -2n_yn_z &amp; 0 \\
+-2n_xn_z &amp; -2n_yn_z &amp; 1 - 2n_z^2 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+</li>
+</ul>
+<h2 id="vigtige-afsluttende-pointer">Vigtige afsluttende pointer<a class="headerlink" href="#vigtige-afsluttende-pointer" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Rækkefølge af Transformationer:</strong> Når du bruger homogene matricer, er rækkefølgen, transformationerne anvendes i, afgørende. Hvis du kombinerer flere transformationer, skal du multiplicere matricerne i den korrekte rækkefølge. Hvis du bruger rækkevektorer, udføres transformationerne fra venstre mod højre. Hvis du bruger søjlevektorer, udføres de fra højre mod venstre.</li>
+<li><strong>To sæt transformationsmatricer:</strong> Transformationsmatricerne er også forskellige om du bruger søjle- eller rækkevektorer.</li>
+<li><strong>Affine Transformationer:</strong> Homogene matricer giver dig mulighed for at kombinere lineære transformationer (rotation, skalering, shear) med translation, hvilket resulterer i affine transformationer.</li>
+<li><strong>Perspektivisk Projektion:</strong> Den fjerde kolonne i en homogen matrix kan bruges til at implementere perspektivisk projektion, hvilket er afgørende for at skabe realistiske 3D-scener.</li>
+<li><strong>Points at infinity:</strong> Disse punkter er defineret som værende på formen <span class="arithmatex">\((x, y, z, 0)\)</span></li>
+<li><strong>Translation 'Slås fra':</strong> w-komponenten i en 4D vektor kan bruges til selektivt at "slukke" for translationsdelen af en 4×4 matrix</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Tilbage til start
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Richard Brooks
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:rib@via.dk" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 8-8 5-8-5V6l8 5 8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/RBrooksDK/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/rbrooks-dk/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.prune", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Kopieret til udklipsholderen", "clipboard.copy": "Kopi\u00e9r til udklipsholderen", "search.result.more.one": "1 resultat mere p\u00e5 denne side", "search.result.more.other": "# resultater mere p\u00e5 denne side", "search.result.none": "Ingen resultater fundet", "search.result.one": "1 resultat", "search.result.other": "# resultater", "search.result.placeholder": "Indtast s\u00f8geord", "search.result.term.missing": "Mangler", "select.version": "V\u00e6lg version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
