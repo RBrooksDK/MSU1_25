@@ -50,7 +50,7 @@ Jeg har dog lavet en række tutorials, som I kan gå igennem. Hvis I vil, kan I 
 <div class="grid cards" markdown>
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="../figures/T1.mp4" type="video/mp4">
+  <source src="src/T1.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
@@ -60,7 +60,7 @@ Jeg har dog lavet en række tutorials, som I kan gå igennem. Hvis I vil, kan I 
     [:octicons-arrow-right-24: T1: Lineær vs ikke-lineære transformationer](T1.md)
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="../figures/T2.mp4" type="video/mp4">
+  <source src="src/T2.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
@@ -71,7 +71,7 @@ Jeg har dog lavet en række tutorials, som I kan gå igennem. Hvis I vil, kan I 
     
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="../figures/T3.mp4" type="video/mp4">
+  <source src="src/T3.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
@@ -80,7 +80,7 @@ Jeg har dog lavet en række tutorials, som I kan gå igennem. Hvis I vil, kan I 
     [:octicons-arrow-right-24: T3: 3D-Rotationer](T3.md)
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="../figures/T4.mp4" type="video/mp4">
+  <source src="src/T4.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
