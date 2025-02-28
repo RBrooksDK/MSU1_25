@@ -106,6 +106,8 @@ Hvis du ikke har så meget tid, kan denne video (til nøds) erstatte de to ovens
     ol { list-style-type: lower-alpha; }
 </style>
 
+[Der er Python løsninger i sessionsmaterialet]
+
 **Øvelse 1**
 
 I denne øvelse vil jeg gerne have at I først prøver at regne det i hånden, så I får fornemmelsen af, hvordan det hænger sammen. Derefter kan I tjekke jeres svar i Python. Find determinanten af følgende matricer:
