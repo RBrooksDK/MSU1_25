@@ -85,7 +85,10 @@ Hvis du ikke har så meget tid, kan denne video (til nøds) erstatte de to ovens
     
     [:octicons-arrow-right-24: T3: Homogene matricer og translationer](T3.md)
 
-- ![](src/T4.jpg){align=right : style="height:100px"}
+- <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
+  <source src="src/T4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+    </video>
 
     Perspektivisk projektion er en teknik inden for 3D-grafik, der bruges til at skabe en **illusion af dybde** på en 2D-skærm. Denne tutorial forklarer, hvordan 4x4 matricer bruges til at implementere perspektivisk projektion, og dækker de underliggende principper og den nødvendige matematik.
     
