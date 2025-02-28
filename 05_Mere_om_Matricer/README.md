@@ -100,13 +100,13 @@ Hvis du ikke har så meget tid, kan denne video (til nøds) erstatte de to ovens
 
 ## Øvelser
 
----
-
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
 </style>
 
 [Der er Python løsninger i sessionsmaterialet]
+
+---
 
 **Øvelse 1**
 
