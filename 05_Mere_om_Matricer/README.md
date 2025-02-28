@@ -123,7 +123,7 @@ I denne øvelse vil jeg gerne have at I først prøver at regne det i hånden, s
 
 **Øvelse 2**
 
-Is the following matrix orthogonal?
+Is the following matrix orthogonal? [Brug Python. Se Tutorial 2]
 
 $$
 \left[\begin{array}{ccc}
@@ -133,17 +133,18 @@ $$
 \end{array}\right]
 $$
 
-Use a tolerance of $10^{-4}$.
+Use a tolerance of $10^{-4}$ and then $10^{-3}$.
 
 ??? answer "Se svaret"
-    The matrix is orthogonal within the appropriate tolerance.
+    The matrix is orthogonal within the appropriate tolerance ($10^{-3}$).
     
-
 ---
 
 **Exercise 3**
-Construct a $4 \times 4$ matrix to translate by $[4,2,3]$.
+Construct a $4 \times 4$ matrix to translate by $[4,2,3]$. Remember that the book uses row vectors, so the translation should be in the last row.
+
 ??? answer "Se svaret"
+    $\left[\begin{array}{llll}1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 4 & 2 & 3 & 1\end{array}\right]$
 
 
 ---
