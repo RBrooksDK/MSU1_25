@@ -1179,35 +1179,39 @@
 <p>The matrix is orthogonal within the appropriate tolerance (<span class="arithmatex">\(10^{-3}\)</span>).</p>
 </details>
 <hr />
-<p><strong>Exercise 3</strong>
-Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to translate by <span class="arithmatex">\([4,2,3]\)</span>. Remember that the book uses row vectors, so the translation should be in the last row.</p>
+<p><strong>Exercise 3</strong></p>
+<p>Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to translate by <span class="arithmatex">\([4,2,3]\)</span>. Remember that the book uses row vectors, so the translation should be in the last row.</p>
 <details class="answer">
 <summary>Se svaret</summary>
 <p><span class="arithmatex">\(\left[\begin{array}{llll}1 &amp; 0 &amp; 0 &amp; 0 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 4 &amp; 2 &amp; 3 &amp; 1\end{array}\right]\)</span></p>
 </details>
 <hr />
-<p><strong>Øvelse 4</strong>
-Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to rotate <span class="arithmatex">\(20^{\circ}\)</span> about the <span class="arithmatex">\(x\)</span>-axis and then translate by <span class="arithmatex">\([4,2,3]\)</span>.</p>
+<p><strong>Øvelse 4</strong></p>
+<p>Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to rotate <span class="arithmatex">\(20^{\circ}\)</span> about the <span class="arithmatex">\(x\)</span>-axis and then translate by <span class="arithmatex">\([4,2,3]\)</span>.</p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\begin{aligned} \mathbf{R}_x\left(20^{\circ}\right) \mathbf{T}([4,2,3]) &amp; =\left[\begin{array}{cccc}1.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.940 &amp; 0.342 &amp; 0.000 \\ 0.000 &amp; -0.342 &amp; 0.940 &amp; 0.000 \\ 0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000\end{array}\right]\left[\begin{array}{llll}1.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 1.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.000 &amp; 1.000 &amp; 0.000 \\ 4.000 &amp; 2.000 &amp; 3.000 &amp; 1.000\end{array}\right] \\ &amp; =\left[\begin{array}{cccc}1.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.940 &amp; 0.342 &amp; 0.000 \\ 0.000 &amp; -0.342 &amp; 0.940 &amp; 0.000 \\ 4.000 &amp; 2.000 &amp; 3.000 &amp; 1.000\end{array}\right]\end{aligned}\)</span></p>
 </details>
 <hr />
-<p><strong>Øvelse 5</strong>
-Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to translate by <span class="arithmatex">\([4,2,3]\)</span> and then rotate <span class="arithmatex">\(20^{\circ}\)</span> about the <span class="arithmatex">\(x\)</span>-axis.</p>
+<p><strong>Øvelse 5</strong></p>
+<p>Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to translate by <span class="arithmatex">\([4,2,3]\)</span> and then rotate <span class="arithmatex">\(20^{\circ}\)</span> about the <span class="arithmatex">\(x\)</span>-axis.</p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\begin{aligned} \mathbf{T}([4,2,3]) \mathbf{R}_x\left(20^{\circ}\right) &amp; =\left[\begin{array}{cccc}1.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 1.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.000 &amp; 1.000 &amp; 0.000 \\ 4.000 &amp; 2.000 &amp; 3.000 &amp; 1.000\end{array}\right]\left[\begin{array}{cccc}1.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.940 &amp; 0.342 &amp; 0.000 \\ 0.000 &amp; -0.342 &amp; 0.940 &amp; 0.000 \\ 0.000 &amp; 0.000 &amp; 0.000 &amp; 1.000\end{array}\right] \\ &amp; =\left[\begin{array}{cccc}1.000 &amp; 0.000 &amp; 0.000 &amp; 0.000 \\ 0.000 &amp; 0.940 &amp; 0.342 &amp; 0.000 \\ 0.000 &amp; -0.342 &amp; 0.940 &amp; 0.000 \\ 4.000 &amp; 0.853 &amp; 3.503 &amp; 1.000\end{array}\right]\end{aligned}\)</span></p>
 </details>
 <hr />
-<p><strong>Øvelse 6</strong>
-Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to perform a perspective projection onto the plane <span class="arithmatex">\(x=5\)</span>. (Assume the origin is the center of projection.)</p>
+<p><strong>Øvelse 6</strong></p>
+<p>Construct a <span class="arithmatex">\(4 \times 4\)</span> matrix to perform a perspective projection onto the plane <span class="arithmatex">\(x=5\)</span>. (Assume the origin is the center of projection.)</p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\left[\begin{array}{cccc}1 &amp; 0 &amp; 0 &amp; 1 / 5 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right]\)</span></p>
 </details>
 <hr />
 <p><strong>Øvelse 7</strong>
-Use the matrix from the previous exercise to compute the 3D coordinates of the projection of the point <span class="arithmatex">\((105,-243,89)\)</span> onto the plane <span class="arithmatex">\(x=5\)</span>.</p>
+Use the matrix from the previous exercise to compute the 3D coordinates of the projection of the point <span class="arithmatex">\((105,-243,89)\)</span> onto the plane <span class="arithmatex">\(x=5\)</span>. [Prøv at gøre det manuelt først, uden Python, og så gå til implementeringen bagefter]</p>
 <details class="answer">
 <summary>Se svaret</summary>
+<p><span class="arithmatex">\(\left[\begin{array}{llll}105 &amp; -243 &amp; 89 &amp; 1\end{array}\right]\left[\begin{array}{cccc}1 &amp; 0 &amp; 0 &amp; 1 / 5 \\ 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 0 &amp; 0\end{array}\right]=\left[\begin{array}{llll}105 &amp; -243 &amp; 89 &amp; \frac{105}{5}\end{array}\right] \Rightarrow\left[\begin{array}{lll}5 &amp; \frac{-81}{7} &amp; \frac{89}{21}\end{array}\right]\)</span></p>
 </details>
 <hr />
 <h2 id="uddybende-noter">Uddybende noter<a class="headerlink" href="#uddybende-noter" title="Permanent link">&para;</a></h2>

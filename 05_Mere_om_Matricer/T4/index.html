@@ -509,14 +509,41 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#perspektivisk-projektionsmatrix" class="md-nav__link">
+  <a href="#perspektivprojektion-fra-origo-til-planerne-rkkevektorer" class="md-nav__link">
     <span class="md-ellipsis">
-      Perspektivisk Projektionsmatrix
+      Perspektivprojektion fra origo til planerne (rækkevektorer)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Perspektivisk Projektionsmatrix">
+    <nav class="md-nav" aria-label="Perspektivprojektion fra origo til planerne (rækkevektorer)">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projektion-pa-x-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projektion på \(x = d\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projektion-pa-y-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projektion på \(y = d\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projektion-pa-z-d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projektion på \(z = d\)
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#eksempel" class="md-nav__link">
@@ -633,52 +660,56 @@ z = d.
 </div>
 
 <hr />
-<h2 id="perspektivisk-projektionsmatrix">Perspektivisk Projektionsmatrix<a class="headerlink" href="#perspektivisk-projektionsmatrix" title="Permanent link">&para;</a></h2>
-<p>For at implementere perspektivisk projektion med homogene koordinater skal vi finde en 4×4 matrix, der transformer et punkt <span class="arithmatex">\((x, y, z, 1)\)</span> til et nyt punkt, hvor division med <span class="arithmatex">\(w\)</span> giver de ønskede perspektiviske koordinater.</p>
-<p>Vi ønsker, at et punkt</p>
+<h2 id="perspektivprojektion-fra-origo-til-planerne-rkkevektorer">Perspektivprojektion fra origo til planerne (rækkevektorer)<a class="headerlink" href="#perspektivprojektion-fra-origo-til-planerne-rkkevektorer" title="Permanent link">&para;</a></h2>
+<p>Nedenfor er de tre <span class="arithmatex">\(4\times 4\)</span>-matricer (for <strong>rækkevektorer</strong>) til at lave en perspektivprojektion fra origo ned på henholdsvis planerne</p>
+<ol>
+<li><span class="arithmatex">\(x = d\)</span>  </li>
+<li><span class="arithmatex">\(y = d\)</span>  </li>
+<li><span class="arithmatex">\(z = d\)</span>.</li>
+</ol>
+<p>Fælles idé: </p>
+<ul>
+<li>Man ønsker, at et vilkårligt punkt <span class="arithmatex">\(\bigl(x,y,z\bigr)\)</span> “skydes” langs linjen fra <span class="arithmatex">\((0,0,0)\)</span> igennem <span class="arithmatex">\((x,y,z)\)</span> til skæringen med planet.  </li>
+<li>I homogene koordinater <span class="arithmatex">\([x\;\;y\;\;z\;\;1]\)</span> skal resultatet af matrixmultiplikationen (før division) være sådan, at når man dividerer de første tre koordinater med den fjerde, fås netop skæringspunktet på planet.</li>
+</ul>
+<hr />
+<h3 id="projektion-pa-x-d">Projektion på <span class="arithmatex">\(x = d\)</span><a class="headerlink" href="#projektion-pa-x-d" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
-\mathbf{p} = \begin{bmatrix} x &amp; y &amp; z &amp; 1 \end{bmatrix}
-\]</div>
-<p>transformeres til</p>
-<div class="arithmatex">\[
-\mathbf{p}' = \begin{bmatrix} x &amp; y &amp; z &amp; \frac{z}{d} \end{bmatrix}.
-\]</div>
-<p>Efter den homogene deling (division med <span class="arithmatex">\(w\)</span>) bliver de projicerede koordinater:</p>
-<div class="arithmatex">\[
-\left(\frac{x}{z/d},\, \frac{y}{z/d},\, d\right) = \left(\frac{dx}{z},\, \frac{dy}{z},\, d\right).
-\]</div>
-<p>Den <span class="arithmatex">\(4 \times 4\)</span> matrix, der udfører denne transformation, er:</p>
-<div class="arithmatex">\[
-\mathbf{P} = \begin{bmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; \frac{1}{d} &amp; 0
+M_{x=d} 
+=\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; \frac{1}{d}\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0
 \end{bmatrix}.
 \]</div>
-<p>Multiplikation af en rækkevektor med denne matrix (bemærk, at her præsenteres det som en rækkevektor-multiplikation):</p>
+<hr />
+<h3 id="projektion-pa-y-d">Projektion på <span class="arithmatex">\(y = d\)</span><a class="headerlink" href="#projektion-pa-y-d" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
-\begin{bmatrix}
-x &amp; y &amp; z &amp; 1
-\end{bmatrix}
-\mathbf{P} =
-\begin{bmatrix}
-x &amp; y &amp; z &amp; \frac{z}{d}
+M_{y=d}
+=\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; \frac{1}{d}\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 0
 \end{bmatrix}.
 \]</div>
-<p>Efterfølgende udføres den homogene division:</p>
+<hr />
+<h3 id="projektion-pa-z-d">Projektion på <span class="arithmatex">\(z = d\)</span><a class="headerlink" href="#projektion-pa-z-d" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
-x_{\text{proj}} = \frac{x}{z/d} = \frac{dx}{z},\quad y_{\text{proj}} = \frac{y}{z/d} = \frac{dy}{z}.
+M_{z=d}
+=\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{d}\\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}.
 \]</div>
-<blockquote>
-<p><strong>Perspektivisk Division:</strong><br />
-Efter multiplikationen med <span class="arithmatex">\(\mathbf{P}\)</span> divideres <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(y\)</span> og <span class="arithmatex">\(z\)</span> med <span class="arithmatex">\(w = \frac{z}{d}\)</span> for at få de endelige 3D-koordinater i clip space.</p>
-</blockquote>
 <hr />
 <h3 id="eksempel">Eksempel<a class="headerlink" href="#eksempel" title="Permanent link">&para;</a></h3>
-<p>Lad os sige, at <span class="arithmatex">\(d = 2\)</span>. Vi har et punkt:</p>
+<p>Lad os sige, at <span class="arithmatex">\(z = d = 2\)</span>. Vi har et punkt:</p>
 <div class="arithmatex">\[
-\mathbf{p} = \begin{bmatrix} 4 &amp; 3 &amp; 8 &amp; 1 \end{bmatrix}.
+\mathbf{p} = \begin{bmatrix} 4 &amp; 3 &amp; 8 \end{bmatrix}.
 \]</div>
 <p>Multiplicer med <span class="arithmatex">\(\mathbf{P}\)</span>:</p>
 <div class="arithmatex">\[
@@ -686,8 +717,8 @@ Efter multiplikationen med <span class="arithmatex">\(\mathbf{P}\)</span> divide
 \begin{bmatrix}
 1 &amp; 0 &amp; 0 &amp; 0 \\
 0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-0 &amp; 0 &amp; \frac{1}{2} &amp; 0
+0 &amp; 0 &amp; 1 &amp; \frac{1}{2}  \\
+0 &amp; 0 &amp; 0 &amp; 0
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -705,7 +736,7 @@ x_{\text{proj}} = \frac{4}{4} = 1,\quad y_{\text{proj}} = \frac{3}{4} = 0.75,\qu
 <p>Det projicerede punkt bliver således <span class="arithmatex">\((1,\,0.75,\,2)\)</span>.</p>
 <hr />
 <h3 id="python">&#128187; Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<p>Her er et eksempel i Python, som demonstrerer oprettelsen af en perspektivisk projektionmatrix og anvendelsen på et 3D-punkt:</p>
+<p>Her er et eksempel i Python, som demonstrerer oprettelsen af en perspektivisk projektionmatrix (på <span class="arithmatex">\(z=d\)</span>) og anvendelsen på et 3D-punkt:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">perspective_projection_matrix</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
@@ -715,8 +746,8 @@ x_{\text{proj}} = \frac{4}{4} = 1,\quad y_{\text{proj}} = \frac{3}{4} = 0.75,\qu
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="sd">    &quot;&quot;&quot;</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">P</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">d</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">d</span><span class="p">],</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]])</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">return</span> <span class="n">P</span>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1"># Afstand til projektionsplanet</span>
