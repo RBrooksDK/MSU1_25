@@ -141,6 +141,7 @@ Use a tolerance of $10^{-4}$ and then $10^{-3}$.
 ---
 
 **Exercise 3**
+
 Construct a $4 \times 4$ matrix to translate by $[4,2,3]$. Remember that the book uses row vectors, so the translation should be in the last row.
 
 ??? answer "Se svaret"
@@ -150,35 +151,40 @@ Construct a $4 \times 4$ matrix to translate by $[4,2,3]$. Remember that the boo
 ---
 
 **Øvelse 4**
+
 Construct a $4 \times 4$ matrix to rotate $20^{\circ}$ about the $x$-axis and then translate by $[4,2,3]$.
 
 ??? answer "Se svaret"
+    $\begin{aligned} \mathbf{R}_x\left(20^{\circ}\right) \mathbf{T}([4,2,3]) & =\left[\begin{array}{cccc}1.000 & 0.000 & 0.000 & 0.000 \\ 0.000 & 0.940 & 0.342 & 0.000 \\ 0.000 & -0.342 & 0.940 & 0.000 \\ 0.000 & 0.000 & 0.000 & 1.000\end{array}\right]\left[\begin{array}{llll}1.000 & 0.000 & 0.000 & 0.000 \\ 0.000 & 1.000 & 0.000 & 0.000 \\ 0.000 & 0.000 & 1.000 & 0.000 \\ 4.000 & 2.000 & 3.000 & 1.000\end{array}\right] \\ & =\left[\begin{array}{cccc}1.000 & 0.000 & 0.000 & 0.000 \\ 0.000 & 0.940 & 0.342 & 0.000 \\ 0.000 & -0.342 & 0.940 & 0.000 \\ 4.000 & 2.000 & 3.000 & 1.000\end{array}\right]\end{aligned}$
 
 ---
 
 **Øvelse 5**
+
 Construct a $4 \times 4$ matrix to translate by $[4,2,3]$ and then rotate $20^{\circ}$ about the $x$-axis.
 
 
 ??? answer "Se svaret"
-
+    $\begin{aligned} \mathbf{T}([4,2,3]) \mathbf{R}_x\left(20^{\circ}\right) & =\left[\begin{array}{cccc}1.000 & 0.000 & 0.000 & 0.000 \\ 0.000 & 1.000 & 0.000 & 0.000 \\ 0.000 & 0.000 & 1.000 & 0.000 \\ 4.000 & 2.000 & 3.000 & 1.000\end{array}\right]\left[\begin{array}{cccc}1.000 & 0.000 & 0.000 & 0.000 \\ 0.000 & 0.940 & 0.342 & 0.000 \\ 0.000 & -0.342 & 0.940 & 0.000 \\ 0.000 & 0.000 & 0.000 & 1.000\end{array}\right] \\ & =\left[\begin{array}{cccc}1.000 & 0.000 & 0.000 & 0.000 \\ 0.000 & 0.940 & 0.342 & 0.000 \\ 0.000 & -0.342 & 0.940 & 0.000 \\ 4.000 & 0.853 & 3.503 & 1.000\end{array}\right]\end{aligned}$
  
 
 ---
 
 **Øvelse 6**
+
 Construct a $4 \times 4$ matrix to perform a perspective projection onto the plane $x=5$. (Assume the origin is the center of projection.)
 
 ??? answer "Se svaret"
-
+    $\left[\begin{array}{cccc}1 & 0 & 0 & 1 / 5 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0\end{array}\right]$
 
 
 ---
 
 **Øvelse 7**
-Use the matrix from the previous exercise to compute the 3D coordinates of the projection of the point $(105,-243,89)$ onto the plane $x=5$.
+Use the matrix from the previous exercise to compute the 3D coordinates of the projection of the point $(105,-243,89)$ onto the plane $x=5$. [Prøv at gøre det manuelt først, uden Python, og så gå til implementeringen bagefter]
 
 ??? answer "Se svaret"
+    $\left[\begin{array}{llll}105 & -243 & 89 & 1\end{array}\right]\left[\begin{array}{cccc}1 & 0 & 0 & 1 / 5 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0\end{array}\right]=\left[\begin{array}{llll}105 & -243 & 89 & \frac{105}{5}\end{array}\right] \Rightarrow\left[\begin{array}{lll}5 & \frac{-81}{7} & \frac{89}{21}\end{array}\right]$
 
 
 ---
