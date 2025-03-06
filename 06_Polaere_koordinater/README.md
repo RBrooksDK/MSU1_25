@@ -108,6 +108,10 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 
 ## Øvelser
 
+<style type="text/css">
+    ol { list-style-type: lower-alpha; }
+</style>
+
 ---
 
 **Øvelse 1**
