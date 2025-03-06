@@ -46,23 +46,23 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 
 <div class="grid cards" markdown>
 
-- <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="src/T1.mp4" type="video/mp4">
+- <video autoplay loop muted playsinline style="height:100px;width:200px;float:right;">
+  <source src="src/T12.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
-    I denne tutorial gennemgås hvordan man beregner determinanter og inverser for 2x2 og 3x3 matricer. Derudover gennemgås regneregler for determinanter og inverser.
+    Polære koordinat-systemer er en alternativ metode til at beskrive positioner i rum, som adskiller sig fra det kartesiske koordinatsystem.
 
-    [:octicons-arrow-right-24: T1: Beregning af determinanter og inverse](T1.md)
+    [:octicons-arrow-right-24: T1: Introduktion til polære koordinater](T1.md)
 
-- <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="src/T2.mp4" type="video/mp4">
+- <video autoplay loop muted playsinline style="height:100px;width:200px;float:right;">
+  <source src="src/T21.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
-    Her gennemgås ortogonalitet og ortonormalitet. Vi har set på dette da vi snakkede om vektorer.    
+    Aliasing betyder, at det samme punkt i rummet kan beskrives ved uendeligt mange forskellige polære koordinatpar. Den kanoniske form er en standardiseret måde at repræsentere et punkt på i polære koordinater. 
     
-    [:octicons-arrow-right-24: T2: Ortogonalitet](T2.md)
+    [:octicons-arrow-right-24: T2: Aliasing og kanonisk form](T2.md)
 
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
@@ -70,7 +70,7 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
   Your browser does not support the video tag.
     </video>
 
-    Her gennemgås hvordan man laver translationer i 2D og 3D. Dette er en vigtig transformation, som I skal kunne. Vi genbesøger også de andre transformationer, som vi har set på tidligere.
+    Ofte er det nødvendigt at kunne skifte mellem det kartesiske koordinatsystem $(x, y)$ og det polære koordinatsystem $(r, \theta)$. 
     
     [:octicons-arrow-right-24: T3: Homogene matricer og translationer](T3.md)
 
@@ -86,6 +86,20 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 </div>
 
 ## Videomateriale
+3Blue1Brown har ikke lavet videoer om polære koordinater, men til gengæld har min kollega Mette lavet nogle tre korte videoer om emnet. Mette har fokus på forståelse af enhedscirklen og på hvordan man går fra polære til kartesiske koordinater og omvendt. Den fjerde video giver en mere visuel forklaring af polære koordinater, og den sidste omhandler 3d polære koordinater og er lidt mere kompleks. Se også ovenstående tutorials.
+
+### 6.1. Mette Mortensen: Enhedscirklen 
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1x9uhjI2m60dd2aZL9GYn1joVViHwMIqB/preview" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 6.2. Mette Mortensen: Polære koordinater
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1aeSpckiWnwzLaBqA_edtqFLKReRqTYLt/preview" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 6.3. Mette Mortensen: Eksempler på polære koordinater
+<iframe width="560" height="315" src="https://drive.google.com/file/d/1xrIhd3O62ha3G2--rfdpuLsdUydmHhKy/preview" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### 6.4. Chris Odden: Introduction to polar coordinates
+<iframe width="560" height="315" src="https://www.youtube.com/embed/stU63ST6ung?si=g3Irq3m3xllczaDG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ---
 
