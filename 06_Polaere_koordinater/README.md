@@ -35,9 +35,9 @@ Denne session omhandler de polære koordinatsystemer i både 2D og 3D og præsen
 - Kartesiske koordinater  
 - Aliasering  
 - Kanoniske koordinater  
-- Konverteringsalgoritmer  
-- Cylindriske koordinater  
-- Sfæriske koordinater  
+- Konverteringsalgoritmer   
+- Sfæriske koordinater
+- Cylindriske koordinater   
 - Gimbal lock  
 - Vektorrepræsentation 
 
@@ -102,8 +102,8 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 ### 6.4. Chris Odden: Introduction to polar coordinates
 <iframe width="560" height="315" src="https://www.youtube.com/embed/stU63ST6ung?si=g3Irq3m3xllczaDG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### 
-
+### 6.5. Paul Dawkins: Spherical Coordinates 3D
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ex_g2w4E5lQ?si=97kNtJHNBxrpb2YX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ---
 
 ## Øvelser
