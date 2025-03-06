@@ -8,6 +8,8 @@
 </p>
 
 
+
+
 ## Forberedelse
 3DM: [Kapitel 7](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EWSwoHT2ECtHlA4ISmU-mucBfmYwfl_B4vktd5YlZN_QPQ?e=bHGQQ4)
 
@@ -66,27 +68,27 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="src/T3.mp4" type="video/mp4">
+  <source src="src/T31.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
     Ofte er det nødvendigt at kunne skifte mellem det kartesiske koordinatsystem $(x, y)$ og det polære koordinatsystem $(r, \theta)$. 
     
-    [:octicons-arrow-right-24: T3: Homogene matricer og translationer](T3.md)
+    [:octicons-arrow-right-24: T3: Konvertering mellem Kartesiske og Polære Koordinater i 2D](T3.md)
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
-  <source src="src/T4.mp4" type="video/mp4">
+  <source src="src/T41.mp4" type="video/mp4">
   Your browser does not support the video tag.
     </video>
 
-    Perspektivisk projektion er en teknik inden for 3D-grafik, der bruges til at skabe en **illusion af dybde** på en 2D-skærm. Denne tutorial forklarer, hvordan 4x4 matricer bruges til at implementere perspektivisk projektion, og dækker de underliggende principper og den nødvendige matematik.
+    Når vi bevæger os fra 2D til 3D, udvides det polære koordinatsystem til to vigtige koordinatsystemer: cylindriske og sfæriske koordinater. 
     
-    [:octicons-arrow-right-24: T4: Perspektiv projektion](T4.md)
+    [:octicons-arrow-right-24: T4: Cylindriske og Sfæriske Koordinater i 3D](T4.md)
 
 </div>
 
 ## Videomateriale
-3Blue1Brown har ikke lavet videoer om polære koordinater, men til gengæld har min kollega Mette lavet nogle tre korte videoer om emnet. Mette har fokus på forståelse af enhedscirklen og på hvordan man går fra polære til kartesiske koordinater og omvendt. Den fjerde video giver en mere visuel forklaring af polære koordinater, og den sidste omhandler 3d polære koordinater og er lidt mere kompleks. Se også ovenstående tutorials.
+3Blue1Brown har ikke lavet videoer om polære koordinater, men til gengæld har min kollega Mette lavet tre korte videoer om emnet. Mette har fokus på forståelse af enhedscirklen og på hvordan man går fra polære til kartesiske koordinater og omvendt. Den fjerde video giver en mere visuel forklaring af polære koordinater, og den sidste omhandler 3d polære koordinater og er lidt mere kompleks. Se også ovenstående tutorials.
 
 ### 6.1. Mette Mortensen: Enhedscirklen 
 <iframe width="560" height="315" src="https://drive.google.com/file/d/1x9uhjI2m60dd2aZL9GYn1joVViHwMIqB/preview" title="Video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -100,6 +102,7 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 ### 6.4. Chris Odden: Introduction to polar coordinates
 <iframe width="560" height="315" src="https://www.youtube.com/embed/stU63ST6ung?si=g3Irq3m3xllczaDG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+### 
 
 ---
 
@@ -109,9 +112,11 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 
 **Øvelse 1**
 
+Kig øvelse 2-10 igennem og kig derefter tutorials igennem. Lav en Jupyter Notebook med kode, der kan løse nedenstående opgaver - de af dem, der har Python løsninger. Hvis ikke der lige er en i Tutorial, så overvej at lave en selv med udgangspunkt i formlerne enten fra tutorial eller fra bogen.
 
 
 ??? answer "Se svaret"
+    Jeg er tom.
 
     
 
@@ -372,5 +377,3 @@ Convert the following 3D Cartesian coordinates to (canonical) spherical form usi
         & \text { so }(r, h, p)=\left(\sqrt{14},-31.48^{\circ}, 27.58^{\circ}\right)
         \end{aligned}
         $$
-
-## Uddybende noter
