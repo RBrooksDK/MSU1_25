@@ -1,0 +1,9 @@
+\documentclass[preview]{standalone}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\begin{align*}
+\text{atan2}(y, x) = \begin{cases} 0, & x = 0,\, y = 0 \\+90^\circ, & x = 0,\, y > 0 \\-90^\circ, & x = 0,\, y < 0 \\\arctan\left(\frac{y}{x}\right), & x > 0 \\\arctan\left(\frac{y}{x}\right) + 180^\circ, & x < 0,\, y \geq 0 \\\arctan\left(\frac{y}{x}\right) - 180^\circ, & x < 0,\, y < 0 \end{cases}
+\end{align*}
+\end{document}
