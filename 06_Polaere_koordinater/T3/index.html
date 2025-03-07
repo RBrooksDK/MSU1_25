@@ -22,7 +22,7 @@
     
     
       
-        <title>Tutorial 3: Konvertering mellem Kartesiske og Polære Koordinater i 2D - Matematik for Spiludviklere</title>
+        <title>Tutorial 3: Aliasing og Kanonisk Form i 2D Polære Koordinater - Matematik for Spiludviklere</title>
       
     
     
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tutorial-3-konvertering-mellem-kartesiske-og-polre-koordinater-i-2d" class="md-skip">
+        <a href="#tutorial-3-aliasing-og-kanonisk-form-i-2d-polre-koordinater" class="md-skip">
           Gå til indholdet
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tutorial 3: Konvertering mellem Kartesiske og Polære Koordinater i 2D
+              Tutorial 3: Aliasing og Kanonisk Form i 2D Polære Koordinater
             
           </span>
         </div>
@@ -491,20 +491,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#konvertering-mellem-polre-og-kartesiske-koordinater-python" class="md-nav__link">
+  <a href="#arsager-til-aliasing" class="md-nav__link">
     <span class="md-ellipsis">
-      &#x1F4BB; Konvertering mellem polære og kartesiske koordinater Python
+      Årsager til aliasing:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#optimering-af-beregninger" class="md-nav__link">
+  <a href="#kanonisk-form" class="md-nav__link">
     <span class="md-ellipsis">
-      Optimering af beregninger
+      Kanonisk form:
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#algoritme-til-konvertering-til-kanonisk-form-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algoritme til konvertering til kanonisk form (r, θ):
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Algoritme til konvertering til kanonisk form (r, θ):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#konvertering-til-kanonisk-form-i-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Konvertering til kanonisk form i Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -527,73 +551,86 @@
   
 
 
-<h1 id="tutorial-3-konvertering-mellem-kartesiske-og-polre-koordinater-i-2d">Tutorial 3: Konvertering mellem Kartesiske og Polære Koordinater i 2D<a class="headerlink" href="#tutorial-3-konvertering-mellem-kartesiske-og-polre-koordinater-i-2d" title="Permanent link">&para;</a></h1>
-<p>Ofte er det nødvendigt at kunne skifte mellem det kartesiske koordinatsystem <span class="arithmatex">\((x, y)\)</span> og det polære koordinatsystem <span class="arithmatex">\((r, \theta)\)</span>. Denne tutorial beskriver, hvordan man konverterer koordinater mellem disse to systemer i to dimensioner. Trigonometri spiller en central rolle i disse konverteringer.</p>
-<p>Konverteringen fra polære til kartesiske koordinater følger direkte fra definitionerne af sinus og cosinus i en retvinklet trekant:</p>
+<h1 id="tutorial-3-aliasing-og-kanonisk-form-i-2d-polre-koordinater">Tutorial 3: Aliasing og Kanonisk Form i 2D Polære Koordinater<a class="headerlink" href="#tutorial-3-aliasing-og-kanonisk-form-i-2d-polre-koordinater" title="Permanent link">&para;</a></h1>
+<p>Et centralt koncept ved polære koordinater er aliasing, hvilket betyder, at det samme punkt i rummet kan beskrives ved uendeligt mange forskellige polære koordinatpar. Dette er en væsentlig forskel fra det kartesiske system, hvor hver punkt har præcis ét unikt <span class="arithmatex">\((x, y)\)</span>-koordinatpar.</p>
+<h2 id="arsager-til-aliasing">Årsager til aliasing:<a class="headerlink" href="#arsager-til-aliasing" title="Permanent link">&para;</a></h2>
+<p>Flere faktorer bidrager til aliasing i polære koordinater:</p>
+<ol>
+<li>
+<p><strong>Periodicitet af vinkler:</strong> At tilføje et helt antal omdrejninger (<span class="arithmatex">\(360^\circ\)</span> eller <span class="arithmatex">\(2\pi\)</span> radianer) til vinklen <span class="arithmatex">\(\theta\)</span> fører til den samme retning. Derfor beskriver <span class="arithmatex">\((r, \theta)\)</span> og <span class="arithmatex">\((r, \theta + k \cdot 360^\circ)\)</span> (hvor <span class="arithmatex">\(k\)</span> er et heltal) det samme punkt.</p>
+</li>
+<li>
+<p><strong>Negativ radius:</strong> En negativ radius <span class="arithmatex">\(-r\)</span> betyder, at man bevæger sig i den modsatte retning af vinklen <span class="arithmatex">\(\theta\)</span>. Dette er ækvivalent med at bruge den positive radius <span class="arithmatex">\(r\)</span> og vinklen <span class="arithmatex">\(\theta + 180^\circ\)</span> (eller <span class="arithmatex">\(\theta + \pi\)</span> radianer). Derfor er <span class="arithmatex">\((r, \theta)\)</span> og <span class="arithmatex">\((-r, \theta + 180^\circ)\)</span> ækvivalente.</p>
+</li>
+<li>
+<p><strong>Ambivalens ved specielle punkter:</strong></p>
 <ul>
-<li><span class="arithmatex">\(x = r \cos \theta\)</span></li>
-<li><span class="arithmatex">\(y = r \sin \theta\)</span></li>
+<li>For punkter direkte "vest" for origo (negativ x-akse, y=0) kan vinklen opfattes som <span class="arithmatex">\(+180^\circ\)</span> eller <span class="arithmatex">\(-180^\circ\)</span>.</li>
+<li>For selve origo (<span class="arithmatex">\(r = 0\)</span>) er vinkelværdien <span class="arithmatex">\(\theta\)</span> irrelevant, da man ikke bevæger sig nogen afstand væk.</li>
 </ul>
-<p>Disse ligninger gælder for alle værdier af <span class="arithmatex">\(r\)</span> og <span class="arithmatex">\(\theta\)</span>, også for "usædvanlige" værdier, hvilket betyder, at aliasing ikke er et problem i denne konvertering.</p>
+</li>
+</ol>
+<p>Generelt gælder det for et punkt med polære koordinater <span class="arithmatex">\((r, \theta)\)</span> (undtagen origo), at alle ækvivalente koordinatpar (aliaser) kan udtrykkes som:</p>
+<div class="arithmatex">\[ ((-1)^k r, \theta + k \cdot 180^\circ) \]</div>
+<p>hvor <span class="arithmatex">\(k\)</span> er et hvilket som helst heltal.</p>
+<h2 id="kanonisk-form">Kanonisk form:<a class="headerlink" href="#kanonisk-form" title="Permanent link">&para;</a></h2>
+<p>Selvom der er uendeligt mange måder at repræsentere et punkt på i polære koordinater, er det ofte praktisk at have en <strong>standardiseret eller foretrukken måde</strong> at gøre det på. Dette kaldes den <strong>kanoniske form</strong>. For 2D polære koordinater <span class="arithmatex">\((r, \theta)\)</span> defineres den kanoniske form ved følgende betingelser:</p>
+<ul>
+<li><span class="arithmatex">\(r \geq 0\)</span> (Radius er ikke-negativ).</li>
+<li><span class="arithmatex">\(-180^\circ &lt; \theta \leq 180^\circ\)</span> (Vinklen ligger i intervallet fra eksklusivt <span class="arithmatex">\(-180^\circ\)</span> til og med <span class="arithmatex">\(+180^\circ\)</span>. For punkter direkte "vest" for origo bruges <span class="arithmatex">\(\theta = +180^\circ\)</span>).</li>
+<li>Hvis <span class="arithmatex">\(r = 0\)</span> (ved origo), så sættes <span class="arithmatex">\(\theta = 0\)</span>.</li>
+</ul>
+<p>Aliasering er illustreret i følgende animation:</p>
 <p align="center">
-    <video class="hover-controls-video" width="800" controls muted poster="../src/T31.png">
-        <source src="../src/T31.mp4" type="video/mp4">
+    <video class="hover-controls-video" width="800" controls muted poster="../src/T21.png">
+        <source src="../src/T21.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </p>
 
-<p>Konvertering fra kartesiske <span class="arithmatex">\((x, y)\)</span> til polære <span class="arithmatex">\((r, \theta)\)</span> koordinater er mere kompleks på grund af aliasing, da der er uendeligt mange <span class="arithmatex">\((r, \theta)\)</span>-par, der kan beskrive et givent <span class="arithmatex">\((x, y)\)</span>-punkt. Normalt ønsker vi at finde de <strong>kanoniske polære koordinater</strong>.</p>
-<p>Radius <span class="arithmatex">\(r\)</span> kan nemt beregnes ved hjælp af Pythagoras' læresætning:</p>
-<ul>
-<li><span class="arithmatex">\(r = \sqrt{x^2 + y^2}\)</span></li>
-</ul>
-<p>Da kvadratrodsfunktionen altid returnerer den positive rod, vil den beregnede værdi af <span class="arithmatex">\(r\)</span> altid være ikke-negativ, hvilket er i overensstemmelse med den kanoniske form.</p>
-<p>Beregningen af vinklen <span class="arithmatex">\(\theta\)</span> er mere udfordrende. Et umiddelbart forsøg kunne være at bruge tangens:</p>
-<div class="arithmatex">\[ \frac{y}{x} = \frac{r \sin \theta}{r \cos \theta} = \tan \theta \implies \theta = \arctan\left(\frac{y}{x}\right) \]</div>
-<p>Dog er der to problemer med denne tilgang:</p>
+<h2 id="algoritme-til-konvertering-til-kanonisk-form-r">Algoritme til konvertering til kanonisk form (r, θ):<a class="headerlink" href="#algoritme-til-konvertering-til-kanonisk-form-r" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Hvis <span class="arithmatex">\(x = 0\)</span>, er divisionen <span class="arithmatex">\(y/x\)</span> udefineret.</li>
-<li>Arctan-funktionen (<span class="arithmatex">\(=\tan^{-1}\)</span>) har kun et værdiområde på <span class="arithmatex">\([-90^\circ, +90^\circ]\)</span> (eller <span class="arithmatex">\([-\pi/2, +\pi/2]\)</span> radianer), dvs i første og fjerde kvadrant.</li>
+<li>Hvis <span class="arithmatex">\(r = 0\)</span>, sæt <span class="arithmatex">\(\theta = 0\)</span>.</li>
+<li>Hvis <span class="arithmatex">\(r &lt; 0\)</span>, negér <span class="arithmatex">\(r\)</span> (gør den positiv) og læg <span class="arithmatex">\(180^\circ\)</span> til <span class="arithmatex">\(\theta\)</span>.</li>
+<li>Hvis <span class="arithmatex">\(\theta \leq -180^\circ\)</span>, læg <span class="arithmatex">\(360^\circ\)</span> til <span class="arithmatex">\(\theta\)</span> indtil <span class="arithmatex">\(\theta &gt; -180^\circ\)</span>.</li>
+<li>Hvis <span class="arithmatex">\(\theta &gt; 180^\circ\)</span>, træk <span class="arithmatex">\(360^\circ\)</span> fra <span class="arithmatex">\(\theta\)</span> indtil <span class="arithmatex">\(\theta \leq 180^\circ\)</span>.</li>
 </ol>
-<p>Problemet er, at divisionen <span class="arithmatex">\(y/x\)</span> mister information om fortegnene på <span class="arithmatex">\(x\)</span> og <span class="arithmatex">\(y\)</span>, hvilket er nødvendigt for at bestemme den korrekte kvadrant for vinklen.</p>
-<p>En bedre løsning er at bruge den såkaldte <strong>atan2-funktion</strong>, som tager både <span class="arithmatex">\(y\)</span> og <span class="arithmatex">\(x\)</span> som argumenter og korrekt beregner vinklen <span class="arithmatex">\(\theta\)</span> i alle fire kvadranter, bortset fra ved origo. Definitionen af atan2-funktionen, som bruges i mange programmeringssprog, er:</p>
-<div class="arithmatex">\[ \text{atan2}(y, x) = \begin{cases} 0, &amp; x = 0, y = 0 \\ +90^\circ, &amp; x = 0, y &gt; 0 \\ -90^\circ, &amp; x = 0, y &lt; 0 \\ \arctan(y/x), &amp; x &gt; 0 \\ \arctan(y/x) + 180^\circ, &amp; x &lt; 0, y \geq 0 \\ \arctan(y/x) - 180^\circ, &amp; x &lt; 0, y &lt; 0 \end{cases} \]</div>
-<p>Ved hjælp af atan2-funktionen kan de kanoniske polære koordinater <span class="arithmatex">\((r, \theta)\)</span> beregnes fra de kartesiske koordinater <span class="arithmatex">\((x, y)\)</span> som:</p>
-<ul>
-<li><span class="arithmatex">\(r = \sqrt{x^2 + y^2}\)</span></li>
-<li><span class="arithmatex">\(\theta = \text{atan2}(y, x)\)</span></li>
-</ul>
-<h2 id="konvertering-mellem-polre-og-kartesiske-koordinater-python">&#x1F4BB; Konvertering mellem polære og kartesiske koordinater  Python<a class="headerlink" href="#konvertering-mellem-polre-og-kartesiske-koordinater-python" title="Permanent link">&para;</a></h2>
-<p><div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<h3 id="konvertering-til-kanonisk-form-i-python">💻 Konvertering til kanonisk form i Python<a class="headerlink" href="#konvertering-til-kanonisk-form-i-python" title="Permanent link">&para;</a></h3>
+<p>Her er et eksempel på, hvordan du kan konvertere polære koordinater til kanonisk form i Python:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">polar_til_kartesisk</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">theta</span><span class="p">):</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Konverterer polære koordinater til kartesiske.&quot;&quot;&quot;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">x</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">y</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">return</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">kartesisk_til_polar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Konverterer kartesiske koordinater til polære.&quot;&quot;&quot;</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">r</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">theta</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">atan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">theta</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">def</span><span class="w"> </span><span class="nf">til_kanonisk_form</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">output_degrees</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;Konverterer polære koordinater til kanonisk form.</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="sd">    Args:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="sd">        r (float): Afstanden fra origo.</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="sd">        theta (float): Vinklen (i radianer).</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="sd">        output_degrees (bool, optional): Hvis sandt, konverteres theta til grader.</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="sd">            Standard er False, hvilket betyder at theta returneres i radianer.</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="sd">    Returns:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="sd">        tuple: En tuple (r, theta) hvor theta enten er i radianer eller grader.</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="c1"># Hvis vi er ved nulpunktet</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="k">if</span> <span class="n">r</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="k">return</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="c1"># Håndter negative afstande</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="k">if</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="n">r</span> <span class="o">=</span> <span class="o">-</span><span class="n">r</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        <span class="n">theta</span> <span class="o">+=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>  <span class="c1"># 180 grader</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="c1"># Wrap theta til intervallet (-pi, pi]</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="n">theta</span> <span class="o">=</span> <span class="p">(</span><span class="n">theta</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">-</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="c1"># Konverter theta til grader hvis ønsket</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="k">if</span> <span class="n">output_degrees</span><span class="p">:</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        <span class="n">theta</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="k">return</span> <span class="n">r</span><span class="p">,</span> <span class="n">theta</span>
 </span></code></pre></div>
-Her kan du se en animation af atan2-funktionen, som beregner vinklen <span class="arithmatex">\(\theta\)</span> i alle kvadranter:</p>
-<p align="center">
-    <video class="hover-controls-video" width="800" controls muted poster="../src/T32.png">
-        <source src="../src/T32.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</p>
-
-<h2 id="optimering-af-beregninger">Optimering af beregninger<a class="headerlink" href="#optimering-af-beregninger" title="Permanent link">&para;</a></h2>
-<p>Når du arbejder med polære koordinater, er det ofte en god idé at overveje disse optimeringstips:</p>
-<ol>
-<li>Undgå unødvendige konverteringer mellem polære og kartesiske koordinater</li>
-<li>Brug biblioteksfunktioner som <code>atan2()</code> i stedet for selv at implementere dem</li>
-<li>Vær opmærksom på præcisionstab ved flydende kommatal</li>
-<li>Håndter edge cases korrekt (f.eks. ved nulpunktet eller ved polerne)</li>
-</ol>
+<p>Forståelsen af aliasing er vigtig, når man arbejder med polære koordinater. Den kanoniske form giver en entydig repræsentation for hvert punkt i 2D-rummet, hvilket forenkler mange beregninger og sammenligninger. Konvertering til kanonisk form sikrer, at man har en standard måde at udtrykke polære koordinater på.</p>
 
 
 
