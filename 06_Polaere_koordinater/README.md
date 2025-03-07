@@ -26,6 +26,7 @@ I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udg
 ## Kort om sessionen
 
 Denne session omhandler de polære koordinatsystemer i både 2D og 3D og præsenterer de fundamentale koncepter bag brugen af vinkler og afstande til at beskrive positioner og vektorer. Vi kigger på hvordan man
+
  - Bruger polære koordinater til at lokalisere punkter i et todimensionelt rum, herunder omregning til og fra kartesiske koordinater med formler som \( x = r \cos\theta \) og \( y = r \sin\theta \).
  - Håndterer aliasering, dvs. de multiple måder at repræsentere det samme punkt på, og fastlægger et kanonisk koordinatsæt.
  - Udvider begrebet til 3d gennem cylindriske og sfæriske koordinatsystemer
@@ -57,16 +58,6 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 
     [:octicons-arrow-right-24: T1: Introduktion til polære koordinater](T1.md)
 
-- <video autoplay loop muted playsinline style="height:100px;width:200px;float:right;">
-  <source src="src/T21.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-    </video>
-
-    Aliasing betyder, at det samme punkt i rummet kan beskrives ved uendeligt mange forskellige polære koordinatpar. Den kanoniske form er en standardiseret måde at repræsentere et punkt på i polære koordinater. 
-    
-    [:octicons-arrow-right-24: T2: Aliasing og kanonisk form](T2.md)
-
-
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
   <source src="src/T31.mp4" type="video/mp4">
   Your browser does not support the video tag.
@@ -74,7 +65,16 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 
     Ofte er det nødvendigt at kunne skifte mellem det kartesiske koordinatsystem $(x, y)$ og det polære koordinatsystem $(r, \theta)$. 
     
-    [:octicons-arrow-right-24: T3: Konvertering mellem Kartesiske og Polære Koordinater i 2D](T3.md)
+    [:octicons-arrow-right-24: T2: Konvertering mellem Kartesiske og Polære Koordinater i 2D](T2.md)
+
+- <video autoplay loop muted playsinline style="height:100px;width:200px;float:right;">
+  <source src="src/T21.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+    </video>
+
+    Aliasing betyder, at det samme punkt i rummet kan beskrives ved uendeligt mange forskellige polære koordinatpar. Den kanoniske form er en standardiseret måde at repræsentere et punkt på i polære koordinater. 
+    
+    [:octicons-arrow-right-24: T3: Aliasing og kanonisk form](T3.md)
 
 - <video autoplay loop muted playsinline style="height:100px;width:100px;float:right;">
   <source src="src/T41.mp4" type="video/mp4">
@@ -116,7 +116,9 @@ Denne gang vil jeg faktisk sige at Tutorials er vigtigere end videoerne. Så pr�
 
 **Øvelse 1**
 
-Kig øvelse 2-10 igennem og kig derefter tutorials igennem. Lav en Jupyter Notebook med kode, der kan løse nedenstående opgaver - de af dem, der har Python løsninger. Hvis ikke der lige er en i Tutorial, så overvej at lave en selv med udgangspunkt i formlerne enten fra tutorial eller fra bogen.
+Kig øvelse 3-10 igennem og kig derefter tutorials igennem. Lav en Jupyter Notebook med kode, der kan løse nedenstående opgaver - de af dem, der har Python løsninger. Hvis ikke der lige er en i Tutorial, så overvej at lave en selv med udgangspunkt i formlerne enten fra tutorial eller fra bogen.
+
+I øvrigt når I arbejder i Jupyter Notebook så gir Pylance extension i VScode en masse fejl om den ene og det andet. Bare ignorér det. Koden virker alligevel. Hvis I er typen, så sig til, så skal jeg nok se om jeg kan få det væk for jer.
 
 
 ??? answer "Se svaret"
@@ -128,32 +130,32 @@ Kig øvelse 2-10 igennem og kig derefter tutorials igennem. Lav en Jupyter Noteb
 
 **Øvelse 2** <!-- Exercise 1 -->
 
-Plot and label the points with the following polar coordinates:
+Plot and label the points with the following polar coordinates (if degrees are not stated, assume radians):
 
 $$
 \begin{aligned}
 &\begin{array}{ll}
 \mathbf{a}=\left(2,60^{\circ}\right) & \mathbf{b}=\left(5,195^{\circ}\right) \\
 \mathbf{c}=\left(3,-45^{\circ}\right) & \mathbf{d}=\left(-2.75,300^{\circ}\right) \\
-\mathbf{e}=(4, \pi / 6 \mathrm{rad}) & \mathbf{f}=(1,4 \pi / 3 \mathrm{rad}) \\
-\mathbf{g}=(-5 / 2,-\pi / 2 \mathrm{rad}) &
+\mathbf{e}=(4, \pi / 6) & \mathbf{f}=(1,4 \pi / 3) \\
+\mathbf{g}=(-5 / 2,-\pi / 2) &
 \end{array}
 \end{aligned}
 $$
 
+Du kan med fordel bruge noget fra [afsnittet om at plotte](T2.md#plotte-med-polre-koordinater-i-python) i Tutorial 2
+
 
 ??? answer "Se svaret"
     <img src="src/Ex1.png" alt="AnswerCoordinates" style="width: 80%;"/>
-    
 
----
 
 **Øvelse 3** <!-- Exercise 2 a) d) -->
 
 Convert the following 2D polar coordinates to canonical form:
 
 1. $\left(4,207^{\circ}\right)$
-2. $(12.6,11 \pi / 4 \mathrm{rad})$
+2. $(12.6,11 \pi / 4)$
 
 ??? answer "Se svaret"
     1. $\left(4,207^{\circ}\right) \equiv\left(4,207^{\circ}-360^{\circ}\right) \equiv\left(4,-153^{\circ}\right)$
@@ -167,7 +169,7 @@ Convert the following 2D polar coordinates to Cartesian form:
 
 1. $\left(1,45^{\circ}\right)$
 2. $\left(4,90^{\circ}\right)$
-3. $(5.5, \pi \mathrm{rad})$
+3. $(5.5, \pi)$
 
 ??? answer "Se svaret"
     1. $\left(1,45^{\circ}\right)_p \equiv\left(1 \cos 45^{\circ}, 1 \sin 45^{\circ}\right)_c \approx(1 \cdot 0.707,1 \cdot 0.707)_c=(0.707,0.707)_c$
