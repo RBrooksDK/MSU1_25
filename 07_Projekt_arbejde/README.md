@@ -1,116 +1,27 @@
 <h1 align="center">Projektarbejde</h1>
 
+Jeres opgave bliver ikke helt så fri som vi først havde troet. Vi har valgt at slå opgaven i Web sammen med opgaven i Lineær Algebra. Det er stadig to opgaver, men de hænger sammen. I skal løse dem i grupper á 3-4.
 
+## Opgavebeskrivelse: WebGL og Lineær Algebra
 
-## Forberedelse
+**Formål:** I denne opgave skal I anvende jeres viden om lineær algebra til at forstå og videreudvikle en simpel WebGL-demo, der anvender lineære transformationer og shader-programmer til at manipulere 3D-modeller.
 
+### Opgaveindhold
 
-I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
+1. **Analyse af eksisterende transformationer**
+    - Undersøg WebGL-demoen og identificer, hvilke matricer og transformationer der benyttes i vertex shaderen.
+    - Forklar tydeligt formålet med og effekten af disse transformationer.
 
-## Materiale
+2. **Modifier – Matematisk model**
+    - Beskriv en modifier (fx "Bend"), og forklar hvilke lineære transformationer der indgår, samt hvordan de repræsenteres med matricer.
 
-[Sessionsmateriale]()
+3. **Udvikling af egen modifier**
+    - Udarbejd jeres egen modifiers baseret på lineære algebraiske transformationer. Forklar jeres matematiske model, og implementér den/dem i shader-koden.
 
-[Øvelsesnoter - tilgængelige mandag]()
+4. **Refleksion**
+    - Forklar tydeligt, hvordan lineære transformationer anvendes praktisk inden for områder som 3D-grafik, spiludvikling eller visuel simulering.
 
----
+### Dokumentation og aflevering
+ - Afleveringen skal indeholde jeres analyser, matematiske modeller, implementerede shaders og relevant kode  (fra WEb-faget) som bilag.
 
-## Kort om sessionen
-
-
-### Nøgleord
-
-
-
----
-
-## Videomateriale
-
----
-
-## Øvelser
-
----
-
-**Øvelse 1**
-
-
-
-??? answer "Se svaret"
-
-    
-
----
-
-**Øvelse 2**
-
-Udregn følgende:
-
-
-??? answer "Se svaret"
-
-    
-
----
-
-**Exercise 3**
-
-??? answer "Se svaret"
-
-
----
-
-**Øvelse 4**
-
-??? answer "Se svaret"
-
----
-
-**Øvelse 5**
-
-
-
-??? answer "Se svaret"
-
- 
-
----
-
-**Øvelse 6**
-
-
-??? answer "Se svaret"
-
-
-
----
-
-**Øvelse 7**
-
-
-??? answer "Se svaret"
-
-
----
-
-**Øvelse 8**
-
-
-??? answer "Se svaret"
-
----
-
-**Øvelse 9**
-
-??? answer "Se svaret"
-
-
-**Øvelse 10**
-
-
-
-??? answer
-
-
-
-## Uddybende noter
+Opgaven skal have et omfang på omkring 5 sider eksklusiv bilag. Deadline bliver mandag den 12.5. kl. 12:00. I skal aflevere alt i en zip-fil på Itslearning. Husk at aflevere som en gruppe.

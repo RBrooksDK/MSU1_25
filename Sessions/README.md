@@ -14,7 +14,7 @@ Klik på en session til venstre for at få adgang til en plan for den specifikke
 | 05      | 10   | 3. mar. 9:00 – 12:00 | Matricer II             |
 | 06      | 11  | 10. mar. 9:00 – 12:00  | Polære koordinater           |
 | 07      | 12  | 17. mar. 9:00 – 12:00 | Opstart projektarbejde               |
-| 08      | 13  | 24. mar. 9:00 – 12:00 | Rotationer i 3d              |
+| 08      | 13  | 24. mar. 9:00 – 12:00 | Opsamlingssession              |
 | 09      | 14  | 31. mar. 9:00 – 12:00 | Geometri                     |
 | 10      | 15  | 7. apr. 9:00 – 12:00 | 3d grafik                    |
 | 11      | 18  | 28. apr. 9:00 – 12:00 | Projektarbejde               |
