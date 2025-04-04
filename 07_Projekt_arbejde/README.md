@@ -22,6 +22,6 @@ Jeres opgave bliver ikke helt så fri som vi først havde troet. Vi har valgt at
     - Forklar tydeligt, hvordan lineære transformationer anvendes praktisk inden for områder som 3D-grafik, spiludvikling eller visuel simulering.
 
 ### Dokumentation og aflevering
- - Afleveringen skal indeholde jeres analyser, matematiske modeller, implementerede shaders og relevant kode  (fra WEb-faget) som bilag.
+ - Afleveringen skal indeholde jeres analyser, matematiske modeller, implementerede shaders og relevant kode (fra WEb-faget) som bilag.
 
 Opgaven skal have et omfang på omkring 5 sider eksklusiv bilag. Deadline bliver mandag den 12.5. kl. 12:00. I skal aflevere alt i en zip-fil på Itslearning. Husk at aflevere som en gruppe.
