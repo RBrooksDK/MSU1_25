@@ -3,9 +3,8 @@
 
 
 ## Forberedelse
-3DM: [Kapitel 10]()
+3DM: Pensum er Kapitel 2-7 + 8.3
 
-I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udgør som minimum jeres forberedelse til hver session. Hertil kan I også læse i bogen.
 
 ## Materiale
 
@@ -16,7 +15,16 @@ I skal have set [videoerne](#videomateriale) fra den aktuelle session. Dette udg
 ---
 
 ## Kort om sessionen
+I dag skal vi samle op på det vi har været igennem. Der blir ikke noget nyt stof i dag (quarternions er semi-nyt), men en opfriskning af det vi har været igennem. Vi vil gennemgå de vigtigste emner og begreber, og I vil få mulighed for at stille spørgsmål og diskutere emnerne. Hvis skal bruge "keywords" til jeres eksamen, så er det i dag I skal finde dem. Der er groft sagt følgende overskrifter vi vil komme ind på:
 
+- Vektorer
+- Koordinatsystemer
+- Matricer
+- Linæere transformationer
+- Matricer: Determinant, inverse, transponeret, orthogonalitet, homogene
+- Polar vs. kartesiske koordinater
+- 3D rotationer og euler vinkler og gimbal lock
+- Quaternions
 
 ### Nøgleord
 
