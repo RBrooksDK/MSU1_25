@@ -8,9 +8,7 @@
 
 ## Materiale
 
-[Sessionsmateriale]()
-
-[Øvelsesnoter - tilgængelige mandag]()
+[Sessionsmateriale](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EX1sBOnOHFVBu3HIcr1uGSQBiANAeX7gkIUb-mZrvr37Jg?e=CMrogd)
 
 ---
 
