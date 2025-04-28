@@ -10,6 +10,9 @@
 
 [Sessionsmateriale](https://viaucdk-my.sharepoint.com/:b:/g/personal/rib_viauc_dk/EX1sBOnOHFVBu3HIcr1uGSQBiANAeX7gkIUb-mZrvr37Jg?e=CMrogd)
 
+[Præsentation af Quaternions](https://docs.google.com/presentation/d/1BncqvQ4M1ZbkW3pue4mR6tBe8Vix8NelsQvfK_QRP8Y/mobilepresent?slide=id.p)
+
+Det er Freya Holmer, der har lavet præsentationen. Hun gennemgår det også i den video jeg linker til i starten af kurset.
 ---
 
 ## Kort om sessionen
